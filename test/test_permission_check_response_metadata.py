@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.permission_check_response_metadata import PermissionCheckResponseMetadata
+from permify.models.permission_check_response_metadata import PermissionCheckResponseMetadata
 
 class TestPermissionCheckResponseMetadata(unittest.TestCase):
     """PermissionCheckResponseMetadata unit test stubs"""

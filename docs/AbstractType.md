@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.abstract_type import AbstractType
+from permify.models.abstract_type import AbstractType
 
 # TODO update the JSON string below
 json = "{}"

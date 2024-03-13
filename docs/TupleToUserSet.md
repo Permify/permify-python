@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.tuple_to_user_set import TupleToUserSet
+from permify.models.tuple_to_user_set import TupleToUserSet
 
 # TODO update the JSON string below
 json = "{}"

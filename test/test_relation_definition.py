@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.relation_definition import RelationDefinition
+from permify.models.relation_definition import RelationDefinition
 
 class TestRelationDefinition(unittest.TestCase):
     """RelationDefinition unit test stubs"""
@@ -38,7 +38,7 @@ class TestRelationDefinition(unittest.TestCase):
             return RelationDefinition(
                 name = '',
                 relation_references = [
-                    openapi_client.models.relation_reference.RelationReference(
+                    permify.models.relation_reference.RelationReference(
                         type = '', 
                         relation = '', )
                     ]

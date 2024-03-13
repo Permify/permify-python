@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.permissions_expand_request import PermissionsExpandRequest
+from permify.models.permissions_expand_request import PermissionsExpandRequest
 
 class TestPermissionsExpandRequest(unittest.TestCase):
     """PermissionsExpandRequest unit test stubs"""
@@ -36,38 +36,38 @@ class TestPermissionsExpandRequest(unittest.TestCase):
         model = PermissionsExpandRequest()
         if include_optional:
             return PermissionsExpandRequest(
-                metadata = openapi_client.models.permission_expand_request_metadata.PermissionExpandRequestMetadata(
+                metadata = permify.models.permission_expand_request_metadata.PermissionExpandRequestMetadata(
                     schema_version = '', 
                     snap_token = '', ),
-                entity = openapi_client.models.entity.Entity(
+                entity = permify.models.entity.Entity(
                     type = '', 
                     id = '', ),
                 permission = '',
-                context = openapi_client.models.context.Context(
+                context = permify.models.context.Context(
                     tuples = [
-                        openapi_client.models.tuple.Tuple(
-                            entity = openapi_client.models.entity.Entity(
+                        permify.models.tuple.Tuple(
+                            entity = permify.models.entity.Entity(
                                 type = '', 
                                 id = '', ), 
                             relation = '', 
-                            subject = openapi_client.models.subject.Subject(
+                            subject = permify.models.subject.Subject(
                                 type = '', 
                                 id = '', 
                                 relation = '', ), )
                         ], 
                     attributes = [
-                        openapi_client.models.attribute.Attribute(
+                        permify.models.attribute.Attribute(
                             attribute = '', 
                             value = {
                                 'key' : None
                                 }, )
                         ], 
-                    data = openapi_client.models.data.data(), ),
+                    data = permify.models.data.data(), ),
                 arguments = [
-                    openapi_client.models.argument.Argument(
-                        computed_attribute = openapi_client.models.computed_attribute.ComputedAttribute(
+                    permify.models.argument.Argument(
+                        computed_attribute = permify.models.computed_attribute.ComputedAttribute(
                             name = '', ), 
-                        context_attribute = openapi_client.models.context_attribute.ContextAttribute(
+                        context_attribute = permify.models.context_attribute.ContextAttribute(
                             name = '', ), )
                     ]
             )

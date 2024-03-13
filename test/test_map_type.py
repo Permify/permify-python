@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.map_type import MapType
+from permify.models.map_type import MapType
 
 class TestMapType(unittest.TestCase):
     """MapType unit test stubs"""
@@ -36,19 +36,19 @@ class TestMapType(unittest.TestCase):
         model = MapType()
         if include_optional:
             return MapType(
-                key_type = openapi_client.models.v1alpha1/type.v1alpha1.Type(
-                    dyn = openapi_client.models.dyn.dyn(), 
+                key_type = permify.models.v1alpha1/type.v1alpha1.Type(
+                    dyn = permify.models.dyn.dyn(), 
                     null = '', 
                     primitive = 'PRIMITIVE_TYPE_UNSPECIFIED', 
                     wrapper = 'PRIMITIVE_TYPE_UNSPECIFIED', 
                     well_known = 'WELL_KNOWN_TYPE_UNSPECIFIED', 
-                    list_type = openapi_client.models.list_type.ListType(
-                        elem_type = openapi_client.models.v1alpha1/type.v1alpha1.Type(
-                            dyn = openapi_client.models.dyn.dyn(), 
+                    list_type = permify.models.list_type.ListType(
+                        elem_type = permify.models.v1alpha1/type.v1alpha1.Type(
+                            dyn = permify.models.dyn.dyn(), 
                             null = '', 
-                            map_type = openapi_client.models.map_type.MapType(
+                            map_type = permify.models.map_type.MapType(
                                 value_type = , ), 
-                            function = openapi_client.models.function_type.FunctionType(
+                            function = permify.models.function_type.FunctionType(
                                 result_type = , 
                                 arg_types = [
                                     
@@ -56,33 +56,33 @@ class TestMapType(unittest.TestCase):
                             message_type = '', 
                             type_param = '', 
                             type = , 
-                            error = openapi_client.models.error.error(), 
-                            abstract_type = openapi_client.models.abstract_type.AbstractType(
+                            error = permify.models.error.error(), 
+                            abstract_type = permify.models.abstract_type.AbstractType(
                                 name = '', 
                                 parameter_types = [
                                     
                                     ], ), ), ), 
-                    map_type = openapi_client.models.map_type.MapType(), 
-                    function = openapi_client.models.function_type.FunctionType(), 
+                    map_type = permify.models.map_type.MapType(), 
+                    function = permify.models.function_type.FunctionType(), 
                     message_type = '', 
                     type_param = '', 
                     type = , 
-                    error = openapi_client.models.error.error(), 
-                    abstract_type = openapi_client.models.abstract_type.AbstractType(
+                    error = permify.models.error.error(), 
+                    abstract_type = permify.models.abstract_type.AbstractType(
                         name = '', ), ),
-                value_type = openapi_client.models.v1alpha1/type.v1alpha1.Type(
-                    dyn = openapi_client.models.dyn.dyn(), 
+                value_type = permify.models.v1alpha1/type.v1alpha1.Type(
+                    dyn = permify.models.dyn.dyn(), 
                     null = '', 
                     primitive = 'PRIMITIVE_TYPE_UNSPECIFIED', 
                     wrapper = 'PRIMITIVE_TYPE_UNSPECIFIED', 
                     well_known = 'WELL_KNOWN_TYPE_UNSPECIFIED', 
-                    list_type = openapi_client.models.list_type.ListType(
-                        elem_type = openapi_client.models.v1alpha1/type.v1alpha1.Type(
-                            dyn = openapi_client.models.dyn.dyn(), 
+                    list_type = permify.models.list_type.ListType(
+                        elem_type = permify.models.v1alpha1/type.v1alpha1.Type(
+                            dyn = permify.models.dyn.dyn(), 
                             null = '', 
-                            map_type = openapi_client.models.map_type.MapType(
+                            map_type = permify.models.map_type.MapType(
                                 key_type = , ), 
-                            function = openapi_client.models.function_type.FunctionType(
+                            function = permify.models.function_type.FunctionType(
                                 result_type = , 
                                 arg_types = [
                                     
@@ -90,19 +90,19 @@ class TestMapType(unittest.TestCase):
                             message_type = '', 
                             type_param = '', 
                             type = , 
-                            error = openapi_client.models.error.error(), 
-                            abstract_type = openapi_client.models.abstract_type.AbstractType(
+                            error = permify.models.error.error(), 
+                            abstract_type = permify.models.abstract_type.AbstractType(
                                 name = '', 
                                 parameter_types = [
                                     
                                     ], ), ), ), 
-                    map_type = openapi_client.models.map_type.MapType(), 
-                    function = openapi_client.models.function_type.FunctionType(), 
+                    map_type = permify.models.map_type.MapType(), 
+                    function = permify.models.function_type.FunctionType(), 
                     message_type = '', 
                     type_param = '', 
                     type = , 
-                    error = openapi_client.models.error.error(), 
-                    abstract_type = openapi_client.models.abstract_type.AbstractType(
+                    error = permify.models.error.error(), 
+                    abstract_type = permify.models.abstract_type.AbstractType(
                         name = '', ), )
             )
         else:

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.subjects import Subjects
+from permify.models.subjects import Subjects
 
 # TODO update the JSON string below
 json = "{}"

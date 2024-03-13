@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.data_change import DataChange
+from permify.models.data_change import DataChange
 
 class TestDataChange(unittest.TestCase):
     """DataChange unit test stubs"""
@@ -37,17 +37,17 @@ class TestDataChange(unittest.TestCase):
         if include_optional:
             return DataChange(
                 operation = 'OPERATION_UNSPECIFIED',
-                tuple = openapi_client.models.tuple.Tuple(
-                    entity = openapi_client.models.entity.Entity(
+                tuple = permify.models.tuple.Tuple(
+                    entity = permify.models.entity.Entity(
                         type = '', 
                         id = '', ), 
                     relation = '', 
-                    subject = openapi_client.models.subject.Subject(
+                    subject = permify.models.subject.Subject(
                         type = '', 
                         id = '', 
                         relation = '', ), ),
-                attribute = openapi_client.models.attribute.Attribute(
-                    entity = openapi_client.models.entity.Entity(
+                attribute = permify.models.attribute.Attribute(
+                    entity = permify.models.entity.Entity(
                         type = '', 
                         id = '', ), 
                     attribute = '', 

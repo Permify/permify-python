@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.schema_list_response import SchemaListResponse
+from permify.models.schema_list_response import SchemaListResponse
 
 class TestSchemaListResponse(unittest.TestCase):
     """SchemaListResponse unit test stubs"""
@@ -38,7 +38,7 @@ class TestSchemaListResponse(unittest.TestCase):
             return SchemaListResponse(
                 head = '',
                 schemas = [
-                    openapi_client.models.schema_list_provides_a_list_of_schema_versions_with_their_corresponding_creation_timestamps.SchemaList provides a list of schema versions with their corresponding creation timestamps(
+                    permify.models.schema_list_provides_a_list_of_schema_versions_with_their_corresponding_creation_timestamps.SchemaList provides a list of schema versions with their corresponding creation timestamps(
                         version = '', 
                         created_at = '', )
                     ],

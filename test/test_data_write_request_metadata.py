@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.data_write_request_metadata import DataWriteRequestMetadata
+from permify.models.data_write_request_metadata import DataWriteRequestMetadata
 
 class TestDataWriteRequestMetadata(unittest.TestCase):
     """DataWriteRequestMetadata unit test stubs"""

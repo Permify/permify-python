@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.relation_reference import RelationReference
+from permify.models.relation_reference import RelationReference
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.schemas_read_request import SchemasReadRequest
+from permify.models.schemas_read_request import SchemasReadRequest
 
 class TestSchemasReadRequest(unittest.TestCase):
     """SchemasReadRequest unit test stubs"""
@@ -36,7 +36,7 @@ class TestSchemasReadRequest(unittest.TestCase):
         model = SchemasReadRequest()
         if include_optional:
             return SchemasReadRequest(
-                metadata = openapi_client.models.schema_read_request_metadata.SchemaReadRequestMetadata(
+                metadata = permify.models.schema_read_request_metadata.SchemaReadRequestMetadata(
                     schema_version = '', )
             )
         else:

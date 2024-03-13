@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.relationships_write_request import RelationshipsWriteRequest
+from permify.models.relationships_write_request import RelationshipsWriteRequest
 
 class TestRelationshipsWriteRequest(unittest.TestCase):
     """RelationshipsWriteRequest unit test stubs"""
@@ -36,15 +36,15 @@ class TestRelationshipsWriteRequest(unittest.TestCase):
         model = RelationshipsWriteRequest()
         if include_optional:
             return RelationshipsWriteRequest(
-                metadata = openapi_client.models.relationship_write_request_metadata.RelationshipWriteRequestMetadata(
+                metadata = permify.models.relationship_write_request_metadata.RelationshipWriteRequestMetadata(
                     schema_version = '', ),
                 tuples = [
-                    openapi_client.models.tuple.Tuple(
-                        entity = openapi_client.models.entity.Entity(
+                    permify.models.tuple.Tuple(
+                        entity = permify.models.entity.Entity(
                             type = '', 
                             id = '', ), 
                         relation = '', 
-                        subject = openapi_client.models.subject.Subject(
+                        subject = permify.models.subject.Subject(
                             type = '', 
                             id = '', 
                             relation = '', ), )

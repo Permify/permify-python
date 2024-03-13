@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.permission_lookup_entity_request_metadata import PermissionLookupEntityRequestMetadata
+from permify.models.permission_lookup_entity_request_metadata import PermissionLookupEntityRequestMetadata
 
 class TestPermissionLookupEntityRequestMetadata(unittest.TestCase):
     """PermissionLookupEntityRequestMetadata unit test stubs"""

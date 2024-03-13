@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.schema_definition import SchemaDefinition
+from permify.models.schema_definition import SchemaDefinition
 
 # TODO update the JSON string below
 json = "{}"

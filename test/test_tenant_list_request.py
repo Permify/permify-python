@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.tenant_list_request import TenantListRequest
+from permify.models.tenant_list_request import TenantListRequest
 
 class TestTenantListRequest(unittest.TestCase):
     """TenantListRequest unit test stubs"""

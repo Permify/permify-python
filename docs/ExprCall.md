@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.expr_call import ExprCall
+from permify.models.expr_call import ExprCall
 
 # TODO update the JSON string below
 json = "{}"

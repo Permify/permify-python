@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.stream_result_of_permission_lookup_entity_stream_response import StreamResultOfPermissionLookupEntityStreamResponse
+from permify.models.stream_result_of_permission_lookup_entity_stream_response import StreamResultOfPermissionLookupEntityStreamResponse
 
 class TestStreamResultOfPermissionLookupEntityStreamResponse(unittest.TestCase):
     """StreamResultOfPermissionLookupEntityStreamResponse unit test stubs"""
@@ -36,9 +36,9 @@ class TestStreamResultOfPermissionLookupEntityStreamResponse(unittest.TestCase):
         model = StreamResultOfPermissionLookupEntityStreamResponse()
         if include_optional:
             return StreamResultOfPermissionLookupEntityStreamResponse(
-                result = openapi_client.models.permission_lookup_entity_stream_response.PermissionLookupEntityStreamResponse(
+                result = permify.models.permission_lookup_entity_stream_response.PermissionLookupEntityStreamResponse(
                     entity_id = '', ),
-                error = openapi_client.models.status.Status(
+                error = permify.models.status.Status(
                     code = 56, 
                     message = '', 
                     details = [

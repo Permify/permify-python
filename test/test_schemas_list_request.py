@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.schemas_list_request import SchemasListRequest
+from permify.models.schemas_list_request import SchemasListRequest
 
 class TestSchemasListRequest(unittest.TestCase):
     """SchemasListRequest unit test stubs"""

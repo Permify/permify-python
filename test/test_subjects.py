@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.subjects import Subjects
+from permify.models.subjects import Subjects
 
 class TestSubjects(unittest.TestCase):
     """Subjects unit test stubs"""
@@ -37,7 +37,7 @@ class TestSubjects(unittest.TestCase):
         if include_optional:
             return Subjects(
                 subjects = [
-                    openapi_client.models.subject.Subject(
+                    permify.models.subject.Subject(
                         type = '', 
                         id = '', 
                         relation = '', )

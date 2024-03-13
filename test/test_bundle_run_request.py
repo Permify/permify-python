@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.bundle_run_request import BundleRunRequest
+from permify.models.bundle_run_request import BundleRunRequest
 
 class TestBundleRunRequest(unittest.TestCase):
     """BundleRunRequest unit test stubs"""

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.v1alpha1_reference import V1alpha1Reference
+from permify.models.v1alpha1_reference import V1alpha1Reference
 
 # TODO update the JSON string below
 json = "{}"

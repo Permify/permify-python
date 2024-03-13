@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.entity_filter import EntityFilter
+from permify.models.entity_filter import EntityFilter
 
 class TestEntityFilter(unittest.TestCase):
     """EntityFilter unit test stubs"""

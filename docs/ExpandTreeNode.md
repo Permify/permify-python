@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.expand_tree_node import ExpandTreeNode
+from permify.models.expand_tree_node import ExpandTreeNode
 
 # TODO update the JSON string below
 json = "{}"

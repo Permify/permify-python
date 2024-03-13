@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.subject_filter import SubjectFilter
+from permify.models.subject_filter import SubjectFilter
 
 class TestSubjectFilter(unittest.TestCase):
     """SubjectFilter unit test stubs"""

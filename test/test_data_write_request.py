@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.data_write_request import DataWriteRequest
+from permify.models.data_write_request import DataWriteRequest
 
 class TestDataWriteRequest(unittest.TestCase):
     """DataWriteRequest unit test stubs"""
@@ -36,22 +36,22 @@ class TestDataWriteRequest(unittest.TestCase):
         model = DataWriteRequest()
         if include_optional:
             return DataWriteRequest(
-                metadata = openapi_client.models.data_write_request_metadata.DataWriteRequestMetadata(
+                metadata = permify.models.data_write_request_metadata.DataWriteRequestMetadata(
                     schema_version = '', ),
                 tuples = [
-                    openapi_client.models.tuple.Tuple(
-                        entity = openapi_client.models.entity.Entity(
+                    permify.models.tuple.Tuple(
+                        entity = permify.models.entity.Entity(
                             type = '', 
                             id = '', ), 
                         relation = '', 
-                        subject = openapi_client.models.subject.Subject(
+                        subject = permify.models.subject.Subject(
                             type = '', 
                             id = '', 
                             relation = '', ), )
                     ],
                 attributes = [
-                    openapi_client.models.attribute.Attribute(
-                        entity = openapi_client.models.entity.Entity(
+                    permify.models.attribute.Attribute(
+                        entity = permify.models.entity.Entity(
                             type = '', 
                             id = '', ), 
                         attribute = '', 

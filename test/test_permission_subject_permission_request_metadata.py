@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.permission_subject_permission_request_metadata import PermissionSubjectPermissionRequestMetadata
+from permify.models.permission_subject_permission_request_metadata import PermissionSubjectPermissionRequestMetadata
 
 class TestPermissionSubjectPermissionRequestMetadata(unittest.TestCase):
     """PermissionSubjectPermissionRequestMetadata unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.data_delete_request import DataDeleteRequest
+from permify.models.data_delete_request import DataDeleteRequest
 
 class TestDataDeleteRequest(unittest.TestCase):
     """DataDeleteRequest unit test stubs"""
@@ -36,21 +36,21 @@ class TestDataDeleteRequest(unittest.TestCase):
         model = DataDeleteRequest()
         if include_optional:
             return DataDeleteRequest(
-                tuple_filter = openapi_client.models.tuple_filter.TupleFilter(
-                    entity = openapi_client.models.entity_filter.EntityFilter(
+                tuple_filter = permify.models.tuple_filter.TupleFilter(
+                    entity = permify.models.entity_filter.EntityFilter(
                         type = '', 
                         ids = [
                             ''
                             ], ), 
                     relation = '', 
-                    subject = openapi_client.models.subject_filter.SubjectFilter(
+                    subject = permify.models.subject_filter.SubjectFilter(
                         type = '', 
                         ids = [
                             ''
                             ], 
                         relation = '', ), ),
-                attribute_filter = openapi_client.models.attribute_filter.AttributeFilter(
-                    entity = openapi_client.models.entity_filter.EntityFilter(
+                attribute_filter = permify.models.attribute_filter.AttributeFilter(
+                    entity = permify.models.entity_filter.EntityFilter(
                         type = '', 
                         ids = [
                             ''

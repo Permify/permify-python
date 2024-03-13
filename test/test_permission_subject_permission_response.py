@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.permission_subject_permission_response import PermissionSubjectPermissionResponse
+from permify.models.permission_subject_permission_response import PermissionSubjectPermissionResponse
 
 class TestPermissionSubjectPermissionResponse(unittest.TestCase):
     """PermissionSubjectPermissionResponse unit test stubs"""

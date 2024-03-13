@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.relationship_write_request_metadata import RelationshipWriteRequestMetadata
+from permify.models.relationship_write_request_metadata import RelationshipWriteRequestMetadata
 
 class TestRelationshipWriteRequestMetadata(unittest.TestCase):
     """RelationshipWriteRequestMetadata unit test stubs"""

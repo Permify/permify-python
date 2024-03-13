@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.data_delete_response import DataDeleteResponse
+from permify.models.data_delete_response import DataDeleteResponse
 
 class TestDataDeleteResponse(unittest.TestCase):
     """DataDeleteResponse unit test stubs"""

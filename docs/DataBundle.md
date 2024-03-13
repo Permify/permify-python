@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_bundle import DataBundle
+from permify.models.data_bundle import DataBundle
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.rewrite_operation import RewriteOperation
+from permify.models.rewrite_operation import RewriteOperation
 
 class TestRewriteOperation(unittest.TestCase):
     """RewriteOperation unit test stubs"""

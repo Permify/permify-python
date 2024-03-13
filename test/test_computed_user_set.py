@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.computed_user_set import ComputedUserSet
+from permify.models.computed_user_set import ComputedUserSet
 
 class TestComputedUserSet(unittest.TestCase):
     """ComputedUserSet unit test stubs"""

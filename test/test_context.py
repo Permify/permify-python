@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.context import Context
+from permify.models.context import Context
 
 class TestContext(unittest.TestCase):
     """Context unit test stubs"""
@@ -37,19 +37,19 @@ class TestContext(unittest.TestCase):
         if include_optional:
             return Context(
                 tuples = [
-                    openapi_client.models.tuple.Tuple(
-                        entity = openapi_client.models.entity.Entity(
+                    permify.models.tuple.Tuple(
+                        entity = permify.models.entity.Entity(
                             type = '', 
                             id = '', ), 
                         relation = '', 
-                        subject = openapi_client.models.subject.Subject(
+                        subject = permify.models.subject.Subject(
                             type = '', 
                             id = '', 
                             relation = '', ), )
                     ],
                 attributes = [
-                    openapi_client.models.attribute.Attribute(
-                        entity = openapi_client.models.entity.Entity(
+                    permify.models.attribute.Attribute(
+                        entity = permify.models.entity.Entity(
                             type = '', 
                             id = '', ), 
                         attribute = '', 

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.permission_expand_request_metadata import PermissionExpandRequestMetadata
+from permify.models.permission_expand_request_metadata import PermissionExpandRequestMetadata
 
 # TODO update the JSON string below
 json = "{}"

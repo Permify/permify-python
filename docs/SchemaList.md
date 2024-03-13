@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.schema_list import SchemaList
+from permify.models.schema_list import SchemaList
 
 # TODO update the JSON string below
 json = "{}"

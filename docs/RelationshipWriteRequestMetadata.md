@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.relationship_write_request_metadata import RelationshipWriteRequestMetadata
+from permify.models.relationship_write_request_metadata import RelationshipWriteRequestMetadata
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.permission_expand_response import PermissionExpandResponse
+from permify.models.permission_expand_response import PermissionExpandResponse
 
 class TestPermissionExpandResponse(unittest.TestCase):
     """PermissionExpandResponse unit test stubs"""
@@ -36,31 +36,31 @@ class TestPermissionExpandResponse(unittest.TestCase):
         model = PermissionExpandResponse()
         if include_optional:
             return PermissionExpandResponse(
-                tree = openapi_client.models.expand.Expand(
-                    entity = openapi_client.models.entity.Entity(
+                tree = permify.models.expand.Expand(
+                    entity = permify.models.entity.Entity(
                         type = '', 
                         id = '', ), 
                     permission = '', 
                     arguments = [
-                        openapi_client.models.argument.Argument(
-                            computed_attribute = openapi_client.models.computed_attribute.ComputedAttribute(
+                        permify.models.argument.Argument(
+                            computed_attribute = permify.models.computed_attribute.ComputedAttribute(
                                 name = '', ), 
-                            context_attribute = openapi_client.models.context_attribute.ContextAttribute(
+                            context_attribute = permify.models.context_attribute.ContextAttribute(
                                 name = '', ), )
                         ], 
-                    expand = openapi_client.models.expand_tree_node.ExpandTreeNode(
+                    expand = permify.models.expand_tree_node.ExpandTreeNode(
                         operation = 'OPERATION_UNSPECIFIED', 
                         children = [
-                            openapi_client.models.expand.Expand(
+                            permify.models.expand.Expand(
                                 permission = '', 
-                                leaf = openapi_client.models.expand_leaf.ExpandLeaf(
-                                    subjects = openapi_client.models.subjects.Subjects(), 
-                                    values = openapi_client.models.values.Values(), 
+                                leaf = permify.models.expand_leaf.ExpandLeaf(
+                                    subjects = permify.models.subjects.Subjects(), 
+                                    values = permify.models.values.Values(), 
                                     value = {
                                         'key' : None
                                         }, ), )
                             ], ), 
-                    leaf = openapi_client.models.expand_leaf.ExpandLeaf(), )
+                    leaf = permify.models.expand_leaf.ExpandLeaf(), )
             )
         else:
             return PermissionExpandResponse(

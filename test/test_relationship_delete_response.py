@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.relationship_delete_response import RelationshipDeleteResponse
+from permify.models.relationship_delete_response import RelationshipDeleteResponse
 
 class TestRelationshipDeleteResponse(unittest.TestCase):
     """RelationshipDeleteResponse unit test stubs"""

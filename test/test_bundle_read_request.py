@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.bundle_read_request import BundleReadRequest
+from permify.models.bundle_read_request import BundleReadRequest
 
 class TestBundleReadRequest(unittest.TestCase):
     """BundleReadRequest unit test stubs"""

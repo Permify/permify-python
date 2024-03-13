@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.rule_definition import RuleDefinition
+from permify.models.rule_definition import RuleDefinition
 
 class TestRuleDefinition(unittest.TestCase):
     """RuleDefinition unit test stubs"""
@@ -40,14 +40,14 @@ class TestRuleDefinition(unittest.TestCase):
                 arguments = {
                     'key' : 'ATTRIBUTE_TYPE_UNSPECIFIED'
                     },
-                expression = openapi_client.models.checked_expr.CheckedExpr(
+                expression = permify.models.checked_expr.CheckedExpr(
                     reference_map = {
-                        'key' : openapi_client.models.v1alpha1/reference.v1alpha1.Reference(
+                        'key' : permify.models.v1alpha1/reference.v1alpha1.Reference(
                             name = '', 
                             overload_id = [
                                 ''
                                 ], 
-                            value = openapi_client.models.constant.Constant(
+                            value = permify.models.constant.Constant(
                                 null_value = '', 
                                 bool_value = True, 
                                 int64_value = '', 
@@ -59,20 +59,20 @@ class TestRuleDefinition(unittest.TestCase):
                                 timestamp_value = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), )
                         }, 
                     type_map = {
-                        'key' : openapi_client.models.v1alpha1/type.v1alpha1.Type(
-                            dyn = openapi_client.models.dyn.dyn(), 
+                        'key' : permify.models.v1alpha1/type.v1alpha1.Type(
+                            dyn = permify.models.dyn.dyn(), 
                             null = '', 
                             primitive = 'PRIMITIVE_TYPE_UNSPECIFIED', 
                             wrapper = 'PRIMITIVE_TYPE_UNSPECIFIED', 
                             well_known = 'WELL_KNOWN_TYPE_UNSPECIFIED', 
-                            list_type = openapi_client.models.list_type.ListType(
-                                elem_type = openapi_client.models.v1alpha1/type.v1alpha1.Type(
-                                    dyn = openapi_client.models.dyn.dyn(), 
+                            list_type = permify.models.list_type.ListType(
+                                elem_type = permify.models.v1alpha1/type.v1alpha1.Type(
+                                    dyn = permify.models.dyn.dyn(), 
                                     null = '', 
-                                    map_type = openapi_client.models.map_type.MapType(
+                                    map_type = permify.models.map_type.MapType(
                                         key_type = , 
                                         value_type = , ), 
-                                    function = openapi_client.models.function_type.FunctionType(
+                                    function = permify.models.function_type.FunctionType(
                                         result_type = , 
                                         arg_types = [
                                             
@@ -80,22 +80,22 @@ class TestRuleDefinition(unittest.TestCase):
                                     message_type = '', 
                                     type_param = '', 
                                     type = , 
-                                    error = openapi_client.models.error.error(), 
-                                    abstract_type = openapi_client.models.abstract_type.AbstractType(
+                                    error = permify.models.error.error(), 
+                                    abstract_type = permify.models.abstract_type.AbstractType(
                                         name = '', 
                                         parameter_types = [
                                             
                                             ], ), ), ), 
-                            map_type = openapi_client.models.map_type.MapType(), 
-                            function = openapi_client.models.function_type.FunctionType(), 
+                            map_type = permify.models.map_type.MapType(), 
+                            function = permify.models.function_type.FunctionType(), 
                             message_type = '', 
                             type_param = '', 
                             type = , 
-                            error = openapi_client.models.error.error(), 
-                            abstract_type = openapi_client.models.abstract_type.AbstractType(
+                            error = permify.models.error.error(), 
+                            abstract_type = permify.models.abstract_type.AbstractType(
                                 name = '', ), )
                         }, 
-                    source_info = openapi_client.models.source_info.SourceInfo(
+                    source_info = permify.models.source_info.SourceInfo(
                         syntax_version = '', 
                         location = '', 
                         line_offsets = [
@@ -105,9 +105,9 @@ class TestRuleDefinition(unittest.TestCase):
                             'key' : 56
                             }, 
                         macro_calls = {
-                            'key' : openapi_client.models.expr.Expr(
+                            'key' : permify.models.expr.Expr(
                                 id = '', 
-                                const_expr = openapi_client.models.constant.Constant(
+                                const_expr = permify.models.constant.Constant(
                                     null_value = '', 
                                     bool_value = True, 
                                     int64_value = '', 
@@ -117,33 +117,33 @@ class TestRuleDefinition(unittest.TestCase):
                                     bytes_value = 'YQ==', 
                                     duration_value = '', 
                                     timestamp_value = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), 
-                                ident_expr = openapi_client.models.ident.Ident(
+                                ident_expr = permify.models.ident.Ident(
                                     name = '', ), 
-                                select_expr = openapi_client.models.select.Select(
-                                    operand = openapi_client.models.expr.Expr(
+                                select_expr = permify.models.select.Select(
+                                    operand = permify.models.expr.Expr(
                                         id = '', 
-                                        call_expr = openapi_client.models.expr/call.Expr.Call(
+                                        call_expr = permify.models.expr/call.Expr.Call(
                                             target = , 
                                             args = [
                                                 
                                                 ], ), 
-                                        list_expr = openapi_client.models.create_list.CreateList(
+                                        list_expr = permify.models.create_list.CreateList(
                                             elements = [
                                                 
                                                 ], 
                                             optional_indices = [
                                                 56
                                                 ], ), 
-                                        struct_expr = openapi_client.models.create_struct.CreateStruct(
+                                        struct_expr = permify.models.create_struct.CreateStruct(
                                             message_name = '', 
                                             entries = [
-                                                openapi_client.models.entry.Entry(
+                                                permify.models.entry.Entry(
                                                     id = '', 
                                                     field_key = '', 
                                                     map_key = , 
                                                     optional_entry = True, )
                                                 ], ), 
-                                        comprehension_expr = openapi_client.models.comprehension.Comprehension(
+                                        comprehension_expr = permify.models.comprehension.Comprehension(
                                             iter_var = '', 
                                             iter_range = , 
                                             accu_var = '', 
@@ -153,11 +153,11 @@ class TestRuleDefinition(unittest.TestCase):
                                             result = , ), ), 
                                     field = '', 
                                     test_only = True, ), 
-                                call_expr = openapi_client.models.expr/call.Expr.Call(), 
-                                list_expr = openapi_client.models.create_list.CreateList(), 
-                                struct_expr = openapi_client.models.create_struct.CreateStruct(
+                                call_expr = permify.models.expr/call.Expr.Call(), 
+                                list_expr = permify.models.create_list.CreateList(), 
+                                struct_expr = permify.models.create_struct.CreateStruct(
                                     message_name = '', ), 
-                                comprehension_expr = openapi_client.models.comprehension.Comprehension(
+                                comprehension_expr = permify.models.comprehension.Comprehension(
                                     iter_var = '', 
                                     accu_var = '', ), )
                             }, ), 

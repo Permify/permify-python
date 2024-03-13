@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.constant import Constant
+from permify.models.constant import Constant
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.attribute_read_response import AttributeReadResponse
+from permify.models.attribute_read_response import AttributeReadResponse
 
 class TestAttributeReadResponse(unittest.TestCase):
     """AttributeReadResponse unit test stubs"""
@@ -37,8 +37,8 @@ class TestAttributeReadResponse(unittest.TestCase):
         if include_optional:
             return AttributeReadResponse(
                 attributes = [
-                    openapi_client.models.attribute.Attribute(
-                        entity = openapi_client.models.entity.Entity(
+                    permify.models.attribute.Attribute(
+                        entity = permify.models.entity.Entity(
                             type = '', 
                             id = '', ), 
                         attribute = '', 

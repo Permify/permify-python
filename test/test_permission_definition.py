@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.permission_definition import PermissionDefinition
+from permify.models.permission_definition import PermissionDefinition
 
 class TestPermissionDefinition(unittest.TestCase):
     """PermissionDefinition unit test stubs"""
@@ -37,28 +37,28 @@ class TestPermissionDefinition(unittest.TestCase):
         if include_optional:
             return PermissionDefinition(
                 name = '',
-                child = openapi_client.models.child.Child(
-                    leaf = openapi_client.models.leaf.Leaf(
-                        computed_user_set = openapi_client.models.computed_user_set.ComputedUserSet(
+                child = permify.models.child.Child(
+                    leaf = permify.models.leaf.Leaf(
+                        computed_user_set = permify.models.computed_user_set.ComputedUserSet(
                             relation = '', ), 
-                        tuple_to_user_set = openapi_client.models.tuple_to_user_set.TupleToUserSet(
-                            tuple_set = openapi_client.models.tuple_set.TupleSet(
+                        tuple_to_user_set = permify.models.tuple_to_user_set.TupleToUserSet(
+                            tuple_set = permify.models.tuple_set.TupleSet(
                                 relation = '', ), 
-                            computed = openapi_client.models.computed_user_set.ComputedUserSet(
+                            computed = permify.models.computed_user_set.ComputedUserSet(
                                 relation = '', ), ), 
-                        computed_attribute = openapi_client.models.computed_attribute.ComputedAttribute(
+                        computed_attribute = permify.models.computed_attribute.ComputedAttribute(
                             name = '', ), 
-                        call = openapi_client.models.v1/call.v1.Call(
+                        call = permify.models.v1/call.v1.Call(
                             rule_name = '', 
                             arguments = [
-                                openapi_client.models.argument.Argument(
-                                    context_attribute = openapi_client.models.context_attribute.ContextAttribute(
+                                permify.models.argument.Argument(
+                                    context_attribute = permify.models.context_attribute.ContextAttribute(
                                         name = '', ), )
                                 ], ), ), 
-                    rewrite = openapi_client.models.rewrite.Rewrite(
+                    rewrite = permify.models.rewrite.Rewrite(
                         rewrite_operation = 'OPERATION_UNSPECIFIED', 
                         children = [
-                            openapi_client.models.child.Child()
+                            permify.models.child.Child()
                             ], ), )
             )
         else:

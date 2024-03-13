@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.bundle_write_request import BundleWriteRequest
+from permify.models.bundle_write_request import BundleWriteRequest
 
 class TestBundleWriteRequest(unittest.TestCase):
     """BundleWriteRequest unit test stubs"""
@@ -37,13 +37,13 @@ class TestBundleWriteRequest(unittest.TestCase):
         if include_optional:
             return BundleWriteRequest(
                 bundles = [
-                    openapi_client.models.data_bundle.DataBundle(
+                    permify.models.data_bundle.DataBundle(
                         name = '', 
                         arguments = [
                             ''
                             ], 
                         operations = [
-                            openapi_client.models.v1/operation.v1.Operation(
+                            permify.models.v1/operation.v1.Operation(
                                 relationships_write = [
                                     ''
                                     ], 

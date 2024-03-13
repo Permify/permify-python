@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.bundle_run_request import BundleRunRequest
+from permify.models.bundle_run_request import BundleRunRequest
 
 # TODO update the JSON string below
 json = "{}"

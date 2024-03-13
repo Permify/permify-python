@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.v1_operation import V1Operation
+from permify.models.v1_operation import V1Operation
 
 # TODO update the JSON string below
 json = "{}"

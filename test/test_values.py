@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.values import Values
+from permify.models.values import Values
 
 class TestValues(unittest.TestCase):
     """Values unit test stubs"""

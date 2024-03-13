@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.stream_result_of_watch_response import StreamResultOfWatchResponse
+from permify.models.stream_result_of_watch_response import StreamResultOfWatchResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.computed_attribute import ComputedAttribute
+from permify.models.computed_attribute import ComputedAttribute
 
 class TestComputedAttribute(unittest.TestCase):
     """ComputedAttribute unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.well_known_type import WellKnownType
+from permify.models.well_known_type import WellKnownType
 
 class TestWellKnownType(unittest.TestCase):
     """WellKnownType unit test stubs"""

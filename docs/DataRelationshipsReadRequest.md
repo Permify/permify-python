@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_relationships_read_request import DataRelationshipsReadRequest
+from permify.models.data_relationships_read_request import DataRelationshipsReadRequest
 
 # TODO update the JSON string below
 json = "{}"

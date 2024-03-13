@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.expand_leaf import ExpandLeaf
+from permify.models.expand_leaf import ExpandLeaf
 
 class TestExpandLeaf(unittest.TestCase):
     """ExpandLeaf unit test stubs"""
@@ -36,8 +36,8 @@ class TestExpandLeaf(unittest.TestCase):
         model = ExpandLeaf()
         if include_optional:
             return ExpandLeaf(
-                subjects = openapi_client.models.subjects.Subjects(),
-                values = openapi_client.models.values.Values(),
+                subjects = permify.models.subjects.Subjects(),
+                values = permify.models.values.Values(),
                 value = {
                     'key' : None
                     }

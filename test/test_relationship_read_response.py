@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.relationship_read_response import RelationshipReadResponse
+from permify.models.relationship_read_response import RelationshipReadResponse
 
 class TestRelationshipReadResponse(unittest.TestCase):
     """RelationshipReadResponse unit test stubs"""
@@ -37,12 +37,12 @@ class TestRelationshipReadResponse(unittest.TestCase):
         if include_optional:
             return RelationshipReadResponse(
                 tuples = [
-                    openapi_client.models.tuple.Tuple(
-                        entity = openapi_client.models.entity.Entity(
+                    permify.models.tuple.Tuple(
+                        entity = permify.models.entity.Entity(
                             type = '', 
                             id = '', ), 
                         relation = '', 
-                        subject = openapi_client.models.subject.Subject(
+                        subject = permify.models.subject.Subject(
                             type = '', 
                             id = '', 
                             relation = '', ), )

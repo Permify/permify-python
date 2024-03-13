@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.v1alpha1_reference import V1alpha1Reference
+from permify.models.v1alpha1_reference import V1alpha1Reference
 
 class TestV1alpha1Reference(unittest.TestCase):
     """V1alpha1Reference unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1alpha1Reference(unittest.TestCase):
                 overload_id = [
                     ''
                     ],
-                value = openapi_client.models.constant.Constant(
+                value = permify.models.constant.Constant(
                     null_value = '', 
                     bool_value = True, 
                     int64_value = '', 

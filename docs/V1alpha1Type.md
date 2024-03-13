@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.v1alpha1_type import V1alpha1Type
+from permify.models.v1alpha1_type import V1alpha1Type
 
 # TODO update the JSON string below
 json = "{}"

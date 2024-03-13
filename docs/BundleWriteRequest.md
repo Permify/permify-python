@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.bundle_write_request import BundleWriteRequest
+from permify.models.bundle_write_request import BundleWriteRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.schema_write_response import SchemaWriteResponse
+from permify.models.schema_write_response import SchemaWriteResponse
 
 class TestSchemaWriteResponse(unittest.TestCase):
     """SchemaWriteResponse unit test stubs"""

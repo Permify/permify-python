@@ -1,4 +1,4 @@
-# openapi_client.WatchApi
+# permify.WatchApi
 
 All URIs are relative to *http://localhost*
 
@@ -16,25 +16,25 @@ Method | HTTP request | Description
 
 
 ```python
-import openapi_client
-from openapi_client.models.stream_result_of_watch_response import StreamResultOfWatchResponse
-from openapi_client.models.watch_watch_request import WatchWatchRequest
-from openapi_client.rest import ApiException
+import permify
+from permify.models.stream_result_of_watch_response import StreamResultOfWatchResponse
+from permify.models.watch_watch_request import WatchWatchRequest
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WatchApi(api_client)
+    api_instance = permify.WatchApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.
-    body = openapi_client.WatchWatchRequest() # WatchWatchRequest | 
+    body = permify.WatchWatchRequest() # WatchWatchRequest | 
 
     try:
         api_response = api_instance.watch_watch(tenant_id, body)

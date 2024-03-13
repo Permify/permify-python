@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.attribute import Attribute
+from permify.models.attribute import Attribute
 
 class TestAttribute(unittest.TestCase):
     """Attribute unit test stubs"""
@@ -36,7 +36,7 @@ class TestAttribute(unittest.TestCase):
         model = Attribute()
         if include_optional:
             return Attribute(
-                entity = openapi_client.models.entity.Entity(
+                entity = permify.models.entity.Entity(
                     type = '', 
                     id = '', ),
                 attribute = '',

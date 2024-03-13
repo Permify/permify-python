@@ -1,4 +1,4 @@
-# openapi_client.TenancyApi
+# permify.TenancyApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,24 +18,24 @@ create new tenant
 
 
 ```python
-import openapi_client
-from openapi_client.models.tenant_create_request import TenantCreateRequest
-from openapi_client.models.tenant_create_response import TenantCreateResponse
-from openapi_client.rest import ApiException
+import permify
+from permify.models.tenant_create_request import TenantCreateRequest
+from permify.models.tenant_create_response import TenantCreateResponse
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TenancyApi(api_client)
-    body = openapi_client.TenantCreateRequest() # TenantCreateRequest | TenantCreateRequest is the message used for the request to create a tenant.
+    api_instance = permify.TenancyApi(api_client)
+    body = permify.TenantCreateRequest() # TenantCreateRequest | TenantCreateRequest is the message used for the request to create a tenant.
 
     try:
         # create new tenant
@@ -86,22 +86,22 @@ delete tenant
 
 
 ```python
-import openapi_client
-from openapi_client.models.tenant_delete_response import TenantDeleteResponse
-from openapi_client.rest import ApiException
+import permify
+from permify.models.tenant_delete_response import TenantDeleteResponse
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TenancyApi(api_client)
+    api_instance = permify.TenancyApi(api_client)
     id = 'id_example' # str | id is the unique identifier of the tenant to be deleted.
 
     try:
@@ -153,24 +153,24 @@ list tenants
 
 
 ```python
-import openapi_client
-from openapi_client.models.tenant_list_request import TenantListRequest
-from openapi_client.models.tenant_list_response import TenantListResponse
-from openapi_client.rest import ApiException
+import permify
+from permify.models.tenant_list_request import TenantListRequest
+from permify.models.tenant_list_response import TenantListResponse
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TenancyApi(api_client)
-    body = openapi_client.TenantListRequest() # TenantListRequest | TenantListRequest is the message used for the request to list all tenants.
+    api_instance = permify.TenancyApi(api_client)
+    body = permify.TenantListRequest() # TenantListRequest | TenantListRequest is the message used for the request to list all tenants.
 
     try:
         # list tenants

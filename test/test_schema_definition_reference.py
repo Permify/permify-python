@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.schema_definition_reference import SchemaDefinitionReference
+from permify.models.schema_definition_reference import SchemaDefinitionReference
 
 class TestSchemaDefinitionReference(unittest.TestCase):
     """SchemaDefinitionReference unit test stubs"""

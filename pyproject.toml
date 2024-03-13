@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "openapi_client"
+name = "permify"
 version = "1.0.0"
 description = "Permify API"
 authors = ["API Support <hello@permify.co>"]
 license = "Apache-2.0 license"
 readme = "README.md"
-repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
+repository = "https://github.com/permify/permify-python"
 keywords = ["OpenAPI", "OpenAPI-Generator", "Permify API"]
-include = ["openapi_client/py.typed"]
+include = ["permify/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
@@ -34,7 +34,7 @@ extension-pkg-whitelist = "pydantic"
 
 [tool.mypy]
 files = [
-  "openapi_client",
+  "permify",
   #"test",  # auto-generated tests
   "tests", # hand-written tests
 ]

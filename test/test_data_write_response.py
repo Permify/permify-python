@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.data_write_response import DataWriteResponse
+from permify.models.data_write_response import DataWriteResponse
 
 class TestDataWriteResponse(unittest.TestCase):
     """DataWriteResponse unit test stubs"""

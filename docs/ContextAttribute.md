@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.context_attribute import ContextAttribute
+from permify.models.context_attribute import ContextAttribute
 
 # TODO update the JSON string below
 json = "{}"

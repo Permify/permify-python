@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.v1_operation import V1Operation
+from permify.models.v1_operation import V1Operation
 
 class TestV1Operation(unittest.TestCase):
     """V1Operation unit test stubs"""

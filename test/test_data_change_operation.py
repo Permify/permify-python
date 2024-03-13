@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.data_change_operation import DataChangeOperation
+from permify.models.data_change_operation import DataChangeOperation
 
 class TestDataChangeOperation(unittest.TestCase):
     """DataChangeOperation unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.entity import Entity
+from permify.models.entity import Entity
 
 class TestEntity(unittest.TestCase):
     """Entity unit test stubs"""

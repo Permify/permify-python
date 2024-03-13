@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.constant import Constant
+from permify.models.constant import Constant
 
 class TestConstant(unittest.TestCase):
     """Constant unit test stubs"""

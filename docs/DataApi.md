@@ -1,4 +1,4 @@
-# openapi_client.DataApi
+# permify.DataApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,25 +22,25 @@ run bundle
 
 
 ```python
-import openapi_client
-from openapi_client.models.bundle_run_request import BundleRunRequest
-from openapi_client.models.bundle_run_response import BundleRunResponse
-from openapi_client.rest import ApiException
+import permify
+from permify.models.bundle_run_request import BundleRunRequest
+from permify.models.bundle_run_response import BundleRunResponse
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DataApi(api_client)
+    api_instance = permify.DataApi(api_client)
     tenant_id = 'tenant_id_example' # str | 
-    body = openapi_client.BundleRunRequest() # BundleRunRequest | 
+    body = permify.BundleRunRequest() # BundleRunRequest | 
 
     try:
         # run bundle
@@ -92,25 +92,25 @@ read attribute(s)
 
 
 ```python
-import openapi_client
-from openapi_client.models.attribute_read_response import AttributeReadResponse
-from openapi_client.models.data_attributes_read_request import DataAttributesReadRequest
-from openapi_client.rest import ApiException
+import permify
+from permify.models.attribute_read_response import AttributeReadResponse
+from permify.models.data_attributes_read_request import DataAttributesReadRequest
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DataApi(api_client)
+    api_instance = permify.DataApi(api_client)
     tenant_id = 'tenant_id_example' # str | tenant_id represents the unique identifier of the tenant from which the attributes are being read.
-    body = openapi_client.DataAttributesReadRequest() # DataAttributesReadRequest | 
+    body = permify.DataAttributesReadRequest() # DataAttributesReadRequest | 
 
     try:
         # read attribute(s)
@@ -162,25 +162,25 @@ delete data
 
 
 ```python
-import openapi_client
-from openapi_client.models.data_delete_request import DataDeleteRequest
-from openapi_client.models.data_delete_response import DataDeleteResponse
-from openapi_client.rest import ApiException
+import permify
+from permify.models.data_delete_request import DataDeleteRequest
+from permify.models.data_delete_response import DataDeleteResponse
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DataApi(api_client)
+    api_instance = permify.DataApi(api_client)
     tenant_id = 'tenant_id_example' # str | tenant_id represents the unique identifier of the tenant from which the data will be deleted.
-    body = openapi_client.DataDeleteRequest() # DataDeleteRequest | 
+    body = permify.DataDeleteRequest() # DataDeleteRequest | 
 
     try:
         # delete data
@@ -232,25 +232,25 @@ read relation tuple(s)
 
 
 ```python
-import openapi_client
-from openapi_client.models.data_relationships_read_request import DataRelationshipsReadRequest
-from openapi_client.models.relationship_read_response import RelationshipReadResponse
-from openapi_client.rest import ApiException
+import permify
+from permify.models.data_relationships_read_request import DataRelationshipsReadRequest
+from permify.models.relationship_read_response import RelationshipReadResponse
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DataApi(api_client)
+    api_instance = permify.DataApi(api_client)
     tenant_id = 'tenant_id_example' # str | tenant_id represents the unique identifier of the tenant for which relationships are read.
-    body = openapi_client.DataRelationshipsReadRequest() # DataRelationshipsReadRequest | 
+    body = permify.DataRelationshipsReadRequest() # DataRelationshipsReadRequest | 
 
     try:
         # read relation tuple(s)
@@ -302,25 +302,25 @@ create data
 
 
 ```python
-import openapi_client
-from openapi_client.models.data_write_request import DataWriteRequest
-from openapi_client.models.data_write_response import DataWriteResponse
-from openapi_client.rest import ApiException
+import permify
+from permify.models.data_write_request import DataWriteRequest
+from permify.models.data_write_response import DataWriteResponse
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DataApi(api_client)
+    api_instance = permify.DataApi(api_client)
     tenant_id = 'tenant_id_example' # str | tenant_id represents the unique identifier of the tenant for which data is written.
-    body = openapi_client.DataWriteRequest() # DataWriteRequest | 
+    body = permify.DataWriteRequest() # DataWriteRequest | 
 
     try:
         # create data
@@ -372,25 +372,25 @@ delete relationships
 
 
 ```python
-import openapi_client
-from openapi_client.models.relationship_delete_request import RelationshipDeleteRequest
-from openapi_client.models.relationship_delete_response import RelationshipDeleteResponse
-from openapi_client.rest import ApiException
+import permify
+from permify.models.relationship_delete_request import RelationshipDeleteRequest
+from permify.models.relationship_delete_response import RelationshipDeleteResponse
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DataApi(api_client)
+    api_instance = permify.DataApi(api_client)
     tenant_id = 'tenant_id_example' # str | 
-    body = openapi_client.RelationshipDeleteRequest() # RelationshipDeleteRequest | 
+    body = permify.RelationshipDeleteRequest() # RelationshipDeleteRequest | 
 
     try:
         # delete relationships
@@ -442,25 +442,25 @@ create new relationships
 
 
 ```python
-import openapi_client
-from openapi_client.models.relationship_write_response import RelationshipWriteResponse
-from openapi_client.models.relationships_write_request import RelationshipsWriteRequest
-from openapi_client.rest import ApiException
+import permify
+from permify.models.relationship_write_response import RelationshipWriteResponse
+from permify.models.relationships_write_request import RelationshipsWriteRequest
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DataApi(api_client)
+    api_instance = permify.DataApi(api_client)
     tenant_id = 'tenant_id_example' # str | Unique identifier for the tenant with specific constraints.
-    body = openapi_client.RelationshipsWriteRequest() # RelationshipsWriteRequest | 
+    body = permify.RelationshipsWriteRequest() # RelationshipsWriteRequest | 
 
     try:
         # create new relationships

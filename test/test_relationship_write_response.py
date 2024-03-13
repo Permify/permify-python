@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.relationship_write_response import RelationshipWriteResponse
+from permify.models.relationship_write_response import RelationshipWriteResponse
 
 class TestRelationshipWriteResponse(unittest.TestCase):
     """RelationshipWriteResponse unit test stubs"""

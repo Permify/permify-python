@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.map_type import MapType
+from permify.models.map_type import MapType
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.watch_watch_request import WatchWatchRequest
+from permify.models.watch_watch_request import WatchWatchRequest
 
 class TestWatchWatchRequest(unittest.TestCase):
     """WatchWatchRequest unit test stubs"""

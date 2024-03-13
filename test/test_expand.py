@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.expand import Expand
+from permify.models.expand import Expand
 
 class TestExpand(unittest.TestCase):
     """Expand unit test stubs"""
@@ -36,48 +36,48 @@ class TestExpand(unittest.TestCase):
         model = Expand()
         if include_optional:
             return Expand(
-                entity = openapi_client.models.entity.Entity(
+                entity = permify.models.entity.Entity(
                     type = '', 
                     id = '', ),
                 permission = '',
                 arguments = [
-                    openapi_client.models.argument.Argument(
-                        computed_attribute = openapi_client.models.computed_attribute.ComputedAttribute(
+                    permify.models.argument.Argument(
+                        computed_attribute = permify.models.computed_attribute.ComputedAttribute(
                             name = '', ), 
-                        context_attribute = openapi_client.models.context_attribute.ContextAttribute(
+                        context_attribute = permify.models.context_attribute.ContextAttribute(
                             name = '', ), )
                     ],
-                expand = openapi_client.models.expand_tree_node.ExpandTreeNode(
+                expand = permify.models.expand_tree_node.ExpandTreeNode(
                     operation = 'OPERATION_UNSPECIFIED', 
                     children = [
-                        openapi_client.models.expand.Expand(
-                            entity = openapi_client.models.entity.Entity(
+                        permify.models.expand.Expand(
+                            entity = permify.models.entity.Entity(
                                 type = '', 
                                 id = '', ), 
                             permission = '', 
                             arguments = [
-                                openapi_client.models.argument.Argument(
-                                    computed_attribute = openapi_client.models.computed_attribute.ComputedAttribute(
+                                permify.models.argument.Argument(
+                                    computed_attribute = permify.models.computed_attribute.ComputedAttribute(
                                         name = '', ), 
-                                    context_attribute = openapi_client.models.context_attribute.ContextAttribute(
+                                    context_attribute = permify.models.context_attribute.ContextAttribute(
                                         name = '', ), )
                                 ], 
-                            expand = openapi_client.models.expand_tree_node.ExpandTreeNode(
+                            expand = permify.models.expand_tree_node.ExpandTreeNode(
                                 children = [
-                                    openapi_client.models.expand.Expand(
+                                    permify.models.expand.Expand(
                                         permission = '', 
-                                        leaf = openapi_client.models.expand_leaf.ExpandLeaf(
-                                            subjects = openapi_client.models.subjects.Subjects(), 
-                                            values = openapi_client.models.values.Values(), 
+                                        leaf = permify.models.expand_leaf.ExpandLeaf(
+                                            subjects = permify.models.subjects.Subjects(), 
+                                            values = permify.models.values.Values(), 
                                             value = {
                                                 'key' : None
                                                 }, ), )
                                     ], ), 
-                            leaf = openapi_client.models.expand_leaf.ExpandLeaf(), )
+                            leaf = permify.models.expand_leaf.ExpandLeaf(), )
                         ], ),
-                leaf = openapi_client.models.expand_leaf.ExpandLeaf(
-                    subjects = openapi_client.models.subjects.Subjects(), 
-                    values = openapi_client.models.values.Values(), 
+                leaf = permify.models.expand_leaf.ExpandLeaf(
+                    subjects = permify.models.subjects.Subjects(), 
+                    values = permify.models.values.Values(), 
                     value = {
                         'key' : None
                         }, )

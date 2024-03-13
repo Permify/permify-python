@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.ident import Ident
+from permify.models.ident import Ident
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.expand_tree_node_operation import ExpandTreeNodeOperation
+from permify.models.expand_tree_node_operation import ExpandTreeNodeOperation
 
 class TestExpandTreeNodeOperation(unittest.TestCase):
     """ExpandTreeNodeOperation unit test stubs"""

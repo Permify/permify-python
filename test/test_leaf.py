@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.leaf import Leaf
+from permify.models.leaf import Leaf
 
 class TestLeaf(unittest.TestCase):
     """Leaf unit test stubs"""
@@ -36,22 +36,22 @@ class TestLeaf(unittest.TestCase):
         model = Leaf()
         if include_optional:
             return Leaf(
-                computed_user_set = openapi_client.models.computed_user_set.ComputedUserSet(
+                computed_user_set = permify.models.computed_user_set.ComputedUserSet(
                     relation = '', ),
-                tuple_to_user_set = openapi_client.models.tuple_to_user_set.TupleToUserSet(
-                    tuple_set = openapi_client.models.tuple_set.TupleSet(
+                tuple_to_user_set = permify.models.tuple_to_user_set.TupleToUserSet(
+                    tuple_set = permify.models.tuple_set.TupleSet(
                         relation = '', ), 
-                    computed = openapi_client.models.computed_user_set.ComputedUserSet(
+                    computed = permify.models.computed_user_set.ComputedUserSet(
                         relation = '', ), ),
-                computed_attribute = openapi_client.models.computed_attribute.ComputedAttribute(
+                computed_attribute = permify.models.computed_attribute.ComputedAttribute(
                     name = '', ),
-                call = openapi_client.models.v1/call.v1.Call(
+                call = permify.models.v1/call.v1.Call(
                     rule_name = '', 
                     arguments = [
-                        openapi_client.models.argument.Argument(
-                            computed_attribute = openapi_client.models.computed_attribute.ComputedAttribute(
+                        permify.models.argument.Argument(
+                            computed_attribute = permify.models.computed_attribute.ComputedAttribute(
                                 name = '', ), 
-                            context_attribute = openapi_client.models.context_attribute.ContextAttribute(
+                            context_attribute = permify.models.context_attribute.ContextAttribute(
                                 name = '', ), )
                         ], )
             )

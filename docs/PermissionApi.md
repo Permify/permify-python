@@ -1,4 +1,4 @@
-# openapi_client.PermissionApi
+# permify.PermissionApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,25 +21,25 @@ This method returns a decision about whether user can perform an permission on a
 
 
 ```python
-import openapi_client
-from openapi_client.models.permission_check_response import PermissionCheckResponse
-from openapi_client.models.permissions_check_request import PermissionsCheckRequest
-from openapi_client.rest import ApiException
+import permify
+from permify.models.permission_check_response import PermissionCheckResponse
+from permify.models.permissions_check_request import PermissionsCheckRequest
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PermissionApi(api_client)
+    api_instance = permify.PermissionApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.
-    body = openapi_client.PermissionsCheckRequest() # PermissionsCheckRequest | 
+    body = permify.PermissionsCheckRequest() # PermissionsCheckRequest | 
 
     try:
         # This method returns a decision about whether user can perform an permission on a certain resource.
@@ -91,25 +91,25 @@ expand relationships according to schema
 
 
 ```python
-import openapi_client
-from openapi_client.models.permission_expand_response import PermissionExpandResponse
-from openapi_client.models.permissions_expand_request import PermissionsExpandRequest
-from openapi_client.rest import ApiException
+import permify
+from permify.models.permission_expand_response import PermissionExpandResponse
+from permify.models.permissions_expand_request import PermissionsExpandRequest
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PermissionApi(api_client)
+    api_instance = permify.PermissionApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.
-    body = openapi_client.PermissionsExpandRequest() # PermissionsExpandRequest | 
+    body = permify.PermissionsExpandRequest() # PermissionsExpandRequest | 
 
     try:
         # expand relationships according to schema
@@ -161,25 +161,25 @@ Retrieve an entity by its identifier.
 
 
 ```python
-import openapi_client
-from openapi_client.models.permission_lookup_entity_response import PermissionLookupEntityResponse
-from openapi_client.models.permissions_lookup_entity_request import PermissionsLookupEntityRequest
-from openapi_client.rest import ApiException
+import permify
+from permify.models.permission_lookup_entity_response import PermissionLookupEntityResponse
+from permify.models.permissions_lookup_entity_request import PermissionsLookupEntityRequest
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PermissionApi(api_client)
+    api_instance = permify.PermissionApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.
-    body = openapi_client.PermissionsLookupEntityRequest() # PermissionsLookupEntityRequest | 
+    body = permify.PermissionsLookupEntityRequest() # PermissionsLookupEntityRequest | 
 
     try:
         # Retrieve an entity by its identifier.
@@ -231,25 +231,25 @@ Stream entities by their identifiers.
 
 
 ```python
-import openapi_client
-from openapi_client.models.permissions_lookup_entity_request import PermissionsLookupEntityRequest
-from openapi_client.models.stream_result_of_permission_lookup_entity_stream_response import StreamResultOfPermissionLookupEntityStreamResponse
-from openapi_client.rest import ApiException
+import permify
+from permify.models.permissions_lookup_entity_request import PermissionsLookupEntityRequest
+from permify.models.stream_result_of_permission_lookup_entity_stream_response import StreamResultOfPermissionLookupEntityStreamResponse
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PermissionApi(api_client)
+    api_instance = permify.PermissionApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.
-    body = openapi_client.PermissionsLookupEntityRequest() # PermissionsLookupEntityRequest | 
+    body = permify.PermissionsLookupEntityRequest() # PermissionsLookupEntityRequest | 
 
     try:
         # Stream entities by their identifiers.
@@ -301,25 +301,25 @@ Retrieve a subject by its identifier.
 
 
 ```python
-import openapi_client
-from openapi_client.models.permission_lookup_subject_response import PermissionLookupSubjectResponse
-from openapi_client.models.permissions_lookup_subject_request import PermissionsLookupSubjectRequest
-from openapi_client.rest import ApiException
+import permify
+from permify.models.permission_lookup_subject_response import PermissionLookupSubjectResponse
+from permify.models.permissions_lookup_subject_request import PermissionsLookupSubjectRequest
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PermissionApi(api_client)
+    api_instance = permify.PermissionApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.
-    body = openapi_client.PermissionsLookupSubjectRequest() # PermissionsLookupSubjectRequest | 
+    body = permify.PermissionsLookupSubjectRequest() # PermissionsLookupSubjectRequest | 
 
     try:
         # Retrieve a subject by its identifier.
@@ -371,25 +371,25 @@ Retrieve permissions related to a specific subject.
 
 
 ```python
-import openapi_client
-from openapi_client.models.permission_subject_permission_response import PermissionSubjectPermissionResponse
-from openapi_client.models.permissions_subject_permission_request import PermissionsSubjectPermissionRequest
-from openapi_client.rest import ApiException
+import permify
+from permify.models.permission_subject_permission_response import PermissionSubjectPermissionResponse
+from permify.models.permissions_subject_permission_request import PermissionsSubjectPermissionRequest
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PermissionApi(api_client)
+    api_instance = permify.PermissionApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.
-    body = openapi_client.PermissionsSubjectPermissionRequest() # PermissionsSubjectPermissionRequest | 
+    body = permify.PermissionsSubjectPermissionRequest() # PermissionsSubjectPermissionRequest | 
 
     try:
         # Retrieve permissions related to a specific subject.

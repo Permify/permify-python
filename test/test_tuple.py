@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.tuple import Tuple
+from permify.models.tuple import Tuple
 
 class TestTuple(unittest.TestCase):
     """Tuple unit test stubs"""
@@ -36,11 +36,11 @@ class TestTuple(unittest.TestCase):
         model = Tuple()
         if include_optional:
             return Tuple(
-                entity = openapi_client.models.entity.Entity(
+                entity = permify.models.entity.Entity(
                     type = '', 
                     id = '', ),
                 relation = '',
-                subject = openapi_client.models.subject.Subject(
+                subject = permify.models.subject.Subject(
                     type = '', 
                     id = '', 
                     relation = '', )

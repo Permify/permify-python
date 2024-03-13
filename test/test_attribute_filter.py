@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.attribute_filter import AttributeFilter
+from permify.models.attribute_filter import AttributeFilter
 
 class TestAttributeFilter(unittest.TestCase):
     """AttributeFilter unit test stubs"""
@@ -36,7 +36,7 @@ class TestAttributeFilter(unittest.TestCase):
         model = AttributeFilter()
         if include_optional:
             return AttributeFilter(
-                entity = openapi_client.models.entity_filter.EntityFilter(
+                entity = permify.models.entity_filter.EntityFilter(
                     type = '', 
                     ids = [
                         ''

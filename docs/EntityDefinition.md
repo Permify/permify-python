@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.entity_definition import EntityDefinition
+from permify.models.entity_definition import EntityDefinition
 
 # TODO update the JSON string below
 json = "{}"

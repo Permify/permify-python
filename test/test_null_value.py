@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.null_value import NullValue
+from permify.models.null_value import NullValue
 
 class TestNullValue(unittest.TestCase):
     """NullValue unit test stubs"""

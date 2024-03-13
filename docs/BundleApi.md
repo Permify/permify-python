@@ -1,4 +1,4 @@
-# openapi_client.BundleApi
+# permify.BundleApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,25 +18,25 @@ delete bundle
 
 
 ```python
-import openapi_client
-from openapi_client.models.bundle_delete_request import BundleDeleteRequest
-from openapi_client.models.bundle_delete_response import BundleDeleteResponse
-from openapi_client.rest import ApiException
+import permify
+from permify.models.bundle_delete_request import BundleDeleteRequest
+from permify.models.bundle_delete_response import BundleDeleteResponse
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.BundleApi(api_client)
+    api_instance = permify.BundleApi(api_client)
     tenant_id = 'tenant_id_example' # str | 
-    body = openapi_client.BundleDeleteRequest() # BundleDeleteRequest | 
+    body = permify.BundleDeleteRequest() # BundleDeleteRequest | 
 
     try:
         # delete bundle
@@ -88,25 +88,25 @@ read bundle
 
 
 ```python
-import openapi_client
-from openapi_client.models.bundle_read_request import BundleReadRequest
-from openapi_client.models.bundle_read_response import BundleReadResponse
-from openapi_client.rest import ApiException
+import permify
+from permify.models.bundle_read_request import BundleReadRequest
+from permify.models.bundle_read_response import BundleReadResponse
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.BundleApi(api_client)
+    api_instance = permify.BundleApi(api_client)
     tenant_id = 'tenant_id_example' # str | 
-    body = openapi_client.BundleReadRequest() # BundleReadRequest | 
+    body = permify.BundleReadRequest() # BundleReadRequest | 
 
     try:
         # read bundle
@@ -158,25 +158,25 @@ write bundle
 
 
 ```python
-import openapi_client
-from openapi_client.models.bundle_write_request import BundleWriteRequest
-from openapi_client.models.bundle_write_response import BundleWriteResponse
-from openapi_client.rest import ApiException
+import permify
+from permify.models.bundle_write_request import BundleWriteRequest
+from permify.models.bundle_write_response import BundleWriteResponse
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.BundleApi(api_client)
+    api_instance = permify.BundleApi(api_client)
     tenant_id = 'tenant_id_example' # str | 
-    body = openapi_client.BundleWriteRequest() # BundleWriteRequest | 
+    body = permify.BundleWriteRequest() # BundleWriteRequest | 
 
     try:
         # write bundle

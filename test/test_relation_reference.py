@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.relation_reference import RelationReference
+from permify.models.relation_reference import RelationReference
 
 class TestRelationReference(unittest.TestCase):
     """RelationReference unit test stubs"""

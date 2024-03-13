@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.permissions_lookup_entity_request import PermissionsLookupEntityRequest
+from permify.models.permissions_lookup_entity_request import PermissionsLookupEntityRequest
 
 class TestPermissionsLookupEntityRequest(unittest.TestCase):
     """PermissionsLookupEntityRequest unit test stubs"""
@@ -36,36 +36,36 @@ class TestPermissionsLookupEntityRequest(unittest.TestCase):
         model = PermissionsLookupEntityRequest()
         if include_optional:
             return PermissionsLookupEntityRequest(
-                metadata = openapi_client.models.permission_lookup_entity_request_metadata.PermissionLookupEntityRequestMetadata(
+                metadata = permify.models.permission_lookup_entity_request_metadata.PermissionLookupEntityRequestMetadata(
                     schema_version = '', 
                     snap_token = '', 
                     depth = 56, ),
                 entity_type = '',
                 permission = '',
-                subject = openapi_client.models.subject.Subject(
+                subject = permify.models.subject.Subject(
                     type = '', 
                     id = '', 
                     relation = '', ),
-                context = openapi_client.models.context.Context(
+                context = permify.models.context.Context(
                     tuples = [
-                        openapi_client.models.tuple.Tuple(
-                            entity = openapi_client.models.entity.Entity(
+                        permify.models.tuple.Tuple(
+                            entity = permify.models.entity.Entity(
                                 type = '', 
                                 id = '', ), 
                             relation = '', 
-                            subject = openapi_client.models.subject.Subject(
+                            subject = permify.models.subject.Subject(
                                 type = '', 
                                 id = '', 
                                 relation = '', ), )
                         ], 
                     attributes = [
-                        openapi_client.models.attribute.Attribute(
+                        permify.models.attribute.Attribute(
                             attribute = '', 
                             value = {
                                 'key' : None
                                 }, )
                         ], 
-                    data = openapi_client.models.data.data(), )
+                    data = permify.models.data.data(), )
             )
         else:
             return PermissionsLookupEntityRequest(

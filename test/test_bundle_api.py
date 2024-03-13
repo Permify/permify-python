@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.bundle_api import BundleApi
+from permify.bundle_api import BundleApi
 
 
 class TestBundleApi(unittest.TestCase):

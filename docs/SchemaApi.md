@@ -1,4 +1,4 @@
-# openapi_client.SchemaApi
+# permify.SchemaApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,25 +18,25 @@ list all authorization models
 
 
 ```python
-import openapi_client
-from openapi_client.models.schema_list_response import SchemaListResponse
-from openapi_client.models.schemas_list_request import SchemasListRequest
-from openapi_client.rest import ApiException
+import permify
+from permify.models.schema_list_response import SchemaListResponse
+from permify.models.schemas_list_request import SchemasListRequest
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SchemaApi(api_client)
+    api_instance = permify.SchemaApi(api_client)
     tenant_id = 'tenant_id_example' # str | tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.
-    body = openapi_client.SchemasListRequest() # SchemasListRequest | 
+    body = permify.SchemasListRequest() # SchemasListRequest | 
 
     try:
         # list all authorization models
@@ -88,25 +88,25 @@ read your authorization model
 
 
 ```python
-import openapi_client
-from openapi_client.models.schema_read_response import SchemaReadResponse
-from openapi_client.models.schemas_read_request import SchemasReadRequest
-from openapi_client.rest import ApiException
+import permify
+from permify.models.schema_read_response import SchemaReadResponse
+from permify.models.schemas_read_request import SchemasReadRequest
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SchemaApi(api_client)
+    api_instance = permify.SchemaApi(api_client)
     tenant_id = 'tenant_id_example' # str | tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.
-    body = openapi_client.SchemasReadRequest() # SchemasReadRequest | 
+    body = permify.SchemasReadRequest() # SchemasReadRequest | 
 
     try:
         # read your authorization model
@@ -158,25 +158,25 @@ write your authorization model
 
 
 ```python
-import openapi_client
-from openapi_client.models.schema_write_response import SchemaWriteResponse
-from openapi_client.models.schemas_write_request import SchemasWriteRequest
-from openapi_client.rest import ApiException
+import permify
+from permify.models.schema_write_response import SchemaWriteResponse
+from permify.models.schemas_write_request import SchemasWriteRequest
+from permify.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = permify.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SchemaApi(api_client)
+    api_instance = permify.SchemaApi(api_client)
     tenant_id = 'tenant_id_example' # str | tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.
-    body = openapi_client.SchemasWriteRequest() # SchemasWriteRequest | 
+    body = permify.SchemasWriteRequest() # SchemasWriteRequest | 
 
     try:
         # write your authorization model

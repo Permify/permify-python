@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.tenant_create_response import TenantCreateResponse
+from permify.models.tenant_create_response import TenantCreateResponse
 
 class TestTenantCreateResponse(unittest.TestCase):
     """TenantCreateResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestTenantCreateResponse(unittest.TestCase):
         model = TenantCreateResponse()
         if include_optional:
             return TenantCreateResponse(
-                tenant = openapi_client.models.tenant.Tenant(
+                tenant = permify.models.tenant.Tenant(
                     id = '', 
                     name = '', 
                     created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )

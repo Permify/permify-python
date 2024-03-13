@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.permission_lookup_entity_stream_response import PermissionLookupEntityStreamResponse
+from permify.models.permission_lookup_entity_stream_response import PermissionLookupEntityStreamResponse
 
 class TestPermissionLookupEntityStreamResponse(unittest.TestCase):
     """PermissionLookupEntityStreamResponse unit test stubs"""

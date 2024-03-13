@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.tuple_set import TupleSet
+from permify.models.tuple_set import TupleSet
 
 class TestTupleSet(unittest.TestCase):
     """TupleSet unit test stubs"""

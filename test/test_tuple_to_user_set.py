@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.tuple_to_user_set import TupleToUserSet
+from permify.models.tuple_to_user_set import TupleToUserSet
 
 class TestTupleToUserSet(unittest.TestCase):
     """TupleToUserSet unit test stubs"""
@@ -36,9 +36,9 @@ class TestTupleToUserSet(unittest.TestCase):
         model = TupleToUserSet()
         if include_optional:
             return TupleToUserSet(
-                tuple_set = openapi_client.models.tuple_set.TupleSet(
+                tuple_set = permify.models.tuple_set.TupleSet(
                     relation = '', ),
-                computed = openapi_client.models.computed_user_set.ComputedUserSet(
+                computed = permify.models.computed_user_set.ComputedUserSet(
                     relation = '', )
             )
         else:

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.permission_check_response import PermissionCheckResponse
+from permify.models.permission_check_response import PermissionCheckResponse
 
 class TestPermissionCheckResponse(unittest.TestCase):
     """PermissionCheckResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestPermissionCheckResponse(unittest.TestCase):
         if include_optional:
             return PermissionCheckResponse(
                 can = 'CHECK_RESULT_UNSPECIFIED',
-                metadata = openapi_client.models.permission_check_response_metadata.PermissionCheckResponseMetadata(
+                metadata = permify.models.permission_check_response_metadata.PermissionCheckResponseMetadata(
                     check_count = 56, )
             )
         else:

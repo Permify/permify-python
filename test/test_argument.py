@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.argument import Argument
+from permify.models.argument import Argument
 
 class TestArgument(unittest.TestCase):
     """Argument unit test stubs"""
@@ -36,9 +36,9 @@ class TestArgument(unittest.TestCase):
         model = Argument()
         if include_optional:
             return Argument(
-                computed_attribute = openapi_client.models.computed_attribute.ComputedAttribute(
+                computed_attribute = permify.models.computed_attribute.ComputedAttribute(
                     name = '', ),
-                context_attribute = openapi_client.models.context_attribute.ContextAttribute(
+                context_attribute = permify.models.context_attribute.ContextAttribute(
                     name = '', )
             )
         else:

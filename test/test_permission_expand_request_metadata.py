@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.permission_expand_request_metadata import PermissionExpandRequestMetadata
+from permify.models.permission_expand_request_metadata import PermissionExpandRequestMetadata
 
 class TestPermissionExpandRequestMetadata(unittest.TestCase):
     """PermissionExpandRequestMetadata unit test stubs"""

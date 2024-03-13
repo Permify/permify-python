@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.relationship_delete_request import RelationshipDeleteRequest
+from permify.models.relationship_delete_request import RelationshipDeleteRequest
 
 # TODO update the JSON string below
 json = "{}"

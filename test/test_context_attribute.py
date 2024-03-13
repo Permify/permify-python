@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.context_attribute import ContextAttribute
+from permify.models.context_attribute import ContextAttribute
 
 class TestContextAttribute(unittest.TestCase):
     """ContextAttribute unit test stubs"""

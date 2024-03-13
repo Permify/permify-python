@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.attribute_read_request_metadata import AttributeReadRequestMetadata
+from permify.models.attribute_read_request_metadata import AttributeReadRequestMetadata
 
 class TestAttributeReadRequestMetadata(unittest.TestCase):
     """AttributeReadRequestMetadata unit test stubs"""

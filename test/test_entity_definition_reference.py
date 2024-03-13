@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.entity_definition_reference import EntityDefinitionReference
+from permify.models.entity_definition_reference import EntityDefinitionReference
 
 class TestEntityDefinitionReference(unittest.TestCase):
     """EntityDefinitionReference unit test stubs"""

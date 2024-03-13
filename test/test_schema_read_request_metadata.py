@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.schema_read_request_metadata import SchemaReadRequestMetadata
+from permify.models.schema_read_request_metadata import SchemaReadRequestMetadata
 
 class TestSchemaReadRequestMetadata(unittest.TestCase):
     """SchemaReadRequestMetadata unit test stubs"""

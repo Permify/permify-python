@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.list_type import ListType
+from permify.models.list_type import ListType
 
 class TestListType(unittest.TestCase):
     """ListType unit test stubs"""
@@ -36,18 +36,18 @@ class TestListType(unittest.TestCase):
         model = ListType()
         if include_optional:
             return ListType(
-                elem_type = openapi_client.models.v1alpha1/type.v1alpha1.Type(
-                    dyn = openapi_client.models.dyn.dyn(), 
+                elem_type = permify.models.v1alpha1/type.v1alpha1.Type(
+                    dyn = permify.models.dyn.dyn(), 
                     null = '', 
                     primitive = 'PRIMITIVE_TYPE_UNSPECIFIED', 
                     wrapper = 'PRIMITIVE_TYPE_UNSPECIFIED', 
                     well_known = 'WELL_KNOWN_TYPE_UNSPECIFIED', 
-                    list_type = openapi_client.models.list_type.ListType(), 
-                    map_type = openapi_client.models.map_type.MapType(
-                        key_type = openapi_client.models.v1alpha1/type.v1alpha1.Type(
-                            dyn = openapi_client.models.dyn.dyn(), 
+                    list_type = permify.models.list_type.ListType(), 
+                    map_type = permify.models.map_type.MapType(
+                        key_type = permify.models.v1alpha1/type.v1alpha1.Type(
+                            dyn = permify.models.dyn.dyn(), 
                             null = '', 
-                            function = openapi_client.models.function_type.FunctionType(
+                            function = permify.models.function_type.FunctionType(
                                 result_type = , 
                                 arg_types = [
                                     
@@ -55,19 +55,19 @@ class TestListType(unittest.TestCase):
                             message_type = '', 
                             type_param = '', 
                             type = , 
-                            error = openapi_client.models.error.error(), 
-                            abstract_type = openapi_client.models.abstract_type.AbstractType(
+                            error = permify.models.error.error(), 
+                            abstract_type = permify.models.abstract_type.AbstractType(
                                 name = '', 
                                 parameter_types = [
                                     
                                     ], ), ), 
                         value_type = , ), 
-                    function = openapi_client.models.function_type.FunctionType(), 
+                    function = permify.models.function_type.FunctionType(), 
                     message_type = '', 
                     type_param = '', 
                     type = , 
-                    error = openapi_client.models.error.error(), 
-                    abstract_type = openapi_client.models.abstract_type.AbstractType(
+                    error = permify.models.error.error(), 
+                    abstract_type = permify.models.abstract_type.AbstractType(
                         name = '', ), )
             )
         else:

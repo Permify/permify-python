@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.any import Any
+from permify.models.any import Any
 
 class TestAny(unittest.TestCase):
     """Any unit test stubs"""

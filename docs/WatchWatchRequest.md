@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.watch_watch_request import WatchWatchRequest
+from permify.models.watch_watch_request import WatchWatchRequest
 
 # TODO update the JSON string below
 json = "{}"

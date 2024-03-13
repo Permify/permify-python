@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.data_attributes_read_request import DataAttributesReadRequest
+from permify.models.data_attributes_read_request import DataAttributesReadRequest
 
 class TestDataAttributesReadRequest(unittest.TestCase):
     """DataAttributesReadRequest unit test stubs"""
@@ -36,10 +36,10 @@ class TestDataAttributesReadRequest(unittest.TestCase):
         model = DataAttributesReadRequest()
         if include_optional:
             return DataAttributesReadRequest(
-                metadata = openapi_client.models.attribute_read_request_metadata.AttributeReadRequestMetadata(
+                metadata = permify.models.attribute_read_request_metadata.AttributeReadRequestMetadata(
                     snap_token = '', ),
-                filter = openapi_client.models.attribute_filter.AttributeFilter(
-                    entity = openapi_client.models.entity_filter.EntityFilter(
+                filter = permify.models.attribute_filter.AttributeFilter(
+                    entity = permify.models.entity_filter.EntityFilter(
                         type = '', 
                         ids = [
                             ''

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.attribute_type import AttributeType
+from permify.models.attribute_type import AttributeType
 
 class TestAttributeType(unittest.TestCase):
     """AttributeType unit test stubs"""

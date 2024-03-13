@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.permissions_subject_permission_request import PermissionsSubjectPermissionRequest
+from permify.models.permissions_subject_permission_request import PermissionsSubjectPermissionRequest
 
 class TestPermissionsSubjectPermissionRequest(unittest.TestCase):
     """PermissionsSubjectPermissionRequest unit test stubs"""
@@ -36,38 +36,38 @@ class TestPermissionsSubjectPermissionRequest(unittest.TestCase):
         model = PermissionsSubjectPermissionRequest()
         if include_optional:
             return PermissionsSubjectPermissionRequest(
-                metadata = openapi_client.models.permission_subject_permission_request_metadata.PermissionSubjectPermissionRequestMetadata(
+                metadata = permify.models.permission_subject_permission_request_metadata.PermissionSubjectPermissionRequestMetadata(
                     schema_version = '', 
                     snap_token = '', 
                     only_permission = True, 
                     depth = 56, ),
-                entity = openapi_client.models.entity.Entity(
+                entity = permify.models.entity.Entity(
                     type = '', 
                     id = '', ),
-                subject = openapi_client.models.subject.Subject(
+                subject = permify.models.subject.Subject(
                     type = '', 
                     id = '', 
                     relation = '', ),
-                context = openapi_client.models.context.Context(
+                context = permify.models.context.Context(
                     tuples = [
-                        openapi_client.models.tuple.Tuple(
-                            entity = openapi_client.models.entity.Entity(
+                        permify.models.tuple.Tuple(
+                            entity = permify.models.entity.Entity(
                                 type = '', 
                                 id = '', ), 
                             relation = '', 
-                            subject = openapi_client.models.subject.Subject(
+                            subject = permify.models.subject.Subject(
                                 type = '', 
                                 id = '', 
                                 relation = '', ), )
                         ], 
                     attributes = [
-                        openapi_client.models.attribute.Attribute(
+                        permify.models.attribute.Attribute(
                             attribute = '', 
                             value = {
                                 'key' : None
                                 }, )
                         ], 
-                    data = openapi_client.models.data.data(), )
+                    data = permify.models.data.data(), )
             )
         else:
             return PermissionsSubjectPermissionRequest(

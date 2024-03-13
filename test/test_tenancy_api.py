@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.api.tenancy_api import TenancyApi
+from permify.tenancy_api import TenancyApi
 
 
 class TestTenancyApi(unittest.TestCase):

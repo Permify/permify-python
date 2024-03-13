@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.v1_call import V1Call
+from permify.models.v1_call import V1Call
 
 class TestV1Call(unittest.TestCase):
     """V1Call unit test stubs"""
@@ -38,10 +38,10 @@ class TestV1Call(unittest.TestCase):
             return V1Call(
                 rule_name = '',
                 arguments = [
-                    openapi_client.models.argument.Argument(
-                        computed_attribute = openapi_client.models.computed_attribute.ComputedAttribute(
+                    permify.models.argument.Argument(
+                        computed_attribute = permify.models.computed_attribute.ComputedAttribute(
                             name = '', ), 
-                        context_attribute = openapi_client.models.context_attribute.ContextAttribute(
+                        context_attribute = permify.models.context_attribute.ContextAttribute(
                             name = '', ), )
                     ]
             )

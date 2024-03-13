@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.computed_attribute import ComputedAttribute
+from permify.models.computed_attribute import ComputedAttribute
 
 # TODO update the JSON string below
 json = "{}"

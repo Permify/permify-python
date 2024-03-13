@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.relationship_delete_request import RelationshipDeleteRequest
+from permify.models.relationship_delete_request import RelationshipDeleteRequest
 
 class TestRelationshipDeleteRequest(unittest.TestCase):
     """RelationshipDeleteRequest unit test stubs"""
@@ -36,14 +36,14 @@ class TestRelationshipDeleteRequest(unittest.TestCase):
         model = RelationshipDeleteRequest()
         if include_optional:
             return RelationshipDeleteRequest(
-                filter = openapi_client.models.tuple_filter.TupleFilter(
-                    entity = openapi_client.models.entity_filter.EntityFilter(
+                filter = permify.models.tuple_filter.TupleFilter(
+                    entity = permify.models.entity_filter.EntityFilter(
                         type = '', 
                         ids = [
                             ''
                             ], ), 
                     relation = '', 
-                    subject = openapi_client.models.subject_filter.SubjectFilter(
+                    subject = permify.models.subject_filter.SubjectFilter(
                         type = '', 
                         ids = [
                             ''

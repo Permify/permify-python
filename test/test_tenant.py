@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.tenant import Tenant
+from permify.models.tenant import Tenant
 
 class TestTenant(unittest.TestCase):
     """Tenant unit test stubs"""

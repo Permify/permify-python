@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.bundle_read_response import BundleReadResponse
+from permify.models.bundle_read_response import BundleReadResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.ident import Ident
+from permify.models.ident import Ident
 
 class TestIdent(unittest.TestCase):
     """Ident unit test stubs"""

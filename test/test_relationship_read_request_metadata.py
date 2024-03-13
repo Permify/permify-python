@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.relationship_read_request_metadata import RelationshipReadRequestMetadata
+from permify.models.relationship_read_request_metadata import RelationshipReadRequestMetadata
 
 class TestRelationshipReadRequestMetadata(unittest.TestCase):
     """RelationshipReadRequestMetadata unit test stubs"""

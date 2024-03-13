@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.rewrite import Rewrite
+from permify.models.rewrite import Rewrite
 
 # TODO update the JSON string below
 json = "{}"

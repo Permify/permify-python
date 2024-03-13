@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.permission_lookup_subject_request_metadata import PermissionLookupSubjectRequestMetadata
+from permify.models.permission_lookup_subject_request_metadata import PermissionLookupSubjectRequestMetadata
 
 # TODO update the JSON string below
 json = "{}"

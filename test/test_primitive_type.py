@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.primitive_type import PrimitiveType
+from permify.models.primitive_type import PrimitiveType
 
 class TestPrimitiveType(unittest.TestCase):
     """PrimitiveType unit test stubs"""

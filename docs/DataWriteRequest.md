@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_write_request import DataWriteRequest
+from permify.models.data_write_request import DataWriteRequest
 
 # TODO update the JSON string below
 json = "{}"

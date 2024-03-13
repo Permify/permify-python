@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.data_bundle import DataBundle
+from permify.models.data_bundle import DataBundle
 
 class TestDataBundle(unittest.TestCase):
     """DataBundle unit test stubs"""
@@ -41,7 +41,7 @@ class TestDataBundle(unittest.TestCase):
                     ''
                     ],
                 operations = [
-                    openapi_client.models.v1/operation.v1.Operation(
+                    permify.models.v1/operation.v1.Operation(
                         relationships_write = [
                             ''
                             ], 

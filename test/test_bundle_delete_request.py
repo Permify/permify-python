@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.bundle_delete_request import BundleDeleteRequest
+from permify.models.bundle_delete_request import BundleDeleteRequest
 
 class TestBundleDeleteRequest(unittest.TestCase):
     """BundleDeleteRequest unit test stubs"""

@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.permissions_lookup_entity_request import PermissionsLookupEntityRequest
+from permify.models.permissions_lookup_entity_request import PermissionsLookupEntityRequest
 
 # TODO update the JSON string below
 json = "{}"

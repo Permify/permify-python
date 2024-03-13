@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.bundle_write_response import BundleWriteResponse
+from permify.models.bundle_write_response import BundleWriteResponse
 
 class TestBundleWriteResponse(unittest.TestCase):
     """BundleWriteResponse unit test stubs"""

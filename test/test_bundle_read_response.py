@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.bundle_read_response import BundleReadResponse
+from permify.models.bundle_read_response import BundleReadResponse
 
 class TestBundleReadResponse(unittest.TestCase):
     """BundleReadResponse unit test stubs"""
@@ -36,13 +36,13 @@ class TestBundleReadResponse(unittest.TestCase):
         model = BundleReadResponse()
         if include_optional:
             return BundleReadResponse(
-                bundle = openapi_client.models.data_bundle.DataBundle(
+                bundle = permify.models.data_bundle.DataBundle(
                     name = '', 
                     arguments = [
                         ''
                         ], 
                     operations = [
-                        openapi_client.models.v1/operation.v1.Operation(
+                        permify.models.v1/operation.v1.Operation(
                             relationships_write = [
                                 ''
                                 ], 

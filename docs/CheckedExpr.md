@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.checked_expr import CheckedExpr
+from permify.models.checked_expr import CheckedExpr
 
 # TODO update the JSON string below
 json = "{}"

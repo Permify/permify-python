@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.check_result import CheckResult
+from permify.models.check_result import CheckResult
 
 class TestCheckResult(unittest.TestCase):
     """CheckResult unit test stubs"""

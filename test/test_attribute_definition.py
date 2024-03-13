@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.attribute_definition import AttributeDefinition
+from permify.models.attribute_definition import AttributeDefinition
 
 class TestAttributeDefinition(unittest.TestCase):
     """AttributeDefinition unit test stubs"""

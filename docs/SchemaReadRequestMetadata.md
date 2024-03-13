@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.schema_read_request_metadata import SchemaReadRequestMetadata
+from permify.models.schema_read_request_metadata import SchemaReadRequestMetadata
 
 # TODO update the JSON string below
 json = "{}"

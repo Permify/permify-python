@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.schema_write_response import SchemaWriteResponse
+from permify.models.schema_write_response import SchemaWriteResponse
 
 # TODO update the JSON string below
 json = "{}"

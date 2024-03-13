@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.expr import Expr
+from permify.models.expr import Expr
 
 class TestExpr(unittest.TestCase):
     """Expr unit test stubs"""
@@ -37,7 +37,7 @@ class TestExpr(unittest.TestCase):
         if include_optional:
             return Expr(
                 id = '',
-                const_expr = openapi_client.models.constant.Constant(
+                const_expr = permify.models.constant.Constant(
                     null_value = '', 
                     bool_value = True, 
                     int64_value = '', 
@@ -47,12 +47,12 @@ class TestExpr(unittest.TestCase):
                     bytes_value = 'YQ==', 
                     duration_value = '', 
                     timestamp_value = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ),
-                ident_expr = openapi_client.models.ident.Ident(
+                ident_expr = permify.models.ident.Ident(
                     name = '', ),
-                select_expr = openapi_client.models.select.Select(
-                    operand = openapi_client.models.expr.Expr(
+                select_expr = permify.models.select.Select(
+                    operand = permify.models.expr.Expr(
                         id = '', 
-                        const_expr = openapi_client.models.constant.Constant(
+                        const_expr = permify.models.constant.Constant(
                             null_value = '', 
                             bool_value = True, 
                             int64_value = '', 
@@ -62,29 +62,29 @@ class TestExpr(unittest.TestCase):
                             bytes_value = 'YQ==', 
                             duration_value = '', 
                             timestamp_value = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), 
-                        ident_expr = openapi_client.models.ident.Ident(
+                        ident_expr = permify.models.ident.Ident(
                             name = '', ), 
-                        call_expr = openapi_client.models.expr/call.Expr.Call(
-                            target = openapi_client.models.expr.Expr(
+                        call_expr = permify.models.expr/call.Expr.Call(
+                            target = permify.models.expr.Expr(
                                 id = '', 
-                                list_expr = openapi_client.models.create_list.CreateList(
+                                list_expr = permify.models.create_list.CreateList(
                                     elements = [
                                         
                                         ], 
                                     optional_indices = [
                                         56
                                         ], ), 
-                                struct_expr = openapi_client.models.create_struct.CreateStruct(
+                                struct_expr = permify.models.create_struct.CreateStruct(
                                     message_name = '', 
                                     entries = [
-                                        openapi_client.models.entry.Entry(
+                                        permify.models.entry.Entry(
                                             id = '', 
                                             field_key = '', 
                                             map_key = , 
                                             value = , 
                                             optional_entry = True, )
                                         ], ), 
-                                comprehension_expr = openapi_client.models.comprehension.Comprehension(
+                                comprehension_expr = permify.models.comprehension.Comprehension(
                                     iter_var = '', 
                                     iter_range = , 
                                     accu_var = '', 
@@ -96,18 +96,18 @@ class TestExpr(unittest.TestCase):
                             args = [
                                 
                                 ], ), 
-                        list_expr = openapi_client.models.create_list.CreateList(), 
-                        struct_expr = openapi_client.models.create_struct.CreateStruct(
+                        list_expr = permify.models.create_list.CreateList(), 
+                        struct_expr = permify.models.create_struct.CreateStruct(
                             message_name = '', ), 
-                        comprehension_expr = openapi_client.models.comprehension.Comprehension(
+                        comprehension_expr = permify.models.comprehension.Comprehension(
                             iter_var = '', 
                             accu_var = '', ), ), 
                     field = '', 
                     test_only = True, ),
-                call_expr = openapi_client.models.expr/call.Expr.Call(
-                    target = openapi_client.models.expr.Expr(
+                call_expr = permify.models.expr/call.Expr.Call(
+                    target = permify.models.expr.Expr(
                         id = '', 
-                        const_expr = openapi_client.models.constant.Constant(
+                        const_expr = permify.models.constant.Constant(
                             null_value = '', 
                             bool_value = True, 
                             int64_value = '', 
@@ -117,29 +117,29 @@ class TestExpr(unittest.TestCase):
                             bytes_value = 'YQ==', 
                             duration_value = '', 
                             timestamp_value = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), 
-                        ident_expr = openapi_client.models.ident.Ident(
+                        ident_expr = permify.models.ident.Ident(
                             name = '', ), 
-                        select_expr = openapi_client.models.select.Select(
-                            operand = openapi_client.models.expr.Expr(
+                        select_expr = permify.models.select.Select(
+                            operand = permify.models.expr.Expr(
                                 id = '', 
-                                list_expr = openapi_client.models.create_list.CreateList(
+                                list_expr = permify.models.create_list.CreateList(
                                     elements = [
                                         
                                         ], 
                                     optional_indices = [
                                         56
                                         ], ), 
-                                struct_expr = openapi_client.models.create_struct.CreateStruct(
+                                struct_expr = permify.models.create_struct.CreateStruct(
                                     message_name = '', 
                                     entries = [
-                                        openapi_client.models.entry.Entry(
+                                        permify.models.entry.Entry(
                                             id = '', 
                                             field_key = '', 
                                             map_key = , 
                                             value = , 
                                             optional_entry = True, )
                                         ], ), 
-                                comprehension_expr = openapi_client.models.comprehension.Comprehension(
+                                comprehension_expr = permify.models.comprehension.Comprehension(
                                     iter_var = '', 
                                     iter_range = , 
                                     accu_var = '', 
@@ -149,21 +149,21 @@ class TestExpr(unittest.TestCase):
                                     result = , ), ), 
                             field = '', 
                             test_only = True, ), 
-                        list_expr = openapi_client.models.create_list.CreateList(), 
-                        struct_expr = openapi_client.models.create_struct.CreateStruct(
+                        list_expr = permify.models.create_list.CreateList(), 
+                        struct_expr = permify.models.create_struct.CreateStruct(
                             message_name = '', ), 
-                        comprehension_expr = openapi_client.models.comprehension.Comprehension(
+                        comprehension_expr = permify.models.comprehension.Comprehension(
                             iter_var = '', 
                             accu_var = '', ), ), 
                     function = '', 
                     args = [
                         
                         ], ),
-                list_expr = openapi_client.models.create_list.CreateList(
+                list_expr = permify.models.create_list.CreateList(
                     elements = [
-                        openapi_client.models.expr.Expr(
+                        permify.models.expr.Expr(
                             id = '', 
-                            const_expr = openapi_client.models.constant.Constant(
+                            const_expr = permify.models.constant.Constant(
                                 null_value = '', 
                                 bool_value = True, 
                                 int64_value = '', 
@@ -173,28 +173,28 @@ class TestExpr(unittest.TestCase):
                                 bytes_value = 'YQ==', 
                                 duration_value = '', 
                                 timestamp_value = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), 
-                            ident_expr = openapi_client.models.ident.Ident(
+                            ident_expr = permify.models.ident.Ident(
                                 name = '', ), 
-                            select_expr = openapi_client.models.select.Select(
-                                operand = openapi_client.models.expr.Expr(
+                            select_expr = permify.models.select.Select(
+                                operand = permify.models.expr.Expr(
                                     id = '', 
-                                    call_expr = openapi_client.models.expr/call.Expr.Call(
+                                    call_expr = permify.models.expr/call.Expr.Call(
                                         target = , 
                                         function = '', 
                                         args = [
                                             
                                             ], ), 
-                                    struct_expr = openapi_client.models.create_struct.CreateStruct(
+                                    struct_expr = permify.models.create_struct.CreateStruct(
                                         message_name = '', 
                                         entries = [
-                                            openapi_client.models.entry.Entry(
+                                            permify.models.entry.Entry(
                                                 id = '', 
                                                 field_key = '', 
                                                 map_key = , 
                                                 value = , 
                                                 optional_entry = True, )
                                             ], ), 
-                                    comprehension_expr = openapi_client.models.comprehension.Comprehension(
+                                    comprehension_expr = permify.models.comprehension.Comprehension(
                                         iter_var = '', 
                                         iter_range = , 
                                         accu_var = '', 
@@ -204,26 +204,26 @@ class TestExpr(unittest.TestCase):
                                         result = , ), ), 
                                 field = '', 
                                 test_only = True, ), 
-                            call_expr = openapi_client.models.expr/call.Expr.Call(
+                            call_expr = permify.models.expr/call.Expr.Call(
                                 function = '', ), 
-                            struct_expr = openapi_client.models.create_struct.CreateStruct(
+                            struct_expr = permify.models.create_struct.CreateStruct(
                                 message_name = '', ), 
-                            comprehension_expr = openapi_client.models.comprehension.Comprehension(
+                            comprehension_expr = permify.models.comprehension.Comprehension(
                                 iter_var = '', 
                                 accu_var = '', ), )
                         ], 
                     optional_indices = [
                         56
                         ], ),
-                struct_expr = openapi_client.models.create_struct.CreateStruct(
+                struct_expr = permify.models.create_struct.CreateStruct(
                     message_name = '', 
                     entries = [
-                        openapi_client.models.entry.Entry(
+                        permify.models.entry.Entry(
                             id = '', 
                             field_key = '', 
-                            map_key = openapi_client.models.expr.Expr(
+                            map_key = permify.models.expr.Expr(
                                 id = '', 
-                                const_expr = openapi_client.models.constant.Constant(
+                                const_expr = permify.models.constant.Constant(
                                     null_value = '', 
                                     bool_value = True, 
                                     int64_value = '', 
@@ -233,25 +233,25 @@ class TestExpr(unittest.TestCase):
                                     bytes_value = 'YQ==', 
                                     duration_value = '', 
                                     timestamp_value = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), 
-                                ident_expr = openapi_client.models.ident.Ident(
+                                ident_expr = permify.models.ident.Ident(
                                     name = '', ), 
-                                select_expr = openapi_client.models.select.Select(
-                                    operand = openapi_client.models.expr.Expr(
+                                select_expr = permify.models.select.Select(
+                                    operand = permify.models.expr.Expr(
                                         id = '', 
-                                        call_expr = openapi_client.models.expr/call.Expr.Call(
+                                        call_expr = permify.models.expr/call.Expr.Call(
                                             target = , 
                                             function = '', 
                                             args = [
                                                 
                                                 ], ), 
-                                        list_expr = openapi_client.models.create_list.CreateList(
+                                        list_expr = permify.models.create_list.CreateList(
                                             elements = [
                                                 
                                                 ], 
                                             optional_indices = [
                                                 56
                                                 ], ), 
-                                        comprehension_expr = openapi_client.models.comprehension.Comprehension(
+                                        comprehension_expr = permify.models.comprehension.Comprehension(
                                             iter_var = '', 
                                             iter_range = , 
                                             accu_var = '', 
@@ -261,20 +261,20 @@ class TestExpr(unittest.TestCase):
                                             result = , ), ), 
                                     field = '', 
                                     test_only = True, ), 
-                                call_expr = openapi_client.models.expr/call.Expr.Call(
+                                call_expr = permify.models.expr/call.Expr.Call(
                                     function = '', ), 
-                                list_expr = openapi_client.models.create_list.CreateList(), 
-                                comprehension_expr = openapi_client.models.comprehension.Comprehension(
+                                list_expr = permify.models.create_list.CreateList(), 
+                                comprehension_expr = permify.models.comprehension.Comprehension(
                                     iter_var = '', 
                                     accu_var = '', ), ), 
                             value = , 
                             optional_entry = True, )
                         ], ),
-                comprehension_expr = openapi_client.models.comprehension.Comprehension(
+                comprehension_expr = permify.models.comprehension.Comprehension(
                     iter_var = '', 
-                    iter_range = openapi_client.models.expr.Expr(
+                    iter_range = permify.models.expr.Expr(
                         id = '', 
-                        const_expr = openapi_client.models.constant.Constant(
+                        const_expr = permify.models.constant.Constant(
                             null_value = '', 
                             bool_value = True, 
                             int64_value = '', 
@@ -284,28 +284,28 @@ class TestExpr(unittest.TestCase):
                             bytes_value = 'YQ==', 
                             duration_value = '', 
                             timestamp_value = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), 
-                        ident_expr = openapi_client.models.ident.Ident(
+                        ident_expr = permify.models.ident.Ident(
                             name = '', ), 
-                        select_expr = openapi_client.models.select.Select(
-                            operand = openapi_client.models.expr.Expr(
+                        select_expr = permify.models.select.Select(
+                            operand = permify.models.expr.Expr(
                                 id = '', 
-                                call_expr = openapi_client.models.expr/call.Expr.Call(
+                                call_expr = permify.models.expr/call.Expr.Call(
                                     target = , 
                                     function = '', 
                                     args = [
                                         
                                         ], ), 
-                                list_expr = openapi_client.models.create_list.CreateList(
+                                list_expr = permify.models.create_list.CreateList(
                                     elements = [
                                         
                                         ], 
                                     optional_indices = [
                                         56
                                         ], ), 
-                                struct_expr = openapi_client.models.create_struct.CreateStruct(
+                                struct_expr = permify.models.create_struct.CreateStruct(
                                     message_name = '', 
                                     entries = [
-                                        openapi_client.models.entry.Entry(
+                                        permify.models.entry.Entry(
                                             id = '', 
                                             field_key = '', 
                                             map_key = , 
@@ -314,10 +314,10 @@ class TestExpr(unittest.TestCase):
                                         ], ), ), 
                             field = '', 
                             test_only = True, ), 
-                        call_expr = openapi_client.models.expr/call.Expr.Call(
+                        call_expr = permify.models.expr/call.Expr.Call(
                             function = '', ), 
-                        list_expr = openapi_client.models.create_list.CreateList(), 
-                        struct_expr = openapi_client.models.create_struct.CreateStruct(
+                        list_expr = permify.models.create_list.CreateList(), 
+                        struct_expr = permify.models.create_struct.CreateStruct(
                             message_name = '', ), ), 
                     accu_var = '', 
                     accu_init = , 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from openapi_client.models.subject import Subject
+from permify.models.subject import Subject
 
 class TestSubject(unittest.TestCase):
     """Subject unit test stubs"""
