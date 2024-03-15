@@ -18,6 +18,8 @@ Method | HTTP request | Description
 
 run bundle
 
+The \"Run Bundle\" API provides a straightforward way to execute predefined bundles within your application's tenant environment. By sending a POST request to this endpoint, you can activate specific functionalities or processes encapsulated in a bundle.
+
 ### Example
 
 
@@ -87,6 +89,8 @@ No authorization required
 > AttributeReadResponse data_attributes_read(tenant_id, body)
 
 read attribute(s)
+
+Read API allows for directly querying the stored graph data to display and filter stored attributes.
 
 ### Example
 
@@ -158,6 +162,8 @@ No authorization required
 
 delete data
 
+You can delete any stored relation tuples or attributes with following API.
+
 ### Example
 
 
@@ -228,6 +234,8 @@ No authorization required
 
 read relation tuple(s)
 
+Read API allows for directly querying the stored graph data to display and filter stored relational tuples.
+
 ### Example
 
 
@@ -297,6 +305,8 @@ No authorization required
 > DataWriteResponse data_write(tenant_id, body)
 
 create data
+
+In Permify, attributes and relations between your entities, objects and users represents your authorization data. These data stored as tuples in a preferred database.
 
 ### Example
 

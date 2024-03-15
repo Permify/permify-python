@@ -63,6 +63,7 @@ class BundleApi:
     ) -> BundleDeleteResponse:
         """delete bundle
 
+        The \"Delete Bundle\" API is designed for removing specific data bundles within a multi-tenant application environment. This API facilitates the deletion of a bundle, identified by its unique name, from a designated tenant's environment.
 
         :param tenant_id: (required)
         :type tenant_id: str
@@ -133,6 +134,7 @@ class BundleApi:
     ) -> ApiResponse[BundleDeleteResponse]:
         """delete bundle
 
+        The \"Delete Bundle\" API is designed for removing specific data bundles within a multi-tenant application environment. This API facilitates the deletion of a bundle, identified by its unique name, from a designated tenant's environment.
 
         :param tenant_id: (required)
         :type tenant_id: str
@@ -203,6 +205,7 @@ class BundleApi:
     ) -> RESTResponseType:
         """delete bundle
 
+        The \"Delete Bundle\" API is designed for removing specific data bundles within a multi-tenant application environment. This API facilitates the deletion of a bundle, identified by its unique name, from a designated tenant's environment.
 
         :param tenant_id: (required)
         :type tenant_id: str
@@ -345,6 +348,7 @@ class BundleApi:
     ) -> BundleReadResponse:
         """read bundle
 
+        The \"Read Bundle\" API is a crucial tool for retrieving details of specific data bundles in a multi-tenant application setup. It is designed to access information about a bundle, uniquely identified by its name, within the specified tenant's environment.
 
         :param tenant_id: (required)
         :type tenant_id: str
@@ -415,6 +419,7 @@ class BundleApi:
     ) -> ApiResponse[BundleReadResponse]:
         """read bundle
 
+        The \"Read Bundle\" API is a crucial tool for retrieving details of specific data bundles in a multi-tenant application setup. It is designed to access information about a bundle, uniquely identified by its name, within the specified tenant's environment.
 
         :param tenant_id: (required)
         :type tenant_id: str
@@ -485,6 +490,7 @@ class BundleApi:
     ) -> RESTResponseType:
         """read bundle
 
+        The \"Read Bundle\" API is a crucial tool for retrieving details of specific data bundles in a multi-tenant application setup. It is designed to access information about a bundle, uniquely identified by its name, within the specified tenant's environment.
 
         :param tenant_id: (required)
         :type tenant_id: str
@@ -627,6 +633,7 @@ class BundleApi:
     ) -> BundleWriteResponse:
         """write bundle
 
+        The \"Write Bundle\" API is designed for handling data in a multi-tenant application environment. Its primary function is to write and delete data according to predefined structures. This API allows users to define or update data bundles, each distinguished by a unique name.
 
         :param tenant_id: (required)
         :type tenant_id: str
@@ -697,6 +704,7 @@ class BundleApi:
     ) -> ApiResponse[BundleWriteResponse]:
         """write bundle
 
+        The \"Write Bundle\" API is designed for handling data in a multi-tenant application environment. Its primary function is to write and delete data according to predefined structures. This API allows users to define or update data bundles, each distinguished by a unique name.
 
         :param tenant_id: (required)
         :type tenant_id: str
@@ -767,6 +775,7 @@ class BundleApi:
     ) -> RESTResponseType:
         """write bundle
 
+        The \"Write Bundle\" API is designed for handling data in a multi-tenant application environment. Its primary function is to write and delete data according to predefined structures. This API allows users to define or update data bundles, each distinguished by a unique name.
 
         :param tenant_id: (required)
         :type tenant_id: str

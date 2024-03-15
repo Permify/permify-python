@@ -60,6 +60,7 @@ class WatchApi:
     ) -> StreamResultOfWatchResponse:
         """watch_watch
 
+        The Permify Watch API acts as a real-time broadcaster that shows changes in the relation tuples.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -130,6 +131,7 @@ class WatchApi:
     ) -> ApiResponse[StreamResultOfWatchResponse]:
         """watch_watch
 
+        The Permify Watch API acts as a real-time broadcaster that shows changes in the relation tuples.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -200,6 +202,7 @@ class WatchApi:
     ) -> RESTResponseType:
         """watch_watch
 
+        The Permify Watch API acts as a real-time broadcaster that shows changes in the relation tuples.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
