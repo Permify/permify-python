@@ -37,7 +37,7 @@ class TestDataApi(unittest.TestCase):
     def test_data_attributes_read(self) -> None:
         """Test case for data_attributes_read
 
-        read attribute(s)
+        read attributes
         """
         pass
 
@@ -51,14 +51,14 @@ class TestDataApi(unittest.TestCase):
     def test_data_relationships_read(self) -> None:
         """Test case for data_relationships_read
 
-        read relation tuple(s)
+        read relationships
         """
         pass
 
     def test_data_write(self) -> None:
         """Test case for data_write
 
-        create data
+        write data
         """
         pass
 
@@ -72,7 +72,7 @@ class TestDataApi(unittest.TestCase):
     def test_relationships_write(self) -> None:
         """Test case for relationships_write
 
-        create new relationships
+        write relationships
         """
         pass
 

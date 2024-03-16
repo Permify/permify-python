@@ -4,15 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**watch_watch**](WatchApi.md#watch_watch) | **POST** /v1/tenants/{tenant_id}/watch | 
+[**watch_watch**](WatchApi.md#watch_watch) | **POST** /v1/tenants/{tenant_id}/watch | watch changes
 
 
 # **watch_watch**
 > StreamResultOfWatchResponse watch_watch(tenant_id, body)
 
-
-
-The Permify Watch API acts as a real-time broadcaster that shows changes in the relation tuples.
+watch changes
 
 ### Example
 
@@ -39,6 +37,7 @@ with permify.ApiClient(configuration) as api_client:
     body = permify.WatchWatchRequest() # WatchWatchRequest | 
 
     try:
+        # watch changes
         api_response = api_instance.watch_watch(tenant_id, body)
         print("The response of WatchApi->watch_watch:\n")
         pprint(api_response)

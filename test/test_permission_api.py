@@ -30,42 +30,42 @@ class TestPermissionApi(unittest.TestCase):
     def test_permissions_check(self) -> None:
         """Test case for permissions_check
 
-        This method returns a decision about whether user can perform an permission on a certain resource.
+        check api
         """
         pass
 
     def test_permissions_expand(self) -> None:
         """Test case for permissions_expand
 
-        expand relationships according to schema
+        expand api
         """
         pass
 
     def test_permissions_lookup_entity(self) -> None:
         """Test case for permissions_lookup_entity
 
-        Retrieve an entity by its identifier.
+        lookup entity
         """
         pass
 
     def test_permissions_lookup_entity_stream(self) -> None:
         """Test case for permissions_lookup_entity_stream
 
-        Stream entities by their identifiers.
+        lookup entity stream
         """
         pass
 
     def test_permissions_lookup_subject(self) -> None:
         """Test case for permissions_lookup_subject
 
-        Retrieve a subject by its identifier.
+        lookup-subject
         """
         pass
 
     def test_permissions_subject_permission(self) -> None:
         """Test case for permissions_subject_permission
 
-        Retrieve permissions related to a specific subject.
+        subject permission
         """
         pass
 

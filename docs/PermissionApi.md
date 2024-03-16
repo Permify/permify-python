@@ -4,20 +4,18 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**permissions_check**](PermissionApi.md#permissions_check) | **POST** /v1/tenants/{tenant_id}/permissions/check | This method returns a decision about whether user can perform an permission on a certain resource.
-[**permissions_expand**](PermissionApi.md#permissions_expand) | **POST** /v1/tenants/{tenant_id}/permissions/expand | expand relationships according to schema
-[**permissions_lookup_entity**](PermissionApi.md#permissions_lookup_entity) | **POST** /v1/tenants/{tenant_id}/permissions/lookup-entity | Retrieve an entity by its identifier.
-[**permissions_lookup_entity_stream**](PermissionApi.md#permissions_lookup_entity_stream) | **POST** /v1/tenants/{tenant_id}/permissions/lookup-entity-stream | Stream entities by their identifiers.
-[**permissions_lookup_subject**](PermissionApi.md#permissions_lookup_subject) | **POST** /v1/tenants/{tenant_id}/permissions/lookup-subject | Retrieve a subject by its identifier.
-[**permissions_subject_permission**](PermissionApi.md#permissions_subject_permission) | **POST** /v1/tenants/{tenant_id}/permissions/subject-permission | Retrieve permissions related to a specific subject.
+[**permissions_check**](PermissionApi.md#permissions_check) | **POST** /v1/tenants/{tenant_id}/permissions/check | check api
+[**permissions_expand**](PermissionApi.md#permissions_expand) | **POST** /v1/tenants/{tenant_id}/permissions/expand | expand api
+[**permissions_lookup_entity**](PermissionApi.md#permissions_lookup_entity) | **POST** /v1/tenants/{tenant_id}/permissions/lookup-entity | lookup entity
+[**permissions_lookup_entity_stream**](PermissionApi.md#permissions_lookup_entity_stream) | **POST** /v1/tenants/{tenant_id}/permissions/lookup-entity-stream | lookup entity stream
+[**permissions_lookup_subject**](PermissionApi.md#permissions_lookup_subject) | **POST** /v1/tenants/{tenant_id}/permissions/lookup-subject | lookup-subject
+[**permissions_subject_permission**](PermissionApi.md#permissions_subject_permission) | **POST** /v1/tenants/{tenant_id}/permissions/subject-permission | subject permission
 
 
 # **permissions_check**
 > PermissionCheckResponse permissions_check(tenant_id, body)
 
-This method returns a decision about whether user can perform an permission on a certain resource.
-
-In Permify, you can perform two different types access checks,   resource based authorization checks, in form of Can user U perform action Y in resource Z? subject based authorization checks,   in form of Which resources can user U edit? In this section we'll look at the resource based check request of Permify. You can find subject based access checks in Entity (Data) Filtering section.
+check api
 
 ### Example
 
@@ -44,7 +42,7 @@ with permify.ApiClient(configuration) as api_client:
     body = permify.PermissionsCheckRequest() # PermissionsCheckRequest | 
 
     try:
-        # This method returns a decision about whether user can perform an permission on a certain resource.
+        # check api
         api_response = api_instance.permissions_check(tenant_id, body)
         print("The response of PermissionApi->permissions_check:\n")
         pprint(api_response)
@@ -87,9 +85,7 @@ No authorization required
 # **permissions_expand**
 > PermissionExpandResponse permissions_expand(tenant_id, body)
 
-expand relationships according to schema
-
-Retrieve all subjects (users and user sets) that have a relationship or attribute with given entity and permission. Expand API response is represented by a user set tree, whose leaf nodes are user IDs or user sets pointing to other ⟨object#relation⟩ pairs.  <Tip>WHEN TO USE ? Expand is designed for reasoning the complete set of users that have access to their objects, which allows our users to build efficient search indices for access-controlled content.  It is not designed to use as a check access. Expand request has a high latency which can cause a performance issues when its used as access check.</Tip>
+expand api
 
 ### Example
 
@@ -116,7 +112,7 @@ with permify.ApiClient(configuration) as api_client:
     body = permify.PermissionsExpandRequest() # PermissionsExpandRequest | 
 
     try:
-        # expand relationships according to schema
+        # expand api
         api_response = api_instance.permissions_expand(tenant_id, body)
         print("The response of PermissionApi->permissions_expand:\n")
         pprint(api_response)
@@ -159,9 +155,7 @@ No authorization required
 # **permissions_lookup_entity**
 > PermissionLookupEntityResponse permissions_lookup_entity(tenant_id, body)
 
-Retrieve an entity by its identifier.
-
-Lookup Entity endpoint lets you ask questions in form of “Which resources can user:X do action Y?”. As a response of this you’ll get a entity results in a format of string array.
+lookup entity
 
 ### Example
 
@@ -188,7 +182,7 @@ with permify.ApiClient(configuration) as api_client:
     body = permify.PermissionsLookupEntityRequest() # PermissionsLookupEntityRequest | 
 
     try:
-        # Retrieve an entity by its identifier.
+        # lookup entity
         api_response = api_instance.permissions_lookup_entity(tenant_id, body)
         print("The response of PermissionApi->permissions_lookup_entity:\n")
         pprint(api_response)
@@ -231,9 +225,7 @@ No authorization required
 # **permissions_lookup_entity_stream**
 > StreamResultOfPermissionLookupEntityStreamResponse permissions_lookup_entity_stream(tenant_id, body)
 
-Stream entities by their identifiers.
-
-Lookup Entity endpoint lets you ask questions in form of “Which resources can user:X do action Y?”. As a response of this you’ll get a entity results in a format of as a streaming response.
+lookup entity stream
 
 ### Example
 
@@ -260,7 +252,7 @@ with permify.ApiClient(configuration) as api_client:
     body = permify.PermissionsLookupEntityRequest() # PermissionsLookupEntityRequest | 
 
     try:
-        # Stream entities by their identifiers.
+        # lookup entity stream
         api_response = api_instance.permissions_lookup_entity_stream(tenant_id, body)
         print("The response of PermissionApi->permissions_lookup_entity_stream:\n")
         pprint(api_response)
@@ -303,9 +295,7 @@ No authorization required
 # **permissions_lookup_subject**
 > PermissionLookupSubjectResponse permissions_lookup_subject(tenant_id, body)
 
-Retrieve a subject by its identifier.
-
-Lookup Subject endpoint lets you ask questions in form of “Which subjects can do action Y on entity:X?”. As a response of this you’ll get a subject results in a format of string array.
+lookup-subject
 
 ### Example
 
@@ -332,7 +322,7 @@ with permify.ApiClient(configuration) as api_client:
     body = permify.PermissionsLookupSubjectRequest() # PermissionsLookupSubjectRequest | 
 
     try:
-        # Retrieve a subject by its identifier.
+        # lookup-subject
         api_response = api_instance.permissions_lookup_subject(tenant_id, body)
         print("The response of PermissionApi->permissions_lookup_subject:\n")
         pprint(api_response)
@@ -375,9 +365,7 @@ No authorization required
 # **permissions_subject_permission**
 > PermissionSubjectPermissionResponse permissions_subject_permission(tenant_id, body)
 
-Retrieve permissions related to a specific subject.
-
-The Subject Permission List endpoint allows you to inquire in the form of “Which permissions user:x can perform on entity:y?”. In response, you'll receive a list of permissions specific to the user for the given entity, returned in the format of a map.    In this endpoint, you'll receive a map of permissions and their statuses directly. The structure is map[string]CheckResult, such as \"sample-permission\" -> \"ALLOWED\". This represents the permissions and their associated states in a key-value pair format.
+subject permission
 
 ### Example
 
@@ -404,7 +392,7 @@ with permify.ApiClient(configuration) as api_client:
     body = permify.PermissionsSubjectPermissionRequest() # PermissionsSubjectPermissionRequest | 
 
     try:
-        # Retrieve permissions related to a specific subject.
+        # subject permission
         api_response = api_instance.permissions_subject_permission(tenant_id, body)
         print("The response of PermissionApi->permissions_subject_permission:\n")
         pprint(api_response)

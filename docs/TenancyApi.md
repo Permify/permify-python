@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**tenants_create**](TenancyApi.md#tenants_create) | **POST** /v1/tenants/create | create new tenant
+[**tenants_create**](TenancyApi.md#tenants_create) | **POST** /v1/tenants/create | create tenant
 [**tenants_delete**](TenancyApi.md#tenants_delete) | **DELETE** /v1/tenants/{id} | delete tenant
 [**tenants_list**](TenancyApi.md#tenants_list) | **POST** /v1/tenants/list | list tenants
 
@@ -12,9 +12,7 @@ Method | HTTP request | Description
 # **tenants_create**
 > TenantCreateResponse tenants_create(body)
 
-create new tenant
-
-Permify Multi Tenancy support you can create custom schemas for tenants and manage them in a single place. You can create a tenant with following API.  <Warning>We have a pre-inserted tenant - t1 - by default for the ones that don't use multi-tenancy.</Warning>
+create tenant
 
 ### Example
 
@@ -40,7 +38,7 @@ with permify.ApiClient(configuration) as api_client:
     body = permify.TenantCreateRequest() # TenantCreateRequest | TenantCreateRequest is the message used for the request to create a tenant.
 
     try:
-        # create new tenant
+        # create tenant
         api_response = api_instance.tenants_create(body)
         print("The response of TenancyApi->tenants_create:\n")
         pprint(api_response)
@@ -83,8 +81,6 @@ No authorization required
 > TenantDeleteResponse tenants_delete(id)
 
 delete tenant
-
-You can delete a tenant with following API.
 
 ### Example
 
@@ -152,8 +148,6 @@ No authorization required
 > TenantListResponse tenants_list(body)
 
 list tenants
-
-You can list tenants with following API.
 
 ### Example
 

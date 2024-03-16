@@ -4,17 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**schemas_list**](SchemaApi.md#schemas_list) | **POST** /v1/tenants/{tenant_id}/schemas/list | list all authorization models
-[**schemas_read**](SchemaApi.md#schemas_read) | **POST** /v1/tenants/{tenant_id}/schemas/read | read your authorization model
-[**schemas_write**](SchemaApi.md#schemas_write) | **POST** /v1/tenants/{tenant_id}/schemas/write | write your authorization model
+[**schemas_list**](SchemaApi.md#schemas_list) | **POST** /v1/tenants/{tenant_id}/schemas/list | list schema
+[**schemas_read**](SchemaApi.md#schemas_read) | **POST** /v1/tenants/{tenant_id}/schemas/read | read schema
+[**schemas_write**](SchemaApi.md#schemas_write) | **POST** /v1/tenants/{tenant_id}/schemas/write | write schema
 
 
 # **schemas_list**
 > SchemaListResponse schemas_list(tenant_id, body)
 
-list all authorization models
-
-Models written to Permify using the write schema API can be listed using this API with the timestamps at which the models were created.
+list schema
 
 ### Example
 
@@ -41,7 +39,7 @@ with permify.ApiClient(configuration) as api_client:
     body = permify.SchemasListRequest() # SchemasListRequest | 
 
     try:
-        # list all authorization models
+        # list schema
         api_response = api_instance.schemas_list(tenant_id, body)
         print("The response of SchemaApi->schemas_list:\n")
         pprint(api_response)
@@ -84,9 +82,7 @@ No authorization required
 # **schemas_read**
 > SchemaReadResponse schemas_read(tenant_id, body)
 
-read your authorization model
-
-When a model is written to Permify using the write schema API a schema version will be returned by the API. That schema version can be used to inspect the schema.
+read schema
 
 ### Example
 
@@ -113,7 +109,7 @@ with permify.ApiClient(configuration) as api_client:
     body = permify.SchemasReadRequest() # SchemasReadRequest | 
 
     try:
-        # read your authorization model
+        # read schema
         api_response = api_instance.schemas_read(tenant_id, body)
         print("The response of SchemaApi->schemas_read:\n")
         pprint(api_response)
@@ -156,9 +152,7 @@ No authorization required
 # **schemas_write**
 > SchemaWriteResponse schemas_write(tenant_id, body)
 
-write your authorization model
-
-Permify provide it's own authorization language to model common patterns of easily. We called the authorization model Permify Schema and it can be created on our playground as well as in any IDE or text editor.
+write schema
 
 ### Example
 
@@ -185,7 +179,7 @@ with permify.ApiClient(configuration) as api_client:
     body = permify.SchemasWriteRequest() # SchemasWriteRequest | 
 
     try:
-        # write your authorization model
+        # write schema
         api_response = api_instance.schemas_write(tenant_id, body)
         print("The response of SchemaApi->schemas_write:\n")
         pprint(api_response)

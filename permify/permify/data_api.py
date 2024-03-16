@@ -72,7 +72,6 @@ class DataApi:
     ) -> BundleRunResponse:
         """run bundle
 
-        The \"Run Bundle\" API provides a straightforward way to execute predefined bundles within your application's tenant environment. By sending a POST request to this endpoint, you can activate specific functionalities or processes encapsulated in a bundle.
 
         :param tenant_id: (required)
         :type tenant_id: str
@@ -143,7 +142,6 @@ class DataApi:
     ) -> ApiResponse[BundleRunResponse]:
         """run bundle
 
-        The \"Run Bundle\" API provides a straightforward way to execute predefined bundles within your application's tenant environment. By sending a POST request to this endpoint, you can activate specific functionalities or processes encapsulated in a bundle.
 
         :param tenant_id: (required)
         :type tenant_id: str
@@ -214,7 +212,6 @@ class DataApi:
     ) -> RESTResponseType:
         """run bundle
 
-        The \"Run Bundle\" API provides a straightforward way to execute predefined bundles within your application's tenant environment. By sending a POST request to this endpoint, you can activate specific functionalities or processes encapsulated in a bundle.
 
         :param tenant_id: (required)
         :type tenant_id: str
@@ -355,9 +352,8 @@ class DataApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AttributeReadResponse:
-        """read attribute(s)
+        """read attributes
 
-        Read API allows for directly querying the stored graph data to display and filter stored attributes.
 
         :param tenant_id: tenant_id represents the unique identifier of the tenant from which the attributes are being read. (required)
         :type tenant_id: str
@@ -426,9 +422,8 @@ class DataApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AttributeReadResponse]:
-        """read attribute(s)
+        """read attributes
 
-        Read API allows for directly querying the stored graph data to display and filter stored attributes.
 
         :param tenant_id: tenant_id represents the unique identifier of the tenant from which the attributes are being read. (required)
         :type tenant_id: str
@@ -497,9 +492,8 @@ class DataApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """read attribute(s)
+        """read attributes
 
-        Read API allows for directly querying the stored graph data to display and filter stored attributes.
 
         :param tenant_id: tenant_id represents the unique identifier of the tenant from which the attributes are being read. (required)
         :type tenant_id: str
@@ -642,7 +636,6 @@ class DataApi:
     ) -> DataDeleteResponse:
         """delete data
 
-        You can delete any stored relation tuples or attributes with following API.
 
         :param tenant_id: tenant_id represents the unique identifier of the tenant from which the data will be deleted. (required)
         :type tenant_id: str
@@ -713,7 +706,6 @@ class DataApi:
     ) -> ApiResponse[DataDeleteResponse]:
         """delete data
 
-        You can delete any stored relation tuples or attributes with following API.
 
         :param tenant_id: tenant_id represents the unique identifier of the tenant from which the data will be deleted. (required)
         :type tenant_id: str
@@ -784,7 +776,6 @@ class DataApi:
     ) -> RESTResponseType:
         """delete data
 
-        You can delete any stored relation tuples or attributes with following API.
 
         :param tenant_id: tenant_id represents the unique identifier of the tenant from which the data will be deleted. (required)
         :type tenant_id: str
@@ -925,9 +916,8 @@ class DataApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RelationshipReadResponse:
-        """read relation tuple(s)
+        """read relationships
 
-        Read API allows for directly querying the stored graph data to display and filter stored relational tuples.
 
         :param tenant_id: tenant_id represents the unique identifier of the tenant for which relationships are read. (required)
         :type tenant_id: str
@@ -996,9 +986,8 @@ class DataApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[RelationshipReadResponse]:
-        """read relation tuple(s)
+        """read relationships
 
-        Read API allows for directly querying the stored graph data to display and filter stored relational tuples.
 
         :param tenant_id: tenant_id represents the unique identifier of the tenant for which relationships are read. (required)
         :type tenant_id: str
@@ -1067,9 +1056,8 @@ class DataApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """read relation tuple(s)
+        """read relationships
 
-        Read API allows for directly querying the stored graph data to display and filter stored relational tuples.
 
         :param tenant_id: tenant_id represents the unique identifier of the tenant for which relationships are read. (required)
         :type tenant_id: str
@@ -1210,9 +1198,8 @@ class DataApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> DataWriteResponse:
-        """create data
+        """write data
 
-        In Permify, attributes and relations between your entities, objects and users represents your authorization data. These data stored as tuples in a preferred database.
 
         :param tenant_id: tenant_id represents the unique identifier of the tenant for which data is written. (required)
         :type tenant_id: str
@@ -1281,9 +1268,8 @@ class DataApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[DataWriteResponse]:
-        """create data
+        """write data
 
-        In Permify, attributes and relations between your entities, objects and users represents your authorization data. These data stored as tuples in a preferred database.
 
         :param tenant_id: tenant_id represents the unique identifier of the tenant for which data is written. (required)
         :type tenant_id: str
@@ -1352,9 +1338,8 @@ class DataApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """create data
+        """write data
 
-        In Permify, attributes and relations between your entities, objects and users represents your authorization data. These data stored as tuples in a preferred database.
 
         :param tenant_id: tenant_id represents the unique identifier of the tenant for which data is written. (required)
         :type tenant_id: str
@@ -1777,7 +1762,7 @@ class DataApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RelationshipWriteResponse:
-        """create new relationships
+        """write relationships
 
 
         :param tenant_id: Unique identifier for the tenant with specific constraints. (required)
@@ -1847,7 +1832,7 @@ class DataApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[RelationshipWriteResponse]:
-        """create new relationships
+        """write relationships
 
 
         :param tenant_id: Unique identifier for the tenant with specific constraints. (required)
@@ -1917,7 +1902,7 @@ class DataApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """create new relationships
+        """write relationships
 
 
         :param tenant_id: Unique identifier for the tenant with specific constraints. (required)

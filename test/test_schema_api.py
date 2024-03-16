@@ -30,21 +30,21 @@ class TestSchemaApi(unittest.TestCase):
     def test_schemas_list(self) -> None:
         """Test case for schemas_list
 
-        list all authorization models
+        list schema
         """
         pass
 
     def test_schemas_read(self) -> None:
         """Test case for schemas_read
 
-        read your authorization model
+        read schema
         """
         pass
 
     def test_schemas_write(self) -> None:
         """Test case for schemas_write
 
-        write your authorization model
+        write schema
         """
         pass
 

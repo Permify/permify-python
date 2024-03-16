@@ -91,25 +91,25 @@ Class | Method | HTTP request | Description
 *BundleApi* | [**bundle_read**](docs/BundleApi.md#bundle_read) | **POST** /v1/tenants/{tenant_id}/bundle/read | read bundle
 *BundleApi* | [**bundle_write**](docs/BundleApi.md#bundle_write) | **POST** /v1/tenants/{tenant_id}/bundle/write | write bundle
 *DataApi* | [**bundle_run**](docs/DataApi.md#bundle_run) | **POST** /v1/tenants/{tenant_id}/data/run-bundle | run bundle
-*DataApi* | [**data_attributes_read**](docs/DataApi.md#data_attributes_read) | **POST** /v1/tenants/{tenant_id}/data/attributes/read | read attribute(s)
+*DataApi* | [**data_attributes_read**](docs/DataApi.md#data_attributes_read) | **POST** /v1/tenants/{tenant_id}/data/attributes/read | read attributes
 *DataApi* | [**data_delete**](docs/DataApi.md#data_delete) | **POST** /v1/tenants/{tenant_id}/data/delete | delete data
-*DataApi* | [**data_relationships_read**](docs/DataApi.md#data_relationships_read) | **POST** /v1/tenants/{tenant_id}/data/relationships/read | read relation tuple(s)
-*DataApi* | [**data_write**](docs/DataApi.md#data_write) | **POST** /v1/tenants/{tenant_id}/data/write | create data
+*DataApi* | [**data_relationships_read**](docs/DataApi.md#data_relationships_read) | **POST** /v1/tenants/{tenant_id}/data/relationships/read | read relationships
+*DataApi* | [**data_write**](docs/DataApi.md#data_write) | **POST** /v1/tenants/{tenant_id}/data/write | write data
 *DataApi* | [**relationships_delete**](docs/DataApi.md#relationships_delete) | **POST** /v1/tenants/{tenant_id}/relationships/delete | delete relationships
-*DataApi* | [**relationships_write**](docs/DataApi.md#relationships_write) | **POST** /v1/tenants/{tenant_id}/relationships/write | create new relationships
-*PermissionApi* | [**permissions_check**](docs/PermissionApi.md#permissions_check) | **POST** /v1/tenants/{tenant_id}/permissions/check | This method returns a decision about whether user can perform an permission on a certain resource.
-*PermissionApi* | [**permissions_expand**](docs/PermissionApi.md#permissions_expand) | **POST** /v1/tenants/{tenant_id}/permissions/expand | expand relationships according to schema
-*PermissionApi* | [**permissions_lookup_entity**](docs/PermissionApi.md#permissions_lookup_entity) | **POST** /v1/tenants/{tenant_id}/permissions/lookup-entity | Retrieve an entity by its identifier.
-*PermissionApi* | [**permissions_lookup_entity_stream**](docs/PermissionApi.md#permissions_lookup_entity_stream) | **POST** /v1/tenants/{tenant_id}/permissions/lookup-entity-stream | Stream entities by their identifiers.
-*PermissionApi* | [**permissions_lookup_subject**](docs/PermissionApi.md#permissions_lookup_subject) | **POST** /v1/tenants/{tenant_id}/permissions/lookup-subject | Retrieve a subject by its identifier.
-*PermissionApi* | [**permissions_subject_permission**](docs/PermissionApi.md#permissions_subject_permission) | **POST** /v1/tenants/{tenant_id}/permissions/subject-permission | Retrieve permissions related to a specific subject.
-*SchemaApi* | [**schemas_list**](docs/SchemaApi.md#schemas_list) | **POST** /v1/tenants/{tenant_id}/schemas/list | list all authorization models
-*SchemaApi* | [**schemas_read**](docs/SchemaApi.md#schemas_read) | **POST** /v1/tenants/{tenant_id}/schemas/read | read your authorization model
-*SchemaApi* | [**schemas_write**](docs/SchemaApi.md#schemas_write) | **POST** /v1/tenants/{tenant_id}/schemas/write | write your authorization model
-*TenancyApi* | [**tenants_create**](docs/TenancyApi.md#tenants_create) | **POST** /v1/tenants/create | create new tenant
+*DataApi* | [**relationships_write**](docs/DataApi.md#relationships_write) | **POST** /v1/tenants/{tenant_id}/relationships/write | write relationships
+*PermissionApi* | [**permissions_check**](docs/PermissionApi.md#permissions_check) | **POST** /v1/tenants/{tenant_id}/permissions/check | check api
+*PermissionApi* | [**permissions_expand**](docs/PermissionApi.md#permissions_expand) | **POST** /v1/tenants/{tenant_id}/permissions/expand | expand api
+*PermissionApi* | [**permissions_lookup_entity**](docs/PermissionApi.md#permissions_lookup_entity) | **POST** /v1/tenants/{tenant_id}/permissions/lookup-entity | lookup entity
+*PermissionApi* | [**permissions_lookup_entity_stream**](docs/PermissionApi.md#permissions_lookup_entity_stream) | **POST** /v1/tenants/{tenant_id}/permissions/lookup-entity-stream | lookup entity stream
+*PermissionApi* | [**permissions_lookup_subject**](docs/PermissionApi.md#permissions_lookup_subject) | **POST** /v1/tenants/{tenant_id}/permissions/lookup-subject | lookup-subject
+*PermissionApi* | [**permissions_subject_permission**](docs/PermissionApi.md#permissions_subject_permission) | **POST** /v1/tenants/{tenant_id}/permissions/subject-permission | subject permission
+*SchemaApi* | [**schemas_list**](docs/SchemaApi.md#schemas_list) | **POST** /v1/tenants/{tenant_id}/schemas/list | list schema
+*SchemaApi* | [**schemas_read**](docs/SchemaApi.md#schemas_read) | **POST** /v1/tenants/{tenant_id}/schemas/read | read schema
+*SchemaApi* | [**schemas_write**](docs/SchemaApi.md#schemas_write) | **POST** /v1/tenants/{tenant_id}/schemas/write | write schema
+*TenancyApi* | [**tenants_create**](docs/TenancyApi.md#tenants_create) | **POST** /v1/tenants/create | create tenant
 *TenancyApi* | [**tenants_delete**](docs/TenancyApi.md#tenants_delete) | **DELETE** /v1/tenants/{id} | delete tenant
 *TenancyApi* | [**tenants_list**](docs/TenancyApi.md#tenants_list) | **POST** /v1/tenants/list | list tenants
-*WatchApi* | [**watch_watch**](docs/WatchApi.md#watch_watch) | **POST** /v1/tenants/{tenant_id}/watch | 
+*WatchApi* | [**watch_watch**](docs/WatchApi.md#watch_watch) | **POST** /v1/tenants/{tenant_id}/watch | watch changes
 
 
 ## Documentation For Models

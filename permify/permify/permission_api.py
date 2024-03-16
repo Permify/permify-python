@@ -67,9 +67,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> PermissionCheckResponse:
-        """This method returns a decision about whether user can perform an permission on a certain resource.
+        """check api
 
-        In Permify, you can perform two different types access checks,   resource based authorization checks, in form of Can user U perform action Y in resource Z? subject based authorization checks,   in form of Which resources can user U edit? In this section we'll look at the resource based check request of Permify. You can find subject based access checks in Entity (Data) Filtering section.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -138,9 +137,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[PermissionCheckResponse]:
-        """This method returns a decision about whether user can perform an permission on a certain resource.
+        """check api
 
-        In Permify, you can perform two different types access checks,   resource based authorization checks, in form of Can user U perform action Y in resource Z? subject based authorization checks,   in form of Which resources can user U edit? In this section we'll look at the resource based check request of Permify. You can find subject based access checks in Entity (Data) Filtering section.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -209,9 +207,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """This method returns a decision about whether user can perform an permission on a certain resource.
+        """check api
 
-        In Permify, you can perform two different types access checks,   resource based authorization checks, in form of Can user U perform action Y in resource Z? subject based authorization checks,   in form of Which resources can user U edit? In this section we'll look at the resource based check request of Permify. You can find subject based access checks in Entity (Data) Filtering section.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -352,9 +349,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> PermissionExpandResponse:
-        """expand relationships according to schema
+        """expand api
 
-        Retrieve all subjects (users and user sets) that have a relationship or attribute with given entity and permission. Expand API response is represented by a user set tree, whose leaf nodes are user IDs or user sets pointing to other ⟨object#relation⟩ pairs.  <Tip>WHEN TO USE ? Expand is designed for reasoning the complete set of users that have access to their objects, which allows our users to build efficient search indices for access-controlled content.  It is not designed to use as a check access. Expand request has a high latency which can cause a performance issues when its used as access check.</Tip>
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -423,9 +419,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[PermissionExpandResponse]:
-        """expand relationships according to schema
+        """expand api
 
-        Retrieve all subjects (users and user sets) that have a relationship or attribute with given entity and permission. Expand API response is represented by a user set tree, whose leaf nodes are user IDs or user sets pointing to other ⟨object#relation⟩ pairs.  <Tip>WHEN TO USE ? Expand is designed for reasoning the complete set of users that have access to their objects, which allows our users to build efficient search indices for access-controlled content.  It is not designed to use as a check access. Expand request has a high latency which can cause a performance issues when its used as access check.</Tip>
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -494,9 +489,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """expand relationships according to schema
+        """expand api
 
-        Retrieve all subjects (users and user sets) that have a relationship or attribute with given entity and permission. Expand API response is represented by a user set tree, whose leaf nodes are user IDs or user sets pointing to other ⟨object#relation⟩ pairs.  <Tip>WHEN TO USE ? Expand is designed for reasoning the complete set of users that have access to their objects, which allows our users to build efficient search indices for access-controlled content.  It is not designed to use as a check access. Expand request has a high latency which can cause a performance issues when its used as access check.</Tip>
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -637,9 +631,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> PermissionLookupEntityResponse:
-        """Retrieve an entity by its identifier.
+        """lookup entity
 
-        Lookup Entity endpoint lets you ask questions in form of “Which resources can user:X do action Y?”. As a response of this you’ll get a entity results in a format of string array.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -708,9 +701,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[PermissionLookupEntityResponse]:
-        """Retrieve an entity by its identifier.
+        """lookup entity
 
-        Lookup Entity endpoint lets you ask questions in form of “Which resources can user:X do action Y?”. As a response of this you’ll get a entity results in a format of string array.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -779,9 +771,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Retrieve an entity by its identifier.
+        """lookup entity
 
-        Lookup Entity endpoint lets you ask questions in form of “Which resources can user:X do action Y?”. As a response of this you’ll get a entity results in a format of string array.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -922,9 +913,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> StreamResultOfPermissionLookupEntityStreamResponse:
-        """Stream entities by their identifiers.
+        """lookup entity stream
 
-        Lookup Entity endpoint lets you ask questions in form of “Which resources can user:X do action Y?”. As a response of this you’ll get a entity results in a format of as a streaming response.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -993,9 +983,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[StreamResultOfPermissionLookupEntityStreamResponse]:
-        """Stream entities by their identifiers.
+        """lookup entity stream
 
-        Lookup Entity endpoint lets you ask questions in form of “Which resources can user:X do action Y?”. As a response of this you’ll get a entity results in a format of as a streaming response.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -1064,9 +1053,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Stream entities by their identifiers.
+        """lookup entity stream
 
-        Lookup Entity endpoint lets you ask questions in form of “Which resources can user:X do action Y?”. As a response of this you’ll get a entity results in a format of as a streaming response.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -1207,9 +1195,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> PermissionLookupSubjectResponse:
-        """Retrieve a subject by its identifier.
+        """lookup-subject
 
-        Lookup Subject endpoint lets you ask questions in form of “Which subjects can do action Y on entity:X?”. As a response of this you’ll get a subject results in a format of string array.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -1278,9 +1265,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[PermissionLookupSubjectResponse]:
-        """Retrieve a subject by its identifier.
+        """lookup-subject
 
-        Lookup Subject endpoint lets you ask questions in form of “Which subjects can do action Y on entity:X?”. As a response of this you’ll get a subject results in a format of string array.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -1349,9 +1335,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Retrieve a subject by its identifier.
+        """lookup-subject
 
-        Lookup Subject endpoint lets you ask questions in form of “Which subjects can do action Y on entity:X?”. As a response of this you’ll get a subject results in a format of string array.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -1492,9 +1477,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> PermissionSubjectPermissionResponse:
-        """Retrieve permissions related to a specific subject.
+        """subject permission
 
-        The Subject Permission List endpoint allows you to inquire in the form of “Which permissions user:x can perform on entity:y?”. In response, you'll receive a list of permissions specific to the user for the given entity, returned in the format of a map.    In this endpoint, you'll receive a map of permissions and their statuses directly. The structure is map[string]CheckResult, such as \"sample-permission\" -> \"ALLOWED\". This represents the permissions and their associated states in a key-value pair format.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -1563,9 +1547,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[PermissionSubjectPermissionResponse]:
-        """Retrieve permissions related to a specific subject.
+        """subject permission
 
-        The Subject Permission List endpoint allows you to inquire in the form of “Which permissions user:x can perform on entity:y?”. In response, you'll receive a list of permissions specific to the user for the given entity, returned in the format of a map.    In this endpoint, you'll receive a map of permissions and their statuses directly. The structure is map[string]CheckResult, such as \"sample-permission\" -> \"ALLOWED\". This represents the permissions and their associated states in a key-value pair format.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str
@@ -1634,9 +1617,8 @@ class PermissionApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Retrieve permissions related to a specific subject.
+        """subject permission
 
-        The Subject Permission List endpoint allows you to inquire in the form of “Which permissions user:x can perform on entity:y?”. In response, you'll receive a list of permissions specific to the user for the given entity, returned in the format of a map.    In this endpoint, you'll receive a map of permissions and their statuses directly. The structure is map[string]CheckResult, such as \"sample-permission\" -> \"ALLOWED\". This represents the permissions and their associated states in a key-value pair format.
 
         :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
         :type tenant_id: str

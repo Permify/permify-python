@@ -5,20 +5,18 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**bundle_run**](DataApi.md#bundle_run) | **POST** /v1/tenants/{tenant_id}/data/run-bundle | run bundle
-[**data_attributes_read**](DataApi.md#data_attributes_read) | **POST** /v1/tenants/{tenant_id}/data/attributes/read | read attribute(s)
+[**data_attributes_read**](DataApi.md#data_attributes_read) | **POST** /v1/tenants/{tenant_id}/data/attributes/read | read attributes
 [**data_delete**](DataApi.md#data_delete) | **POST** /v1/tenants/{tenant_id}/data/delete | delete data
-[**data_relationships_read**](DataApi.md#data_relationships_read) | **POST** /v1/tenants/{tenant_id}/data/relationships/read | read relation tuple(s)
-[**data_write**](DataApi.md#data_write) | **POST** /v1/tenants/{tenant_id}/data/write | create data
+[**data_relationships_read**](DataApi.md#data_relationships_read) | **POST** /v1/tenants/{tenant_id}/data/relationships/read | read relationships
+[**data_write**](DataApi.md#data_write) | **POST** /v1/tenants/{tenant_id}/data/write | write data
 [**relationships_delete**](DataApi.md#relationships_delete) | **POST** /v1/tenants/{tenant_id}/relationships/delete | delete relationships
-[**relationships_write**](DataApi.md#relationships_write) | **POST** /v1/tenants/{tenant_id}/relationships/write | create new relationships
+[**relationships_write**](DataApi.md#relationships_write) | **POST** /v1/tenants/{tenant_id}/relationships/write | write relationships
 
 
 # **bundle_run**
 > BundleRunResponse bundle_run(tenant_id, body)
 
 run bundle
-
-The \"Run Bundle\" API provides a straightforward way to execute predefined bundles within your application's tenant environment. By sending a POST request to this endpoint, you can activate specific functionalities or processes encapsulated in a bundle.
 
 ### Example
 
@@ -88,9 +86,7 @@ No authorization required
 # **data_attributes_read**
 > AttributeReadResponse data_attributes_read(tenant_id, body)
 
-read attribute(s)
-
-Read API allows for directly querying the stored graph data to display and filter stored attributes.
+read attributes
 
 ### Example
 
@@ -117,7 +113,7 @@ with permify.ApiClient(configuration) as api_client:
     body = permify.DataAttributesReadRequest() # DataAttributesReadRequest | 
 
     try:
-        # read attribute(s)
+        # read attributes
         api_response = api_instance.data_attributes_read(tenant_id, body)
         print("The response of DataApi->data_attributes_read:\n")
         pprint(api_response)
@@ -161,8 +157,6 @@ No authorization required
 > DataDeleteResponse data_delete(tenant_id, body)
 
 delete data
-
-You can delete any stored relation tuples or attributes with following API.
 
 ### Example
 
@@ -232,9 +226,7 @@ No authorization required
 # **data_relationships_read**
 > RelationshipReadResponse data_relationships_read(tenant_id, body)
 
-read relation tuple(s)
-
-Read API allows for directly querying the stored graph data to display and filter stored relational tuples.
+read relationships
 
 ### Example
 
@@ -261,7 +253,7 @@ with permify.ApiClient(configuration) as api_client:
     body = permify.DataRelationshipsReadRequest() # DataRelationshipsReadRequest | 
 
     try:
-        # read relation tuple(s)
+        # read relationships
         api_response = api_instance.data_relationships_read(tenant_id, body)
         print("The response of DataApi->data_relationships_read:\n")
         pprint(api_response)
@@ -304,9 +296,7 @@ No authorization required
 # **data_write**
 > DataWriteResponse data_write(tenant_id, body)
 
-create data
-
-In Permify, attributes and relations between your entities, objects and users represents your authorization data. These data stored as tuples in a preferred database.
+write data
 
 ### Example
 
@@ -333,7 +323,7 @@ with permify.ApiClient(configuration) as api_client:
     body = permify.DataWriteRequest() # DataWriteRequest | 
 
     try:
-        # create data
+        # write data
         api_response = api_instance.data_write(tenant_id, body)
         print("The response of DataApi->data_write:\n")
         pprint(api_response)
@@ -446,7 +436,7 @@ No authorization required
 # **relationships_write**
 > RelationshipWriteResponse relationships_write(tenant_id, body)
 
-create new relationships
+write relationships
 
 ### Example
 
@@ -473,7 +463,7 @@ with permify.ApiClient(configuration) as api_client:
     body = permify.RelationshipsWriteRequest() # RelationshipsWriteRequest | 
 
     try:
-        # create new relationships
+        # write relationships
         api_response = api_instance.relationships_write(tenant_id, body)
         print("The response of DataApi->relationships_write:\n")
         pprint(api_response)

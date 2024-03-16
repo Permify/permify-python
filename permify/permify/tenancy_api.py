@@ -60,9 +60,8 @@ class TenancyApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> TenantCreateResponse:
-        """create new tenant
+        """create tenant
 
-        Permify Multi Tenancy support you can create custom schemas for tenants and manage them in a single place. You can create a tenant with following API.  <Warning>We have a pre-inserted tenant - t1 - by default for the ones that don't use multi-tenancy.</Warning>
 
         :param body: TenantCreateRequest is the message used for the request to create a tenant. (required)
         :type body: TenantCreateRequest
@@ -127,9 +126,8 @@ class TenancyApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[TenantCreateResponse]:
-        """create new tenant
+        """create tenant
 
-        Permify Multi Tenancy support you can create custom schemas for tenants and manage them in a single place. You can create a tenant with following API.  <Warning>We have a pre-inserted tenant - t1 - by default for the ones that don't use multi-tenancy.</Warning>
 
         :param body: TenantCreateRequest is the message used for the request to create a tenant. (required)
         :type body: TenantCreateRequest
@@ -194,9 +192,8 @@ class TenancyApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """create new tenant
+        """create tenant
 
-        Permify Multi Tenancy support you can create custom schemas for tenants and manage them in a single place. You can create a tenant with following API.  <Warning>We have a pre-inserted tenant - t1 - by default for the ones that don't use multi-tenancy.</Warning>
 
         :param body: TenantCreateRequest is the message used for the request to create a tenant. (required)
         :type body: TenantCreateRequest
@@ -332,7 +329,6 @@ class TenancyApi:
     ) -> TenantDeleteResponse:
         """delete tenant
 
-        You can delete a tenant with following API.
 
         :param id: id is the unique identifier of the tenant to be deleted. (required)
         :type id: str
@@ -399,7 +395,6 @@ class TenancyApi:
     ) -> ApiResponse[TenantDeleteResponse]:
         """delete tenant
 
-        You can delete a tenant with following API.
 
         :param id: id is the unique identifier of the tenant to be deleted. (required)
         :type id: str
@@ -466,7 +461,6 @@ class TenancyApi:
     ) -> RESTResponseType:
         """delete tenant
 
-        You can delete a tenant with following API.
 
         :param id: id is the unique identifier of the tenant to be deleted. (required)
         :type id: str
@@ -589,7 +583,6 @@ class TenancyApi:
     ) -> TenantListResponse:
         """list tenants
 
-        You can list tenants with following API.
 
         :param body: TenantListRequest is the message used for the request to list all tenants. (required)
         :type body: TenantListRequest
@@ -656,7 +649,6 @@ class TenancyApi:
     ) -> ApiResponse[TenantListResponse]:
         """list tenants
 
-        You can list tenants with following API.
 
         :param body: TenantListRequest is the message used for the request to list all tenants. (required)
         :type body: TenantListRequest
@@ -723,7 +715,6 @@ class TenancyApi:
     ) -> RESTResponseType:
         """list tenants
 
-        You can list tenants with following API.
 
         :param body: TenantListRequest is the message used for the request to list all tenants. (required)
         :type body: TenantListRequest

@@ -30,7 +30,7 @@ class TestTenancyApi(unittest.TestCase):
     def test_tenants_create(self) -> None:
         """Test case for tenants_create
 
-        create new tenant
+        create tenant
         """
         pass
 
