@@ -25,10 +25,10 @@ from typing_extensions import Self
 
 class PermissionExpandRequestMetadata(BaseModel):
     """
-    PermissionExpandRequestMetadata is the metadata associated with a PermissionExpandRequest.
+    PermissionExpandRequestMetadata metadata for the PermissionExpandRequest.
     """ # noqa: E501
     schema_version: Optional[StrictStr] = Field(default=None, description="Version of the schema.")
-    snap_token: Optional[StrictStr] = Field(default=None, description="Token associated with the snap.")
+    snap_token: Optional[StrictStr] = Field(default=None, description="The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens).")
     __properties: ClassVar[List[str]] = ["schema_version", "snap_token"]
 
     model_config = ConfigDict(

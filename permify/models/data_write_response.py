@@ -27,7 +27,7 @@ class DataWriteResponse(BaseModel):
     """
     DataWriteResponse defines the structure of the response after writing data. It contains the snap_token generated after the write operation.
     """ # noqa: E501
-    snap_token: Optional[StrictStr] = Field(default=None, description="snap_token is the token generated after the data write operation, representing a snapshot of the data.")
+    snap_token: Optional[StrictStr] = Field(default=None, description="The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens).")
     __properties: ClassVar[List[str]] = ["snap_token"]
 
     model_config = ConfigDict(

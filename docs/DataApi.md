@@ -39,7 +39,7 @@ configuration = permify.Configuration(
 with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify.DataApi(api_client)
-    tenant_id = 'tenant_id_example' # str | 
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify.BundleRunRequest() # BundleRunRequest | 
 
     try:
@@ -58,7 +58,7 @@ with permify.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**|  | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**BundleRunRequest**](BundleRunRequest.md)|  | 
 
 ### Return type
@@ -109,7 +109,7 @@ configuration = permify.Configuration(
 with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify.DataApi(api_client)
-    tenant_id = 'tenant_id_example' # str | tenant_id represents the unique identifier of the tenant from which the attributes are being read.
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify.DataAttributesReadRequest() # DataAttributesReadRequest | 
 
     try:
@@ -128,7 +128,7 @@ with permify.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**| tenant_id represents the unique identifier of the tenant from which the attributes are being read. | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**DataAttributesReadRequest**](DataAttributesReadRequest.md)|  | 
 
 ### Return type
@@ -179,7 +179,7 @@ configuration = permify.Configuration(
 with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify.DataApi(api_client)
-    tenant_id = 'tenant_id_example' # str | tenant_id represents the unique identifier of the tenant from which the data will be deleted.
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify.DataDeleteRequest() # DataDeleteRequest | 
 
     try:
@@ -198,7 +198,7 @@ with permify.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**| tenant_id represents the unique identifier of the tenant from which the data will be deleted. | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**DataDeleteRequest**](DataDeleteRequest.md)|  | 
 
 ### Return type
@@ -249,7 +249,7 @@ configuration = permify.Configuration(
 with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify.DataApi(api_client)
-    tenant_id = 'tenant_id_example' # str | tenant_id represents the unique identifier of the tenant for which relationships are read.
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify.DataRelationshipsReadRequest() # DataRelationshipsReadRequest | 
 
     try:
@@ -268,7 +268,7 @@ with permify.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**| tenant_id represents the unique identifier of the tenant for which relationships are read. | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**DataRelationshipsReadRequest**](DataRelationshipsReadRequest.md)|  | 
 
 ### Return type
@@ -319,7 +319,7 @@ configuration = permify.Configuration(
 with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify.DataApi(api_client)
-    tenant_id = 'tenant_id_example' # str | tenant_id represents the unique identifier of the tenant for which data is written.
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify.DataWriteRequest() # DataWriteRequest | 
 
     try:
@@ -338,7 +338,7 @@ with permify.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**| tenant_id represents the unique identifier of the tenant for which data is written. | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**DataWriteRequest**](DataWriteRequest.md)|  | 
 
 ### Return type
@@ -389,7 +389,7 @@ configuration = permify.Configuration(
 with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify.DataApi(api_client)
-    tenant_id = 'tenant_id_example' # str | 
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify.RelationshipDeleteRequest() # RelationshipDeleteRequest | 
 
     try:
@@ -408,7 +408,7 @@ with permify.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**|  | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**RelationshipDeleteRequest**](RelationshipDeleteRequest.md)|  | 
 
 ### Return type
@@ -459,7 +459,7 @@ configuration = permify.Configuration(
 with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify.DataApi(api_client)
-    tenant_id = 'tenant_id_example' # str | Unique identifier for the tenant with specific constraints.
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify.RelationshipsWriteRequest() # RelationshipsWriteRequest | 
 
     try:
@@ -478,7 +478,7 @@ with permify.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**| Unique identifier for the tenant with specific constraints. | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**RelationshipsWriteRequest**](RelationshipsWriteRequest.md)|  | 
 
 ### Return type

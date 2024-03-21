@@ -6,7 +6,7 @@ WatchRequest is the request message for the Watch RPC. It contains the details n
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**snap_token** | **str** | Snap token to be used for watching. | [optional] 
+**snap_token** | **str** | The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens). | [optional] 
 
 ## Example
 

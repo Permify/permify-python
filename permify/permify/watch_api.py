@@ -43,7 +43,7 @@ class WatchApi:
     @validate_call
     def watch_watch(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: WatchWatchRequest,
         _request_timeout: Union[
             None,
@@ -61,7 +61,7 @@ class WatchApi:
         """watch changes
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: WatchWatchRequest
@@ -113,7 +113,7 @@ class WatchApi:
     @validate_call
     def watch_watch_with_http_info(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: WatchWatchRequest,
         _request_timeout: Union[
             None,
@@ -131,7 +131,7 @@ class WatchApi:
         """watch changes
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: WatchWatchRequest
@@ -183,7 +183,7 @@ class WatchApi:
     @validate_call
     def watch_watch_without_preload_content(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: WatchWatchRequest,
         _request_timeout: Union[
             None,
@@ -201,7 +201,7 @@ class WatchApi:
         """watch changes
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: WatchWatchRequest

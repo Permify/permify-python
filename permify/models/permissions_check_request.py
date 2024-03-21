@@ -34,7 +34,7 @@ class PermissionsCheckRequest(BaseModel):
     """ # noqa: E501
     metadata: Optional[PermissionCheckRequestMetadata] = None
     entity: Optional[Entity] = None
-    permission: Optional[StrictStr] = Field(default=None, description="Name of the permission or relation, required, must start with a letter and can include alphanumeric and underscore, max 64 bytes.")
+    permission: Optional[StrictStr] = Field(default=None, description="The action the user wants to perform on the resource")
     subject: Optional[Subject] = None
     context: Optional[Context] = None
     arguments: Optional[List[Argument]] = Field(default=None, description="Additional arguments associated with this request.")

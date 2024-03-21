@@ -33,7 +33,7 @@ configuration = permify.Configuration(
 with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify.WatchApi(api_client)
-    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify.WatchWatchRequest() # WatchWatchRequest | 
 
     try:
@@ -52,7 +52,7 @@ with permify.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenant_id** | **str**| Identifier of the tenant, required, and must match the pattern \&quot;[a-zA-Z0-9-,]+\&quot;, max 64 bytes. | 
+ **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
  **body** | [**WatchWatchRequest**](WatchWatchRequest.md)|  | 
 
 ### Return type

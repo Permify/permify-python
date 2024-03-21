@@ -27,7 +27,7 @@ class BundleRunResponse(BaseModel):
     """
     BundleRunResponse is the response for a BundleRunRequest. It includes a snap_token, which may be used for tracking the execution or its results.
     """ # noqa: E501
-    snap_token: Optional[StrictStr] = Field(default=None, description="Token related to the bundle execution.")
+    snap_token: Optional[StrictStr] = Field(default=None, description="The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens)")
     __properties: ClassVar[List[str]] = ["snap_token"]
 
     model_config = ConfigDict(

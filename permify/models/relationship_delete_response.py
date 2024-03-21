@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -27,7 +27,7 @@ class RelationshipDeleteResponse(BaseModel):
     """
     RelationshipDeleteResponse
     """ # noqa: E501
-    snap_token: Optional[StrictStr] = None
+    snap_token: Optional[StrictStr] = Field(default=None, description="The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens)")
     __properties: ClassVar[List[str]] = ["snap_token"]
 
     model_config = ConfigDict(

@@ -27,7 +27,7 @@ class WatchWatchRequest(BaseModel):
     """
     WatchRequest is the request message for the Watch RPC. It contains the details needed to establish a watch stream.
     """ # noqa: E501
-    snap_token: Optional[StrictStr] = Field(default=None, description="Snap token to be used for watching.")
+    snap_token: Optional[StrictStr] = Field(default=None, description="The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens).")
     __properties: ClassVar[List[str]] = ["snap_token"]
 
     model_config = ConfigDict(

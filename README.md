@@ -68,7 +68,7 @@ configuration = permify.Configuration(
 with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify.BundleApi(api_client)
-    tenant_id = 'tenant_id_example' # str | 
+    tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
     body = permify.BundleDeleteRequest() # BundleDeleteRequest | 
 
     try:

@@ -25,7 +25,7 @@ from typing_extensions import Self
 
 class PermissionCheckResponseMetadata(BaseModel):
     """
-    PermissionCheckResponseMetadata is the metadata associated with a PermissionCheckResponse.
+    PermissionCheckResponseMetadata metadata for the PermissionCheckResponse.
     """ # noqa: E501
     check_count: Optional[StrictInt] = Field(default=None, description="The count of the checks performed.")
     __properties: ClassVar[List[str]] = ["check_count"]

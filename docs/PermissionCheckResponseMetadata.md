@@ -1,6 +1,6 @@
 # PermissionCheckResponseMetadata
 
-PermissionCheckResponseMetadata is the metadata associated with a PermissionCheckResponse.
+PermissionCheckResponseMetadata metadata for the PermissionCheckResponse.
 
 ## Properties
 

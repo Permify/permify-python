@@ -1,15 +1,15 @@
 # PermissionSubjectPermissionRequestMetadata
 
-PermissionSubjectPermissionRequestMetadata is the metadata associated with a PermissionSubjectPermissionRequest.
+PermissionSubjectPermissionRequestMetadata metadata for the PermissionSubjectPermissionRequest.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **schema_version** | **str** | Version of the schema. | [optional] 
-**snap_token** | **str** | Token associated with the snap. | [optional] 
+**snap_token** | **str** | The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens). | [optional] 
 **only_permission** | **bool** | Whether to only check permissions. | [optional] 
-**depth** | **int** | Depth of the check, must be greater than or equal to 3. | [optional] 
+**depth** | **int** | Query limit when if recursive database queries got in loop. | [optional] 
 
 ## Example
 

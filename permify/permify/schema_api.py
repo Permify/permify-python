@@ -47,7 +47,7 @@ class SchemaApi:
     @validate_call
     def schemas_list(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: SchemasListRequest,
         _request_timeout: Union[
             None,
@@ -65,7 +65,7 @@ class SchemaApi:
         """list schema
 
 
-        :param tenant_id: tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: SchemasListRequest
@@ -117,7 +117,7 @@ class SchemaApi:
     @validate_call
     def schemas_list_with_http_info(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: SchemasListRequest,
         _request_timeout: Union[
             None,
@@ -135,7 +135,7 @@ class SchemaApi:
         """list schema
 
 
-        :param tenant_id: tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: SchemasListRequest
@@ -187,7 +187,7 @@ class SchemaApi:
     @validate_call
     def schemas_list_without_preload_content(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: SchemasListRequest,
         _request_timeout: Union[
             None,
@@ -205,7 +205,7 @@ class SchemaApi:
         """list schema
 
 
-        :param tenant_id: tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: SchemasListRequest
@@ -329,7 +329,7 @@ class SchemaApi:
     @validate_call
     def schemas_read(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: SchemasReadRequest,
         _request_timeout: Union[
             None,
@@ -347,7 +347,7 @@ class SchemaApi:
         """read schema
 
 
-        :param tenant_id: tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: SchemasReadRequest
@@ -399,7 +399,7 @@ class SchemaApi:
     @validate_call
     def schemas_read_with_http_info(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: SchemasReadRequest,
         _request_timeout: Union[
             None,
@@ -417,7 +417,7 @@ class SchemaApi:
         """read schema
 
 
-        :param tenant_id: tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: SchemasReadRequest
@@ -469,7 +469,7 @@ class SchemaApi:
     @validate_call
     def schemas_read_without_preload_content(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: SchemasReadRequest,
         _request_timeout: Union[
             None,
@@ -487,7 +487,7 @@ class SchemaApi:
         """read schema
 
 
-        :param tenant_id: tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: SchemasReadRequest
@@ -611,7 +611,7 @@ class SchemaApi:
     @validate_call
     def schemas_write(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: SchemasWriteRequest,
         _request_timeout: Union[
             None,
@@ -629,7 +629,7 @@ class SchemaApi:
         """write schema
 
 
-        :param tenant_id: tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: SchemasWriteRequest
@@ -681,7 +681,7 @@ class SchemaApi:
     @validate_call
     def schemas_write_with_http_info(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: SchemasWriteRequest,
         _request_timeout: Union[
             None,
@@ -699,7 +699,7 @@ class SchemaApi:
         """write schema
 
 
-        :param tenant_id: tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: SchemasWriteRequest
@@ -751,7 +751,7 @@ class SchemaApi:
     @validate_call
     def schemas_write_without_preload_content(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: SchemasWriteRequest,
         _request_timeout: Union[
             None,
@@ -769,7 +769,7 @@ class SchemaApi:
         """write schema
 
 
-        :param tenant_id: tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: SchemasWriteRequest

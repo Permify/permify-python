@@ -17,7 +17,8 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from pydantic import StrictStr
+from pydantic import Field, StrictStr
+from typing_extensions import Annotated
 from permify.models.bundle_delete_request import BundleDeleteRequest
 from permify.models.bundle_delete_response import BundleDeleteResponse
 from permify.models.bundle_read_request import BundleReadRequest
@@ -46,7 +47,7 @@ class BundleApi:
     @validate_call
     def bundle_delete(
         self,
-        tenant_id: StrictStr,
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: BundleDeleteRequest,
         _request_timeout: Union[
             None,
@@ -64,7 +65,7 @@ class BundleApi:
         """delete bundle
 
 
-        :param tenant_id: (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: BundleDeleteRequest
@@ -116,7 +117,7 @@ class BundleApi:
     @validate_call
     def bundle_delete_with_http_info(
         self,
-        tenant_id: StrictStr,
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: BundleDeleteRequest,
         _request_timeout: Union[
             None,
@@ -134,7 +135,7 @@ class BundleApi:
         """delete bundle
 
 
-        :param tenant_id: (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: BundleDeleteRequest
@@ -186,7 +187,7 @@ class BundleApi:
     @validate_call
     def bundle_delete_without_preload_content(
         self,
-        tenant_id: StrictStr,
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: BundleDeleteRequest,
         _request_timeout: Union[
             None,
@@ -204,7 +205,7 @@ class BundleApi:
         """delete bundle
 
 
-        :param tenant_id: (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: BundleDeleteRequest
@@ -328,7 +329,7 @@ class BundleApi:
     @validate_call
     def bundle_read(
         self,
-        tenant_id: StrictStr,
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: BundleReadRequest,
         _request_timeout: Union[
             None,
@@ -346,7 +347,7 @@ class BundleApi:
         """read bundle
 
 
-        :param tenant_id: (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: BundleReadRequest
@@ -398,7 +399,7 @@ class BundleApi:
     @validate_call
     def bundle_read_with_http_info(
         self,
-        tenant_id: StrictStr,
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: BundleReadRequest,
         _request_timeout: Union[
             None,
@@ -416,7 +417,7 @@ class BundleApi:
         """read bundle
 
 
-        :param tenant_id: (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: BundleReadRequest
@@ -468,7 +469,7 @@ class BundleApi:
     @validate_call
     def bundle_read_without_preload_content(
         self,
-        tenant_id: StrictStr,
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: BundleReadRequest,
         _request_timeout: Union[
             None,
@@ -486,7 +487,7 @@ class BundleApi:
         """read bundle
 
 
-        :param tenant_id: (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: BundleReadRequest
@@ -610,7 +611,7 @@ class BundleApi:
     @validate_call
     def bundle_write(
         self,
-        tenant_id: StrictStr,
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: BundleWriteRequest,
         _request_timeout: Union[
             None,
@@ -628,7 +629,7 @@ class BundleApi:
         """write bundle
 
 
-        :param tenant_id: (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: BundleWriteRequest
@@ -680,7 +681,7 @@ class BundleApi:
     @validate_call
     def bundle_write_with_http_info(
         self,
-        tenant_id: StrictStr,
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: BundleWriteRequest,
         _request_timeout: Union[
             None,
@@ -698,7 +699,7 @@ class BundleApi:
         """write bundle
 
 
-        :param tenant_id: (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: BundleWriteRequest
@@ -750,7 +751,7 @@ class BundleApi:
     @validate_call
     def bundle_write_without_preload_content(
         self,
-        tenant_id: StrictStr,
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: BundleWriteRequest,
         _request_timeout: Union[
             None,
@@ -768,7 +769,7 @@ class BundleApi:
         """write bundle
 
 
-        :param tenant_id: (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: BundleWriteRequest

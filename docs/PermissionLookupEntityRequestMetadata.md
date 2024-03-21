@@ -1,14 +1,14 @@
 # PermissionLookupEntityRequestMetadata
 
-PermissionLookupEntityRequestMetadata is the metadata associated with a PermissionLookupEntityRequest.
+PermissionLookupEntityRequestMetadata metadata for the PermissionLookupEntityRequest.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **schema_version** | **str** | Version of the schema. | [optional] 
-**snap_token** | **str** | Token associated with the snap. | [optional] 
-**depth** | **int** | Depth of lookup, required, must be greater or equal to 3. | [optional] 
+**snap_token** | **str** | The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens). | [optional] 
+**depth** | **int** | Query limit when if recursive database queries got in loop. | [optional] 
 
 ## Example
 

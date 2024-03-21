@@ -6,7 +6,7 @@ DataWriteResponse defines the structure of the response after writing data. It c
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**snap_token** | **str** | snap_token is the token generated after the data write operation, representing a snapshot of the data. | [optional] 
+**snap_token** | **str** | The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens). | [optional] 
 
 ## Example
 

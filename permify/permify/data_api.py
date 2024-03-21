@@ -55,7 +55,7 @@ class DataApi:
     @validate_call
     def bundle_run(
         self,
-        tenant_id: StrictStr,
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: BundleRunRequest,
         _request_timeout: Union[
             None,
@@ -73,7 +73,7 @@ class DataApi:
         """run bundle
 
 
-        :param tenant_id: (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: BundleRunRequest
@@ -125,7 +125,7 @@ class DataApi:
     @validate_call
     def bundle_run_with_http_info(
         self,
-        tenant_id: StrictStr,
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: BundleRunRequest,
         _request_timeout: Union[
             None,
@@ -143,7 +143,7 @@ class DataApi:
         """run bundle
 
 
-        :param tenant_id: (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: BundleRunRequest
@@ -195,7 +195,7 @@ class DataApi:
     @validate_call
     def bundle_run_without_preload_content(
         self,
-        tenant_id: StrictStr,
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: BundleRunRequest,
         _request_timeout: Union[
             None,
@@ -213,7 +213,7 @@ class DataApi:
         """run bundle
 
 
-        :param tenant_id: (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: BundleRunRequest
@@ -337,7 +337,7 @@ class DataApi:
     @validate_call
     def data_attributes_read(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id represents the unique identifier of the tenant from which the attributes are being read.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: DataAttributesReadRequest,
         _request_timeout: Union[
             None,
@@ -355,7 +355,7 @@ class DataApi:
         """read attributes
 
 
-        :param tenant_id: tenant_id represents the unique identifier of the tenant from which the attributes are being read. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: DataAttributesReadRequest
@@ -407,7 +407,7 @@ class DataApi:
     @validate_call
     def data_attributes_read_with_http_info(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id represents the unique identifier of the tenant from which the attributes are being read.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: DataAttributesReadRequest,
         _request_timeout: Union[
             None,
@@ -425,7 +425,7 @@ class DataApi:
         """read attributes
 
 
-        :param tenant_id: tenant_id represents the unique identifier of the tenant from which the attributes are being read. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: DataAttributesReadRequest
@@ -477,7 +477,7 @@ class DataApi:
     @validate_call
     def data_attributes_read_without_preload_content(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id represents the unique identifier of the tenant from which the attributes are being read.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: DataAttributesReadRequest,
         _request_timeout: Union[
             None,
@@ -495,7 +495,7 @@ class DataApi:
         """read attributes
 
 
-        :param tenant_id: tenant_id represents the unique identifier of the tenant from which the attributes are being read. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: DataAttributesReadRequest
@@ -619,7 +619,7 @@ class DataApi:
     @validate_call
     def data_delete(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id represents the unique identifier of the tenant from which the data will be deleted.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: DataDeleteRequest,
         _request_timeout: Union[
             None,
@@ -637,7 +637,7 @@ class DataApi:
         """delete data
 
 
-        :param tenant_id: tenant_id represents the unique identifier of the tenant from which the data will be deleted. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: DataDeleteRequest
@@ -689,7 +689,7 @@ class DataApi:
     @validate_call
     def data_delete_with_http_info(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id represents the unique identifier of the tenant from which the data will be deleted.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: DataDeleteRequest,
         _request_timeout: Union[
             None,
@@ -707,7 +707,7 @@ class DataApi:
         """delete data
 
 
-        :param tenant_id: tenant_id represents the unique identifier of the tenant from which the data will be deleted. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: DataDeleteRequest
@@ -759,7 +759,7 @@ class DataApi:
     @validate_call
     def data_delete_without_preload_content(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id represents the unique identifier of the tenant from which the data will be deleted.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: DataDeleteRequest,
         _request_timeout: Union[
             None,
@@ -777,7 +777,7 @@ class DataApi:
         """delete data
 
 
-        :param tenant_id: tenant_id represents the unique identifier of the tenant from which the data will be deleted. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: DataDeleteRequest
@@ -901,7 +901,7 @@ class DataApi:
     @validate_call
     def data_relationships_read(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id represents the unique identifier of the tenant for which relationships are read.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: DataRelationshipsReadRequest,
         _request_timeout: Union[
             None,
@@ -919,7 +919,7 @@ class DataApi:
         """read relationships
 
 
-        :param tenant_id: tenant_id represents the unique identifier of the tenant for which relationships are read. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: DataRelationshipsReadRequest
@@ -971,7 +971,7 @@ class DataApi:
     @validate_call
     def data_relationships_read_with_http_info(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id represents the unique identifier of the tenant for which relationships are read.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: DataRelationshipsReadRequest,
         _request_timeout: Union[
             None,
@@ -989,7 +989,7 @@ class DataApi:
         """read relationships
 
 
-        :param tenant_id: tenant_id represents the unique identifier of the tenant for which relationships are read. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: DataRelationshipsReadRequest
@@ -1041,7 +1041,7 @@ class DataApi:
     @validate_call
     def data_relationships_read_without_preload_content(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id represents the unique identifier of the tenant for which relationships are read.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: DataRelationshipsReadRequest,
         _request_timeout: Union[
             None,
@@ -1059,7 +1059,7 @@ class DataApi:
         """read relationships
 
 
-        :param tenant_id: tenant_id represents the unique identifier of the tenant for which relationships are read. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: DataRelationshipsReadRequest
@@ -1183,7 +1183,7 @@ class DataApi:
     @validate_call
     def data_write(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id represents the unique identifier of the tenant for which data is written.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: DataWriteRequest,
         _request_timeout: Union[
             None,
@@ -1201,7 +1201,7 @@ class DataApi:
         """write data
 
 
-        :param tenant_id: tenant_id represents the unique identifier of the tenant for which data is written. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: DataWriteRequest
@@ -1253,7 +1253,7 @@ class DataApi:
     @validate_call
     def data_write_with_http_info(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id represents the unique identifier of the tenant for which data is written.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: DataWriteRequest,
         _request_timeout: Union[
             None,
@@ -1271,7 +1271,7 @@ class DataApi:
         """write data
 
 
-        :param tenant_id: tenant_id represents the unique identifier of the tenant for which data is written. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: DataWriteRequest
@@ -1323,7 +1323,7 @@ class DataApi:
     @validate_call
     def data_write_without_preload_content(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="tenant_id represents the unique identifier of the tenant for which data is written.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: DataWriteRequest,
         _request_timeout: Union[
             None,
@@ -1341,7 +1341,7 @@ class DataApi:
         """write data
 
 
-        :param tenant_id: tenant_id represents the unique identifier of the tenant for which data is written. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: DataWriteRequest
@@ -1465,7 +1465,7 @@ class DataApi:
     @validate_call
     def relationships_delete(
         self,
-        tenant_id: StrictStr,
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: RelationshipDeleteRequest,
         _request_timeout: Union[
             None,
@@ -1483,7 +1483,7 @@ class DataApi:
         """delete relationships
 
 
-        :param tenant_id: (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: RelationshipDeleteRequest
@@ -1535,7 +1535,7 @@ class DataApi:
     @validate_call
     def relationships_delete_with_http_info(
         self,
-        tenant_id: StrictStr,
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: RelationshipDeleteRequest,
         _request_timeout: Union[
             None,
@@ -1553,7 +1553,7 @@ class DataApi:
         """delete relationships
 
 
-        :param tenant_id: (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: RelationshipDeleteRequest
@@ -1605,7 +1605,7 @@ class DataApi:
     @validate_call
     def relationships_delete_without_preload_content(
         self,
-        tenant_id: StrictStr,
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: RelationshipDeleteRequest,
         _request_timeout: Union[
             None,
@@ -1623,7 +1623,7 @@ class DataApi:
         """delete relationships
 
 
-        :param tenant_id: (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: RelationshipDeleteRequest
@@ -1747,7 +1747,7 @@ class DataApi:
     @validate_call
     def relationships_write(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Unique identifier for the tenant with specific constraints.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: RelationshipsWriteRequest,
         _request_timeout: Union[
             None,
@@ -1765,7 +1765,7 @@ class DataApi:
         """write relationships
 
 
-        :param tenant_id: Unique identifier for the tenant with specific constraints. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: RelationshipsWriteRequest
@@ -1817,7 +1817,7 @@ class DataApi:
     @validate_call
     def relationships_write_with_http_info(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Unique identifier for the tenant with specific constraints.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: RelationshipsWriteRequest,
         _request_timeout: Union[
             None,
@@ -1835,7 +1835,7 @@ class DataApi:
         """write relationships
 
 
-        :param tenant_id: Unique identifier for the tenant with specific constraints. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: RelationshipsWriteRequest
@@ -1887,7 +1887,7 @@ class DataApi:
     @validate_call
     def relationships_write_without_preload_content(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Unique identifier for the tenant with specific constraints.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: RelationshipsWriteRequest,
         _request_timeout: Union[
             None,
@@ -1905,7 +1905,7 @@ class DataApi:
         """write relationships
 
 
-        :param tenant_id: Unique identifier for the tenant with specific constraints. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: RelationshipsWriteRequest

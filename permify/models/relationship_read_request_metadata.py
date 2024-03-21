@@ -27,7 +27,7 @@ class RelationshipReadRequestMetadata(BaseModel):
     """
     RelationshipReadRequestMetadata defines the structure of the metadata for a read request focused on relationships. It includes the snap_token associated with a particular state of the database.
     """ # noqa: E501
-    snap_token: Optional[StrictStr] = Field(default=None, description="snap_token represents a specific state or \"snapshot\" of the database.")
+    snap_token: Optional[StrictStr] = Field(default=None, description="The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens)")
     __properties: ClassVar[List[str]] = ["snap_token"]
 
     model_config = ConfigDict(

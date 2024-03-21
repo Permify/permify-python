@@ -52,7 +52,7 @@ class PermissionApi:
     @validate_call
     def permissions_check(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsCheckRequest,
         _request_timeout: Union[
             None,
@@ -70,7 +70,7 @@ class PermissionApi:
         """check api
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsCheckRequest
@@ -122,7 +122,7 @@ class PermissionApi:
     @validate_call
     def permissions_check_with_http_info(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsCheckRequest,
         _request_timeout: Union[
             None,
@@ -140,7 +140,7 @@ class PermissionApi:
         """check api
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsCheckRequest
@@ -192,7 +192,7 @@ class PermissionApi:
     @validate_call
     def permissions_check_without_preload_content(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsCheckRequest,
         _request_timeout: Union[
             None,
@@ -210,7 +210,7 @@ class PermissionApi:
         """check api
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsCheckRequest
@@ -334,7 +334,7 @@ class PermissionApi:
     @validate_call
     def permissions_expand(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsExpandRequest,
         _request_timeout: Union[
             None,
@@ -352,7 +352,7 @@ class PermissionApi:
         """expand api
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsExpandRequest
@@ -404,7 +404,7 @@ class PermissionApi:
     @validate_call
     def permissions_expand_with_http_info(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsExpandRequest,
         _request_timeout: Union[
             None,
@@ -422,7 +422,7 @@ class PermissionApi:
         """expand api
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsExpandRequest
@@ -474,7 +474,7 @@ class PermissionApi:
     @validate_call
     def permissions_expand_without_preload_content(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsExpandRequest,
         _request_timeout: Union[
             None,
@@ -492,7 +492,7 @@ class PermissionApi:
         """expand api
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsExpandRequest
@@ -616,7 +616,7 @@ class PermissionApi:
     @validate_call
     def permissions_lookup_entity(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsLookupEntityRequest,
         _request_timeout: Union[
             None,
@@ -634,7 +634,7 @@ class PermissionApi:
         """lookup entity
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsLookupEntityRequest
@@ -686,7 +686,7 @@ class PermissionApi:
     @validate_call
     def permissions_lookup_entity_with_http_info(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsLookupEntityRequest,
         _request_timeout: Union[
             None,
@@ -704,7 +704,7 @@ class PermissionApi:
         """lookup entity
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsLookupEntityRequest
@@ -756,7 +756,7 @@ class PermissionApi:
     @validate_call
     def permissions_lookup_entity_without_preload_content(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsLookupEntityRequest,
         _request_timeout: Union[
             None,
@@ -774,7 +774,7 @@ class PermissionApi:
         """lookup entity
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsLookupEntityRequest
@@ -898,7 +898,7 @@ class PermissionApi:
     @validate_call
     def permissions_lookup_entity_stream(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsLookupEntityRequest,
         _request_timeout: Union[
             None,
@@ -916,7 +916,7 @@ class PermissionApi:
         """lookup entity stream
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsLookupEntityRequest
@@ -968,7 +968,7 @@ class PermissionApi:
     @validate_call
     def permissions_lookup_entity_stream_with_http_info(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsLookupEntityRequest,
         _request_timeout: Union[
             None,
@@ -986,7 +986,7 @@ class PermissionApi:
         """lookup entity stream
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsLookupEntityRequest
@@ -1038,7 +1038,7 @@ class PermissionApi:
     @validate_call
     def permissions_lookup_entity_stream_without_preload_content(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsLookupEntityRequest,
         _request_timeout: Union[
             None,
@@ -1056,7 +1056,7 @@ class PermissionApi:
         """lookup entity stream
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsLookupEntityRequest
@@ -1180,7 +1180,7 @@ class PermissionApi:
     @validate_call
     def permissions_lookup_subject(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsLookupSubjectRequest,
         _request_timeout: Union[
             None,
@@ -1198,7 +1198,7 @@ class PermissionApi:
         """lookup-subject
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsLookupSubjectRequest
@@ -1250,7 +1250,7 @@ class PermissionApi:
     @validate_call
     def permissions_lookup_subject_with_http_info(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsLookupSubjectRequest,
         _request_timeout: Union[
             None,
@@ -1268,7 +1268,7 @@ class PermissionApi:
         """lookup-subject
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsLookupSubjectRequest
@@ -1320,7 +1320,7 @@ class PermissionApi:
     @validate_call
     def permissions_lookup_subject_without_preload_content(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsLookupSubjectRequest,
         _request_timeout: Union[
             None,
@@ -1338,7 +1338,7 @@ class PermissionApi:
         """lookup-subject
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsLookupSubjectRequest
@@ -1462,7 +1462,7 @@ class PermissionApi:
     @validate_call
     def permissions_subject_permission(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsSubjectPermissionRequest,
         _request_timeout: Union[
             None,
@@ -1480,7 +1480,7 @@ class PermissionApi:
         """subject permission
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsSubjectPermissionRequest
@@ -1532,7 +1532,7 @@ class PermissionApi:
     @validate_call
     def permissions_subject_permission_with_http_info(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsSubjectPermissionRequest,
         _request_timeout: Union[
             None,
@@ -1550,7 +1550,7 @@ class PermissionApi:
         """subject permission
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsSubjectPermissionRequest
@@ -1602,7 +1602,7 @@ class PermissionApi:
     @validate_call
     def permissions_subject_permission_without_preload_content(
         self,
-        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes.")],
+        tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
         body: PermissionsSubjectPermissionRequest,
         _request_timeout: Union[
             None,
@@ -1620,7 +1620,7 @@ class PermissionApi:
         """subject permission
 
 
-        :param tenant_id: Identifier of the tenant, required, and must match the pattern \"[a-zA-Z0-9-,]+\", max 64 bytes. (required)
+        :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
         :type body: PermissionsSubjectPermissionRequest

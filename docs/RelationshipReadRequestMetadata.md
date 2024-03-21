@@ -6,7 +6,7 @@ RelationshipReadRequestMetadata defines the structure of the metadata for a read
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**snap_token** | **str** | snap_token represents a specific state or \&quot;snapshot\&quot; of the database. | [optional] 
+**snap_token** | **str** | The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens) | [optional] 
 
 ## Example
 

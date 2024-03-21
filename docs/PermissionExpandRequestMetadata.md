@@ -1,13 +1,13 @@
 # PermissionExpandRequestMetadata
 
-PermissionExpandRequestMetadata is the metadata associated with a PermissionExpandRequest.
+PermissionExpandRequestMetadata metadata for the PermissionExpandRequest.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **schema_version** | **str** | Version of the schema. | [optional] 
-**snap_token** | **str** | Token associated with the snap. | [optional] 
+**snap_token** | **str** | The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens). | [optional] 
 
 ## Example
 

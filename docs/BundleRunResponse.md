@@ -6,7 +6,7 @@ BundleRunResponse is the response for a BundleRunRequest. It includes a snap_tok
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**snap_token** | **str** | Token related to the bundle execution. | [optional] 
+**snap_token** | **str** | The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens) | [optional] 
 
 ## Example
 

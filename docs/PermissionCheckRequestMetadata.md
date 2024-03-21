@@ -1,14 +1,14 @@
 # PermissionCheckRequestMetadata
 
-PermissionCheckRequestMetadata is the metadata associated with a PermissionCheckRequest.
+PermissionCheckRequestMetadata metadata for the PermissionCheckRequest.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **schema_version** | **str** | Version of the schema. | [optional] 
-**snap_token** | **str** | Token associated with the snap. | [optional] 
-**depth** | **int** | Depth of the check, must be greater than or equal to 3. | [optional] 
+**snap_token** | **str** | The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens) | [optional] 
+**depth** | **int** | Query limit when if recursive database queries got in loop | [optional] 
 
 ## Example
 

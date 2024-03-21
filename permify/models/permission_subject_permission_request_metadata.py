@@ -25,12 +25,12 @@ from typing_extensions import Self
 
 class PermissionSubjectPermissionRequestMetadata(BaseModel):
     """
-    PermissionSubjectPermissionRequestMetadata is the metadata associated with a PermissionSubjectPermissionRequest.
+    PermissionSubjectPermissionRequestMetadata metadata for the PermissionSubjectPermissionRequest.
     """ # noqa: E501
     schema_version: Optional[StrictStr] = Field(default=None, description="Version of the schema.")
-    snap_token: Optional[StrictStr] = Field(default=None, description="Token associated with the snap.")
+    snap_token: Optional[StrictStr] = Field(default=None, description="The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens).")
     only_permission: Optional[StrictBool] = Field(default=None, description="Whether to only check permissions.")
-    depth: Optional[StrictInt] = Field(default=None, description="Depth of the check, must be greater than or equal to 3.")
+    depth: Optional[StrictInt] = Field(default=None, description="Query limit when if recursive database queries got in loop.")
     __properties: ClassVar[List[str]] = ["schema_version", "snap_token", "only_permission", "depth"]
 
     model_config = ConfigDict(
