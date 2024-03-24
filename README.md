@@ -104,6 +104,7 @@ Class | Method | HTTP request | Description
 *PermissionApi* | [**permissions_lookup_subject**](docs/PermissionApi.md#permissions_lookup_subject) | **POST** /v1/tenants/{tenant_id}/permissions/lookup-subject | lookup-subject
 *PermissionApi* | [**permissions_subject_permission**](docs/PermissionApi.md#permissions_subject_permission) | **POST** /v1/tenants/{tenant_id}/permissions/subject-permission | subject permission
 *SchemaApi* | [**schemas_list**](docs/SchemaApi.md#schemas_list) | **POST** /v1/tenants/{tenant_id}/schemas/list | list schema
+*SchemaApi* | [**schemas_partial_write**](docs/SchemaApi.md#schemas_partial_write) | **PATCH** /v1/tenants/{tenant_id}/schemas/partial-write | partially update your authorization model
 *SchemaApi* | [**schemas_read**](docs/SchemaApi.md#schemas_read) | **POST** /v1/tenants/{tenant_id}/schemas/read | read schema
 *SchemaApi* | [**schemas_write**](docs/SchemaApi.md#schemas_write) | **POST** /v1/tenants/{tenant_id}/schemas/write | write schema
 *TenancyApi* | [**tenants_create**](docs/TenancyApi.md#tenants_create) | **POST** /v1/tenants/create | create tenant
@@ -166,10 +167,12 @@ Class | Method | HTTP request | Description
  - [ExprCall](docs/ExprCall.md)
  - [FunctionType](docs/FunctionType.md)
  - [Ident](docs/Ident.md)
+ - [ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities](docs/ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities.md)
  - [Leaf](docs/Leaf.md)
  - [ListType](docs/ListType.md)
  - [MapType](docs/MapType.md)
  - [NullValue](docs/NullValue.md)
+ - [Partials](docs/Partials.md)
  - [PermissionCheckRequestMetadata](docs/PermissionCheckRequestMetadata.md)
  - [PermissionCheckResponse](docs/PermissionCheckResponse.md)
  - [PermissionCheckResponseMetadata](docs/PermissionCheckResponseMetadata.md)
@@ -205,6 +208,8 @@ Class | Method | HTTP request | Description
  - [SchemaDefinitionReference](docs/SchemaDefinitionReference.md)
  - [SchemaList](docs/SchemaList.md)
  - [SchemaListResponse](docs/SchemaListResponse.md)
+ - [SchemaPartialWriteRequestMetadata](docs/SchemaPartialWriteRequestMetadata.md)
+ - [SchemaPartialWriteResponse](docs/SchemaPartialWriteResponse.md)
  - [SchemaReadRequestMetadata](docs/SchemaReadRequestMetadata.md)
  - [SchemaReadResponse](docs/SchemaReadResponse.md)
  - [SchemaWriteResponse](docs/SchemaWriteResponse.md)

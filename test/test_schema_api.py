@@ -34,6 +34,13 @@ class TestSchemaApi(unittest.TestCase):
         """
         pass
 
+    def test_schemas_partial_write(self) -> None:
+        """Test case for schemas_partial_write
+
+        partially update your authorization model
+        """
+        pass
+
     def test_schemas_read(self) -> None:
         """Test case for schemas_read
 

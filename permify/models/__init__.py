@@ -67,10 +67,12 @@ from permify.models.expr import Expr
 from permify.models.expr_call import ExprCall
 from permify.models.function_type import FunctionType
 from permify.models.ident import Ident
+from permify.models.it_contains_the_tenant_id_to_identify_the_tenant_and_metadata_of_the_schema_to_be_edited_with_the_corresponding_edits_to_various_entities import ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities
 from permify.models.leaf import Leaf
 from permify.models.list_type import ListType
 from permify.models.map_type import MapType
 from permify.models.null_value import NullValue
+from permify.models.partials import Partials
 from permify.models.permission_check_request_metadata import PermissionCheckRequestMetadata
 from permify.models.permission_check_response import PermissionCheckResponse
 from permify.models.permission_check_response_metadata import PermissionCheckResponseMetadata
@@ -106,6 +108,8 @@ from permify.models.schema_definition import SchemaDefinition
 from permify.models.schema_definition_reference import SchemaDefinitionReference
 from permify.models.schema_list import SchemaList
 from permify.models.schema_list_response import SchemaListResponse
+from permify.models.schema_partial_write_request_metadata import SchemaPartialWriteRequestMetadata
+from permify.models.schema_partial_write_response import SchemaPartialWriteResponse
 from permify.models.schema_read_request_metadata import SchemaReadRequestMetadata
 from permify.models.schema_read_response import SchemaReadResponse
 from permify.models.schema_write_response import SchemaWriteResponse

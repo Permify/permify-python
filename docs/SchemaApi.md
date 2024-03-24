@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**schemas_list**](SchemaApi.md#schemas_list) | **POST** /v1/tenants/{tenant_id}/schemas/list | list schema
+[**schemas_partial_write**](SchemaApi.md#schemas_partial_write) | **PATCH** /v1/tenants/{tenant_id}/schemas/partial-write | partially update your authorization model
 [**schemas_read**](SchemaApi.md#schemas_read) | **POST** /v1/tenants/{tenant_id}/schemas/read | read schema
 [**schemas_write**](SchemaApi.md#schemas_write) | **POST** /v1/tenants/{tenant_id}/schemas/write | write schema
 
@@ -60,6 +61,76 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SchemaListResponse**](SchemaListResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **schemas_partial_write**
+> SchemaPartialWriteResponse schemas_partial_write(tenant_id, body)
+
+partially update your authorization model
+
+### Example
+
+
+```python
+import permify
+from permify.models.it_contains_the_tenant_id_to_identify_the_tenant_and_metadata_of_the_schema_to_be_edited_with_the_corresponding_edits_to_various_entities import ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities
+from permify.models.schema_partial_write_response import SchemaPartialWriteResponse
+from permify.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = permify.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with permify.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = permify.SchemaApi(api_client)
+    tenant_id = 'tenant_id_example' # str | tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.
+    body = permify.ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities() # ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities | 
+
+    try:
+        # partially update your authorization model
+        api_response = api_instance.schemas_partial_write(tenant_id, body)
+        print("The response of SchemaApi->schemas_partial_write:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SchemaApi->schemas_partial_write: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenant_id** | **str**| tenant_id is a string that identifies the tenant. It must match the pattern \&quot;[a-zA-Z0-9-,]+\&quot;, be a maximum of 64 bytes, and must not be empty. | 
+ **body** | [**ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities**](ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities.md)|  | 
+
+### Return type
+
+[**SchemaPartialWriteResponse**](SchemaPartialWriteResponse.md)
 
 ### Authorization
 
