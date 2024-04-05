@@ -28,7 +28,7 @@ class Select(BaseModel):
     A field selection expression. e.g. `request.auth`.
     """ # noqa: E501
     operand: Optional[Expr] = None
-    field: Optional[StrictStr] = Field(default=None, description="Required. The name of the field to select.  For example, in the select expression `request.auth`, the `auth` portion of the expression would be the `field`.")
+    var_field: Optional[StrictStr] = Field(default=None, description="Required. The name of the field to select.  For example, in the select expression `request.auth`, the `auth` portion of the expression would be the `field`.", alias="field")
     test_only: Optional[StrictBool] = Field(default=None, description="Whether the select is to be interpreted as a field presence test.  This results from the macro `has(request.auth)`.", alias="testOnly")
     __properties: ClassVar[List[str]] = ["operand", "field", "testOnly"]
 

@@ -91,7 +91,7 @@ class TestSelect(unittest.TestCase):
                     comprehension_expr = permify.models.comprehension.Comprehension(
                         iter_var = '', 
                         accu_var = '', ), ),
-                field = '',
+                var_field = '',
                 test_only = True
             )
         else:
