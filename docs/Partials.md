@@ -24,7 +24,7 @@ print(Partials.to_json())
 # convert the object into a dict
 partials_dict = partials_instance.to_dict()
 # create an instance of Partials from a dict
-partials_form_dict = partials.from_dict(partials_dict)
+partials_from_dict = Partials.from_dict(partials_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

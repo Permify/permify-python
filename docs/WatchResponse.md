@@ -23,7 +23,7 @@ print(WatchResponse.to_json())
 # convert the object into a dict
 watch_response_dict = watch_response_instance.to_dict()
 # create an instance of WatchResponse from a dict
-watch_response_form_dict = watch_response.from_dict(watch_response_dict)
+watch_response_from_dict = WatchResponse.from_dict(watch_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -24,7 +24,7 @@ print(TenantCreateRequest.to_json())
 # convert the object into a dict
 tenant_create_request_dict = tenant_create_request_instance.to_dict()
 # create an instance of TenantCreateRequest from a dict
-tenant_create_request_form_dict = tenant_create_request.from_dict(tenant_create_request_dict)
+tenant_create_request_from_dict = TenantCreateRequest.from_dict(tenant_create_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

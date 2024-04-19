@@ -23,7 +23,7 @@ print(TenantDeleteResponse.to_json())
 # convert the object into a dict
 tenant_delete_response_dict = tenant_delete_response_instance.to_dict()
 # create an instance of TenantDeleteResponse from a dict
-tenant_delete_response_form_dict = tenant_delete_response.from_dict(tenant_delete_response_dict)
+tenant_delete_response_from_dict = TenantDeleteResponse.from_dict(tenant_delete_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -23,7 +23,7 @@ print(WatchWatchRequest.to_json())
 # convert the object into a dict
 watch_watch_request_dict = watch_watch_request_instance.to_dict()
 # create an instance of WatchWatchRequest from a dict
-watch_watch_request_form_dict = watch_watch_request.from_dict(watch_watch_request_dict)
+watch_watch_request_from_dict = WatchWatchRequest.from_dict(watch_watch_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

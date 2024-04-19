@@ -22,7 +22,7 @@ print(Values.to_json())
 # convert the object into a dict
 values_dict = values_instance.to_dict()
 # create an instance of Values from a dict
-values_form_dict = values.from_dict(values_dict)
+values_from_dict = Values.from_dict(values_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

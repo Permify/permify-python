@@ -26,7 +26,7 @@ print(PermissionsSubjectPermissionRequest.to_json())
 # convert the object into a dict
 permissions_subject_permission_request_dict = permissions_subject_permission_request_instance.to_dict()
 # create an instance of PermissionsSubjectPermissionRequest from a dict
-permissions_subject_permission_request_form_dict = permissions_subject_permission_request.from_dict(permissions_subject_permission_request_dict)
+permissions_subject_permission_request_from_dict = PermissionsSubjectPermissionRequest.from_dict(permissions_subject_permission_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -23,7 +23,7 @@ print(ContextAttribute.to_json())
 # convert the object into a dict
 context_attribute_dict = context_attribute_instance.to_dict()
 # create an instance of ContextAttribute from a dict
-context_attribute_form_dict = context_attribute.from_dict(context_attribute_dict)
+context_attribute_from_dict = ContextAttribute.from_dict(context_attribute_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

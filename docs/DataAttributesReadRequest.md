@@ -26,7 +26,7 @@ print(DataAttributesReadRequest.to_json())
 # convert the object into a dict
 data_attributes_read_request_dict = data_attributes_read_request_instance.to_dict()
 # create an instance of DataAttributesReadRequest from a dict
-data_attributes_read_request_form_dict = data_attributes_read_request.from_dict(data_attributes_read_request_dict)
+data_attributes_read_request_from_dict = DataAttributesReadRequest.from_dict(data_attributes_read_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

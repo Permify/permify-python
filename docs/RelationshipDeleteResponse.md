@@ -22,7 +22,7 @@ print(RelationshipDeleteResponse.to_json())
 # convert the object into a dict
 relationship_delete_response_dict = relationship_delete_response_instance.to_dict()
 # create an instance of RelationshipDeleteResponse from a dict
-relationship_delete_response_form_dict = relationship_delete_response.from_dict(relationship_delete_response_dict)
+relationship_delete_response_from_dict = RelationshipDeleteResponse.from_dict(relationship_delete_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

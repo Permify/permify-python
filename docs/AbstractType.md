@@ -24,7 +24,7 @@ print(AbstractType.to_json())
 # convert the object into a dict
 abstract_type_dict = abstract_type_instance.to_dict()
 # create an instance of AbstractType from a dict
-abstract_type_form_dict = abstract_type.from_dict(abstract_type_dict)
+abstract_type_from_dict = AbstractType.from_dict(abstract_type_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

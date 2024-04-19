@@ -24,7 +24,7 @@ print(RelationshipsWriteRequest.to_json())
 # convert the object into a dict
 relationships_write_request_dict = relationships_write_request_instance.to_dict()
 # create an instance of RelationshipsWriteRequest from a dict
-relationships_write_request_form_dict = relationships_write_request.from_dict(relationships_write_request_dict)
+relationships_write_request_from_dict = RelationshipsWriteRequest.from_dict(relationships_write_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

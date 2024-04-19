@@ -27,7 +27,7 @@ print(PermissionsLookupEntityRequest.to_json())
 # convert the object into a dict
 permissions_lookup_entity_request_dict = permissions_lookup_entity_request_instance.to_dict()
 # create an instance of PermissionsLookupEntityRequest from a dict
-permissions_lookup_entity_request_form_dict = permissions_lookup_entity_request.from_dict(permissions_lookup_entity_request_dict)
+permissions_lookup_entity_request_from_dict = PermissionsLookupEntityRequest.from_dict(permissions_lookup_entity_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

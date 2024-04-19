@@ -23,7 +23,7 @@ print(ComputedAttribute.to_json())
 # convert the object into a dict
 computed_attribute_dict = computed_attribute_instance.to_dict()
 # create an instance of ComputedAttribute from a dict
-computed_attribute_form_dict = computed_attribute.from_dict(computed_attribute_dict)
+computed_attribute_from_dict = ComputedAttribute.from_dict(computed_attribute_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

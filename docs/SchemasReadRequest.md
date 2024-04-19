@@ -23,7 +23,7 @@ print(SchemasReadRequest.to_json())
 # convert the object into a dict
 schemas_read_request_dict = schemas_read_request_instance.to_dict()
 # create an instance of SchemasReadRequest from a dict
-schemas_read_request_form_dict = schemas_read_request.from_dict(schemas_read_request_dict)
+schemas_read_request_from_dict = SchemasReadRequest.from_dict(schemas_read_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

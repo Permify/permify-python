@@ -26,7 +26,7 @@ print(V1Operation.to_json())
 # convert the object into a dict
 v1_operation_dict = v1_operation_instance.to_dict()
 # create an instance of V1Operation from a dict
-v1_operation_form_dict = v1_operation.from_dict(v1_operation_dict)
+v1_operation_from_dict = V1Operation.from_dict(v1_operation_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

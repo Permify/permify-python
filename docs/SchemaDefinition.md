@@ -25,7 +25,7 @@ print(SchemaDefinition.to_json())
 # convert the object into a dict
 schema_definition_dict = schema_definition_instance.to_dict()
 # create an instance of SchemaDefinition from a dict
-schema_definition_form_dict = schema_definition.from_dict(schema_definition_dict)
+schema_definition_from_dict = SchemaDefinition.from_dict(schema_definition_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

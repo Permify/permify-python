@@ -23,7 +23,7 @@ print(StreamResultOfPermissionLookupEntityStreamResponse.to_json())
 # convert the object into a dict
 stream_result_of_permission_lookup_entity_stream_response_dict = stream_result_of_permission_lookup_entity_stream_response_instance.to_dict()
 # create an instance of StreamResultOfPermissionLookupEntityStreamResponse from a dict
-stream_result_of_permission_lookup_entity_stream_response_form_dict = stream_result_of_permission_lookup_entity_stream_response.from_dict(stream_result_of_permission_lookup_entity_stream_response_dict)
+stream_result_of_permission_lookup_entity_stream_response_from_dict = StreamResultOfPermissionLookupEntityStreamResponse.from_dict(stream_result_of_permission_lookup_entity_stream_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

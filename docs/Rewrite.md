@@ -24,7 +24,7 @@ print(Rewrite.to_json())
 # convert the object into a dict
 rewrite_dict = rewrite_instance.to_dict()
 # create an instance of Rewrite from a dict
-rewrite_form_dict = rewrite.from_dict(rewrite_dict)
+rewrite_from_dict = Rewrite.from_dict(rewrite_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -24,7 +24,7 @@ print(MapType.to_json())
 # convert the object into a dict
 map_type_dict = map_type_instance.to_dict()
 # create an instance of MapType from a dict
-map_type_form_dict = map_type.from_dict(map_type_dict)
+map_type_from_dict = MapType.from_dict(map_type_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

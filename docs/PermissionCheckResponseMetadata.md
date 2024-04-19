@@ -23,7 +23,7 @@ print(PermissionCheckResponseMetadata.to_json())
 # convert the object into a dict
 permission_check_response_metadata_dict = permission_check_response_metadata_instance.to_dict()
 # create an instance of PermissionCheckResponseMetadata from a dict
-permission_check_response_metadata_form_dict = permission_check_response_metadata.from_dict(permission_check_response_metadata_dict)
+permission_check_response_metadata_from_dict = PermissionCheckResponseMetadata.from_dict(permission_check_response_metadata_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -25,7 +25,7 @@ print(ExpandLeaf.to_json())
 # convert the object into a dict
 expand_leaf_dict = expand_leaf_instance.to_dict()
 # create an instance of ExpandLeaf from a dict
-expand_leaf_form_dict = expand_leaf.from_dict(expand_leaf_dict)
+expand_leaf_from_dict = ExpandLeaf.from_dict(expand_leaf_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -27,7 +27,7 @@ print(Expand.to_json())
 # convert the object into a dict
 expand_dict = expand_instance.to_dict()
 # create an instance of Expand from a dict
-expand_form_dict = expand.from_dict(expand_dict)
+expand_from_dict = Expand.from_dict(expand_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

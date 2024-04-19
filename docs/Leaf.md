@@ -26,7 +26,7 @@ print(Leaf.to_json())
 # convert the object into a dict
 leaf_dict = leaf_instance.to_dict()
 # create an instance of Leaf from a dict
-leaf_form_dict = leaf.from_dict(leaf_dict)
+leaf_from_dict = Leaf.from_dict(leaf_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -24,7 +24,7 @@ print(Child.to_json())
 # convert the object into a dict
 child_dict = child_instance.to_dict()
 # create an instance of Child from a dict
-child_form_dict = child.from_dict(child_dict)
+child_from_dict = Child.from_dict(child_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -25,7 +25,7 @@ print(ExprCall.to_json())
 # convert the object into a dict
 expr_call_dict = expr_call_instance.to_dict()
 # create an instance of ExprCall from a dict
-expr_call_form_dict = expr_call.from_dict(expr_call_dict)
+expr_call_from_dict = ExprCall.from_dict(expr_call_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

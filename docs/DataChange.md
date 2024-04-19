@@ -25,7 +25,7 @@ print(DataChange.to_json())
 # convert the object into a dict
 data_change_dict = data_change_instance.to_dict()
 # create an instance of DataChange from a dict
-data_change_form_dict = data_change.from_dict(data_change_dict)
+data_change_from_dict = DataChange.from_dict(data_change_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

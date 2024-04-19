@@ -23,7 +23,7 @@ print(Any.to_json())
 # convert the object into a dict
 any_dict = any_instance.to_dict()
 # create an instance of Any from a dict
-any_form_dict = any.from_dict(any_dict)
+any_from_dict = Any.from_dict(any_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

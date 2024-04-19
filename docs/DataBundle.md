@@ -25,7 +25,7 @@ print(DataBundle.to_json())
 # convert the object into a dict
 data_bundle_dict = data_bundle_instance.to_dict()
 # create an instance of DataBundle from a dict
-data_bundle_form_dict = data_bundle.from_dict(data_bundle_dict)
+data_bundle_from_dict = DataBundle.from_dict(data_bundle_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

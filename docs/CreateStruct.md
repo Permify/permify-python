@@ -24,7 +24,7 @@ print(CreateStruct.to_json())
 # convert the object into a dict
 create_struct_dict = create_struct_instance.to_dict()
 # create an instance of CreateStruct from a dict
-create_struct_form_dict = create_struct.from_dict(create_struct_dict)
+create_struct_from_dict = CreateStruct.from_dict(create_struct_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -24,7 +24,7 @@ print(Entity.to_json())
 # convert the object into a dict
 entity_dict = entity_instance.to_dict()
 # create an instance of Entity from a dict
-entity_form_dict = entity.from_dict(entity_dict)
+entity_from_dict = Entity.from_dict(entity_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

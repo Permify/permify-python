@@ -22,7 +22,7 @@ print(BundleDeleteResponse.to_json())
 # convert the object into a dict
 bundle_delete_response_dict = bundle_delete_response_instance.to_dict()
 # create an instance of BundleDeleteResponse from a dict
-bundle_delete_response_form_dict = bundle_delete_response.from_dict(bundle_delete_response_dict)
+bundle_delete_response_from_dict = BundleDeleteResponse.from_dict(bundle_delete_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -25,7 +25,7 @@ print(V1alpha1Reference.to_json())
 # convert the object into a dict
 v1alpha1_reference_dict = v1alpha1_reference_instance.to_dict()
 # create an instance of V1alpha1Reference from a dict
-v1alpha1_reference_form_dict = v1alpha1_reference.from_dict(v1alpha1_reference_dict)
+v1alpha1_reference_from_dict = V1alpha1Reference.from_dict(v1alpha1_reference_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -23,7 +23,7 @@ print(SchemaWriteResponse.to_json())
 # convert the object into a dict
 schema_write_response_dict = schema_write_response_instance.to_dict()
 # create an instance of SchemaWriteResponse from a dict
-schema_write_response_form_dict = schema_write_response.from_dict(schema_write_response_dict)
+schema_write_response_from_dict = SchemaWriteResponse.from_dict(schema_write_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

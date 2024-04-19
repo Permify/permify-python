@@ -23,7 +23,7 @@ print(SchemaPartialWriteResponse.to_json())
 # convert the object into a dict
 schema_partial_write_response_dict = schema_partial_write_response_instance.to_dict()
 # create an instance of SchemaPartialWriteResponse from a dict
-schema_partial_write_response_form_dict = schema_partial_write_response.from_dict(schema_partial_write_response_dict)
+schema_partial_write_response_from_dict = SchemaPartialWriteResponse.from_dict(schema_partial_write_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

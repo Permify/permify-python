@@ -23,7 +23,7 @@ print(DataWriteRequestMetadata.to_json())
 # convert the object into a dict
 data_write_request_metadata_dict = data_write_request_metadata_instance.to_dict()
 # create an instance of DataWriteRequestMetadata from a dict
-data_write_request_metadata_form_dict = data_write_request_metadata.from_dict(data_write_request_metadata_dict)
+data_write_request_metadata_from_dict = DataWriteRequestMetadata.from_dict(data_write_request_metadata_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

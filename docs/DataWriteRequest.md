@@ -25,7 +25,7 @@ print(DataWriteRequest.to_json())
 # convert the object into a dict
 data_write_request_dict = data_write_request_instance.to_dict()
 # create an instance of DataWriteRequest from a dict
-data_write_request_form_dict = data_write_request.from_dict(data_write_request_dict)
+data_write_request_from_dict = DataWriteRequest.from_dict(data_write_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

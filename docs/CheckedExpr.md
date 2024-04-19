@@ -27,7 +27,7 @@ print(CheckedExpr.to_json())
 # convert the object into a dict
 checked_expr_dict = checked_expr_instance.to_dict()
 # create an instance of CheckedExpr from a dict
-checked_expr_form_dict = checked_expr.from_dict(checked_expr_dict)
+checked_expr_from_dict = CheckedExpr.from_dict(checked_expr_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
