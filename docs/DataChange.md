@@ -6,7 +6,7 @@ DataChange represents a single change in data, with an operation type and the ac
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**operation** | [**DataChangeOperation**](DataChangeOperation.md) |  | [optional] 
+**operation** | [**DataChangeOperation**](DataChangeOperation.md) |  | [optional] [default to DataChangeOperation.UNSPECIFIED]
 **tuple** | [**Tuple**](Tuple.md) |  | [optional] 
 **attribute** | [**Attribute**](Attribute.md) |  | [optional] 
 

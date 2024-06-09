@@ -8,9 +8,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **dyn** | **object** | Dynamic type. | [optional] 
 **null** | **str** | Null value. | [optional] 
-**primitive** | [**PrimitiveType**](PrimitiveType.md) |  | [optional] 
-**wrapper** | [**PrimitiveType**](PrimitiveType.md) |  | [optional] 
-**well_known** | [**WellKnownType**](WellKnownType.md) |  | [optional] 
+**primitive** | [**PrimitiveType**](PrimitiveType.md) |  | [optional] [default to PrimitiveType.PRIMITIVE_TYPE_UNSPECIFIED]
+**wrapper** | [**PrimitiveType**](PrimitiveType.md) |  | [optional] [default to PrimitiveType.PRIMITIVE_TYPE_UNSPECIFIED]
+**well_known** | [**WellKnownType**](WellKnownType.md) |  | [optional] [default to WellKnownType.WELL_KNOWN_TYPE_UNSPECIFIED]
 **list_type** | [**ListType**](ListType.md) |  | [optional] 
 **map_type** | [**MapType**](MapType.md) |  | [optional] 
 **function** | [**FunctionType**](FunctionType.md) |  | [optional] 

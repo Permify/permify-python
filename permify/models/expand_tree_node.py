@@ -28,7 +28,7 @@ class ExpandTreeNode(BaseModel):
     """
     ExpandTreeNode represents a node in an expansion tree with a specific operation and its children.
     """ # noqa: E501
-    operation: Optional[ExpandTreeNodeOperation] = None
+    operation: Optional[ExpandTreeNodeOperation] = ExpandTreeNodeOperation.UNSPECIFIED
     children: Optional[List[Expand]] = None
     __properties: ClassVar[List[str]] = ["operation", "children"]
 
@@ -90,7 +90,7 @@ class ExpandTreeNode(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "operation": obj.get("operation"),
+            "operation": obj.get("operation") if obj.get("operation") is not None else ExpandTreeNodeOperation.UNSPECIFIED,
             "children": [Expand.from_dict(_item) for _item in obj["children"]] if obj.get("children") is not None else None
         })
         return _obj

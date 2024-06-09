@@ -29,7 +29,7 @@ class AttributeDefinition(BaseModel):
     The AttributeDefinition message provides detailed information about a specific attribute.
     """ # noqa: E501
     name: Optional[StrictStr] = Field(default=None, description="The name of the attribute, which follows a specific string pattern and has a maximum byte size.")
-    type: Optional[AttributeType] = None
+    type: Optional[AttributeType] = AttributeType.UNSPECIFIED
     __properties: ClassVar[List[str]] = ["name", "type"]
 
     model_config = ConfigDict(
@@ -84,7 +84,7 @@ class AttributeDefinition(BaseModel):
 
         _obj = cls.model_validate({
             "name": obj.get("name"),
-            "type": obj.get("type")
+            "type": obj.get("type") if obj.get("type") is not None else AttributeType.UNSPECIFIED
         })
         return _obj
 

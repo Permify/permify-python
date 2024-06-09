@@ -31,9 +31,9 @@ class V1alpha1Type(BaseModel):
     """ # noqa: E501
     dyn: Optional[Dict[str, Any]] = Field(default=None, description="Dynamic type.")
     null: Optional[StrictStr] = Field(default=None, description="Null value.")
-    primitive: Optional[PrimitiveType] = None
-    wrapper: Optional[PrimitiveType] = None
-    well_known: Optional[WellKnownType] = Field(default=None, alias="wellKnown")
+    primitive: Optional[PrimitiveType] = PrimitiveType.PRIMITIVE_TYPE_UNSPECIFIED
+    wrapper: Optional[PrimitiveType] = PrimitiveType.PRIMITIVE_TYPE_UNSPECIFIED
+    well_known: Optional[WellKnownType] = Field(default=WellKnownType.WELL_KNOWN_TYPE_UNSPECIFIED, alias="wellKnown")
     list_type: Optional[ListType] = Field(default=None, alias="listType")
     map_type: Optional[MapType] = Field(default=None, alias="mapType")
     function: Optional[FunctionType] = None
@@ -112,9 +112,9 @@ class V1alpha1Type(BaseModel):
         _obj = cls.model_validate({
             "dyn": obj.get("dyn"),
             "null": obj.get("null"),
-            "primitive": obj.get("primitive"),
-            "wrapper": obj.get("wrapper"),
-            "wellKnown": obj.get("wellKnown"),
+            "primitive": obj.get("primitive") if obj.get("primitive") is not None else PrimitiveType.PRIMITIVE_TYPE_UNSPECIFIED,
+            "wrapper": obj.get("wrapper") if obj.get("wrapper") is not None else PrimitiveType.PRIMITIVE_TYPE_UNSPECIFIED,
+            "wellKnown": obj.get("wellKnown") if obj.get("wellKnown") is not None else WellKnownType.WELL_KNOWN_TYPE_UNSPECIFIED,
             "listType": ListType.from_dict(obj["listType"]) if obj.get("listType") is not None else None,
             "mapType": MapType.from_dict(obj["mapType"]) if obj.get("mapType") is not None else None,
             "function": FunctionType.from_dict(obj["function"]) if obj.get("function") is not None else None,
