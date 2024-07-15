@@ -1,10 +1,8 @@
 # DataChangeOperation
 
- - OPERATION_UNSPECIFIED: Default operation, not specified.  - OPERATION_CREATE: Creation operation.  - OPERATION_DELETE: Deletion operation.
+ - OPERATION_CREATE: Creation operation.  - OPERATION_DELETE: Deletion operation.
 
 ## Enum
-
-* `OPERATION_UNSPECIFIED` (value: `'OPERATION_UNSPECIFIED'`)
 
 * `OPERATION_CREATE` (value: `'OPERATION_CREATE'`)
 

@@ -37,7 +37,7 @@ class TestPermissionSubjectPermissionResponse(unittest.TestCase):
         if include_optional:
             return PermissionSubjectPermissionResponse(
                 results = {
-                    'key' : 'CHECK_RESULT_UNSPECIFIED'
+                    'key' : 'CHECK_RESULT_ALLOWED'
                     }
             )
         else:

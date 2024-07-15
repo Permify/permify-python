@@ -36,7 +36,7 @@ class TestPermissionExpandResponse(unittest.TestCase):
         model = PermissionExpandResponse()
         if include_optional:
             return PermissionExpandResponse(
-                tree = permify.models.expand.Expand(
+                tree = permify.models.v1/expand.v1.Expand(
                     entity = permify.models.entity.Entity(
                         type = '', 
                         id = '', ), 
@@ -49,9 +49,9 @@ class TestPermissionExpandResponse(unittest.TestCase):
                                 name = '', ), )
                         ], 
                     expand = permify.models.expand_tree_node.ExpandTreeNode(
-                        operation = 'OPERATION_UNSPECIFIED', 
+                        operation = 'OPERATION_UNION', 
                         children = [
-                            permify.models.expand.Expand(
+                            permify.models.v1/expand.v1.Expand(
                                 permission = '', 
                                 leaf = permify.models.expand_leaf.ExpandLeaf(
                                     subjects = permify.models.subjects.Subjects(), 

@@ -29,7 +29,7 @@ class ExpandTreeNode(BaseModel):
     ExpandTreeNode represents a node in an expansion tree with a specific operation and its children.
     """ # noqa: E501
     operation: Optional[ExpandTreeNodeOperation] = None
-    children: Optional[List[Expand]] = None
+    children: Optional[List[V1Expand]] = None
     __properties: ClassVar[List[str]] = ["operation", "children"]
 
     model_config = ConfigDict(
@@ -91,11 +91,11 @@ class ExpandTreeNode(BaseModel):
 
         _obj = cls.model_validate({
             "operation": obj.get("operation"),
-            "children": [Expand.from_dict(_item) for _item in obj["children"]] if obj.get("children") is not None else None
+            "children": [V1Expand.from_dict(_item) for _item in obj["children"]] if obj.get("children") is not None else None
         })
         return _obj
 
-from permify.models.expand import Expand
+from permify.models.v1_expand import V1Expand
 # TODO: Rewrite to not use raise_errors
 ExpandTreeNode.model_rebuild(raise_errors=False)
 

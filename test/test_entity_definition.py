@@ -68,7 +68,7 @@ class TestEntityDefinition(unittest.TestCase):
                                                 name = '', ), )
                                         ], ), ), 
                             rewrite = permify.models.rewrite.Rewrite(
-                                rewrite_operation = 'OPERATION_UNSPECIFIED', 
+                                rewrite_operation = 'OPERATION_UNION', 
                                 children = [
                                     permify.models.child.Child()
                                     ], ), ), )
@@ -76,10 +76,10 @@ class TestEntityDefinition(unittest.TestCase):
                 attributes = {
                     'key' : permify.models.attribute_definition.AttributeDefinition(
                         name = '', 
-                        type = 'ATTRIBUTE_TYPE_UNSPECIFIED', )
+                        type = 'ATTRIBUTE_TYPE_BOOLEAN', )
                     },
                 references = {
-                    'key' : 'REFERENCE_UNSPECIFIED'
+                    'key' : 'REFERENCE_RELATION'
                     }
             )
         else:

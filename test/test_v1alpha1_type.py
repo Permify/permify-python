@@ -38,16 +38,16 @@ class TestV1alpha1Type(unittest.TestCase):
             return V1alpha1Type(
                 dyn = permify.models.dyn.dyn(),
                 null = '',
-                primitive = 'PRIMITIVE_TYPE_UNSPECIFIED',
-                wrapper = 'PRIMITIVE_TYPE_UNSPECIFIED',
-                well_known = 'WELL_KNOWN_TYPE_UNSPECIFIED',
+                primitive = 'BOOL',
+                wrapper = 'BOOL',
+                well_known = 'ANY',
                 list_type = permify.models.list_type.ListType(
                     elem_type = permify.models.v1alpha1/type.v1alpha1.Type(
                         dyn = permify.models.dyn.dyn(), 
                         null = '', 
-                        primitive = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                        wrapper = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                        well_known = 'WELL_KNOWN_TYPE_UNSPECIFIED', 
+                        primitive = 'BOOL', 
+                        wrapper = 'BOOL', 
+                        well_known = 'ANY', 
                         map_type = permify.models.map_type.MapType(
                             key_type = permify.models.v1alpha1/type.v1alpha1.Type(
                                 dyn = permify.models.dyn.dyn(), 
@@ -78,9 +78,9 @@ class TestV1alpha1Type(unittest.TestCase):
                     key_type = permify.models.v1alpha1/type.v1alpha1.Type(
                         dyn = permify.models.dyn.dyn(), 
                         null = '', 
-                        primitive = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                        wrapper = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                        well_known = 'WELL_KNOWN_TYPE_UNSPECIFIED', 
+                        primitive = 'BOOL', 
+                        wrapper = 'BOOL', 
+                        well_known = 'ANY', 
                         list_type = permify.models.list_type.ListType(
                             elem_type = permify.models.v1alpha1/type.v1alpha1.Type(
                                 dyn = permify.models.dyn.dyn(), 
@@ -111,9 +111,9 @@ class TestV1alpha1Type(unittest.TestCase):
                     result_type = permify.models.v1alpha1/type.v1alpha1.Type(
                         dyn = permify.models.dyn.dyn(), 
                         null = '', 
-                        primitive = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                        wrapper = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                        well_known = 'WELL_KNOWN_TYPE_UNSPECIFIED', 
+                        primitive = 'BOOL', 
+                        wrapper = 'BOOL', 
+                        well_known = 'ANY', 
                         list_type = permify.models.list_type.ListType(
                             elem_type = permify.models.v1alpha1/type.v1alpha1.Type(
                                 dyn = permify.models.dyn.dyn(), 
@@ -145,9 +145,9 @@ class TestV1alpha1Type(unittest.TestCase):
                 type = permify.models.v1alpha1/type.v1alpha1.Type(
                     dyn = permify.models.dyn.dyn(), 
                     null = '', 
-                    primitive = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                    wrapper = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                    well_known = 'WELL_KNOWN_TYPE_UNSPECIFIED', 
+                    primitive = 'BOOL', 
+                    wrapper = 'BOOL', 
+                    well_known = 'ANY', 
                     list_type = permify.models.list_type.ListType(
                         elem_type = permify.models.v1alpha1/type.v1alpha1.Type(
                             dyn = permify.models.dyn.dyn(), 
@@ -182,9 +182,9 @@ class TestV1alpha1Type(unittest.TestCase):
                         permify.models.v1alpha1/type.v1alpha1.Type(
                             dyn = permify.models.dyn.dyn(), 
                             null = '', 
-                            primitive = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                            wrapper = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                            well_known = 'WELL_KNOWN_TYPE_UNSPECIFIED', 
+                            primitive = 'BOOL', 
+                            wrapper = 'BOOL', 
+                            well_known = 'ANY', 
                             list_type = permify.models.list_type.ListType(
                                 elem_type = permify.models.v1alpha1/type.v1alpha1.Type(
                                     dyn = permify.models.dyn.dyn(), 

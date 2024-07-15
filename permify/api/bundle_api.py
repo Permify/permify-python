@@ -19,11 +19,11 @@ from typing_extensions import Annotated
 
 from pydantic import Field, StrictStr
 from typing_extensions import Annotated
-from permify.models.bundle_delete_request import BundleDeleteRequest
+from permify.models.bundle_delete_body import BundleDeleteBody
 from permify.models.bundle_delete_response import BundleDeleteResponse
-from permify.models.bundle_read_request import BundleReadRequest
+from permify.models.bundle_read_body import BundleReadBody
 from permify.models.bundle_read_response import BundleReadResponse
-from permify.models.bundle_write_request import BundleWriteRequest
+from permify.models.bundle_write_body import BundleWriteBody
 from permify.models.bundle_write_response import BundleWriteResponse
 
 from permify.api_client import ApiClient, RequestSerialized
@@ -48,7 +48,7 @@ class BundleApi:
     def bundle_delete(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: BundleDeleteRequest,
+        body: BundleDeleteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -68,7 +68,7 @@ class BundleApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: BundleDeleteRequest
+        :type body: BundleDeleteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -118,7 +118,7 @@ class BundleApi:
     def bundle_delete_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: BundleDeleteRequest,
+        body: BundleDeleteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -138,7 +138,7 @@ class BundleApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: BundleDeleteRequest
+        :type body: BundleDeleteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -188,7 +188,7 @@ class BundleApi:
     def bundle_delete_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: BundleDeleteRequest,
+        body: BundleDeleteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -208,7 +208,7 @@ class BundleApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: BundleDeleteRequest
+        :type body: BundleDeleteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -331,7 +331,7 @@ class BundleApi:
     def bundle_read(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: BundleReadRequest,
+        body: BundleReadBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -351,7 +351,7 @@ class BundleApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: BundleReadRequest
+        :type body: BundleReadBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -401,7 +401,7 @@ class BundleApi:
     def bundle_read_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: BundleReadRequest,
+        body: BundleReadBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -421,7 +421,7 @@ class BundleApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: BundleReadRequest
+        :type body: BundleReadBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -471,7 +471,7 @@ class BundleApi:
     def bundle_read_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: BundleReadRequest,
+        body: BundleReadBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -491,7 +491,7 @@ class BundleApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: BundleReadRequest
+        :type body: BundleReadBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -614,7 +614,7 @@ class BundleApi:
     def bundle_write(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: BundleWriteRequest,
+        body: BundleWriteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -634,7 +634,7 @@ class BundleApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: BundleWriteRequest
+        :type body: BundleWriteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -684,7 +684,7 @@ class BundleApi:
     def bundle_write_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: BundleWriteRequest,
+        body: BundleWriteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -704,7 +704,7 @@ class BundleApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: BundleWriteRequest
+        :type body: BundleWriteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -754,7 +754,7 @@ class BundleApi:
     def bundle_write_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: BundleWriteRequest,
+        body: BundleWriteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -774,7 +774,7 @@ class BundleApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: BundleWriteRequest
+        :type body: BundleWriteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of

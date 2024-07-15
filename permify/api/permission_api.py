@@ -19,17 +19,18 @@ from typing_extensions import Annotated
 
 from pydantic import Field, StrictStr
 from typing_extensions import Annotated
+from permify.models.check_body import CheckBody
+from permify.models.lookup_entity_body import LookupEntityBody
+from permify.models.lookup_entity_stream_body import LookupEntityStreamBody
+from permify.models.lookup_subject_body import LookupSubjectBody
 from permify.models.permission_check_response import PermissionCheckResponse
+from permify.models.permission_expand_body import PermissionExpandBody
 from permify.models.permission_expand_response import PermissionExpandResponse
 from permify.models.permission_lookup_entity_response import PermissionLookupEntityResponse
 from permify.models.permission_lookup_subject_response import PermissionLookupSubjectResponse
 from permify.models.permission_subject_permission_response import PermissionSubjectPermissionResponse
-from permify.models.permissions_check_request import PermissionsCheckRequest
-from permify.models.permissions_expand_request import PermissionsExpandRequest
-from permify.models.permissions_lookup_entity_request import PermissionsLookupEntityRequest
-from permify.models.permissions_lookup_subject_request import PermissionsLookupSubjectRequest
-from permify.models.permissions_subject_permission_request import PermissionsSubjectPermissionRequest
 from permify.models.stream_result_of_permission_lookup_entity_stream_response import StreamResultOfPermissionLookupEntityStreamResponse
+from permify.models.subject_permission_body import SubjectPermissionBody
 
 from permify.api_client import ApiClient, RequestSerialized
 from permify.api_response import ApiResponse
@@ -53,7 +54,7 @@ class PermissionApi:
     def permissions_check(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsCheckRequest,
+        body: CheckBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -73,7 +74,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsCheckRequest
+        :type body: CheckBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -123,7 +124,7 @@ class PermissionApi:
     def permissions_check_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsCheckRequest,
+        body: CheckBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -143,7 +144,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsCheckRequest
+        :type body: CheckBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -193,7 +194,7 @@ class PermissionApi:
     def permissions_check_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsCheckRequest,
+        body: CheckBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -213,7 +214,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsCheckRequest
+        :type body: CheckBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -336,7 +337,7 @@ class PermissionApi:
     def permissions_expand(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsExpandRequest,
+        body: PermissionExpandBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -356,7 +357,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsExpandRequest
+        :type body: PermissionExpandBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -406,7 +407,7 @@ class PermissionApi:
     def permissions_expand_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsExpandRequest,
+        body: PermissionExpandBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -426,7 +427,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsExpandRequest
+        :type body: PermissionExpandBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -476,7 +477,7 @@ class PermissionApi:
     def permissions_expand_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsExpandRequest,
+        body: PermissionExpandBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -496,7 +497,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsExpandRequest
+        :type body: PermissionExpandBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -619,7 +620,7 @@ class PermissionApi:
     def permissions_lookup_entity(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsLookupEntityRequest,
+        body: LookupEntityBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -639,7 +640,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsLookupEntityRequest
+        :type body: LookupEntityBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -689,7 +690,7 @@ class PermissionApi:
     def permissions_lookup_entity_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsLookupEntityRequest,
+        body: LookupEntityBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -709,7 +710,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsLookupEntityRequest
+        :type body: LookupEntityBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -759,7 +760,7 @@ class PermissionApi:
     def permissions_lookup_entity_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsLookupEntityRequest,
+        body: LookupEntityBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -779,7 +780,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsLookupEntityRequest
+        :type body: LookupEntityBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -902,7 +903,7 @@ class PermissionApi:
     def permissions_lookup_entity_stream(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsLookupEntityRequest,
+        body: LookupEntityStreamBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -922,7 +923,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsLookupEntityRequest
+        :type body: LookupEntityStreamBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -972,7 +973,7 @@ class PermissionApi:
     def permissions_lookup_entity_stream_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsLookupEntityRequest,
+        body: LookupEntityStreamBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -992,7 +993,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsLookupEntityRequest
+        :type body: LookupEntityStreamBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1042,7 +1043,7 @@ class PermissionApi:
     def permissions_lookup_entity_stream_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsLookupEntityRequest,
+        body: LookupEntityStreamBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1062,7 +1063,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsLookupEntityRequest
+        :type body: LookupEntityStreamBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1185,7 +1186,7 @@ class PermissionApi:
     def permissions_lookup_subject(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsLookupSubjectRequest,
+        body: LookupSubjectBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1205,7 +1206,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsLookupSubjectRequest
+        :type body: LookupSubjectBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1255,7 +1256,7 @@ class PermissionApi:
     def permissions_lookup_subject_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsLookupSubjectRequest,
+        body: LookupSubjectBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1275,7 +1276,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsLookupSubjectRequest
+        :type body: LookupSubjectBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1325,7 +1326,7 @@ class PermissionApi:
     def permissions_lookup_subject_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsLookupSubjectRequest,
+        body: LookupSubjectBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1345,7 +1346,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsLookupSubjectRequest
+        :type body: LookupSubjectBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1468,7 +1469,7 @@ class PermissionApi:
     def permissions_subject_permission(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsSubjectPermissionRequest,
+        body: SubjectPermissionBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1488,7 +1489,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsSubjectPermissionRequest
+        :type body: SubjectPermissionBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1538,7 +1539,7 @@ class PermissionApi:
     def permissions_subject_permission_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsSubjectPermissionRequest,
+        body: SubjectPermissionBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1558,7 +1559,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsSubjectPermissionRequest
+        :type body: SubjectPermissionBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1608,7 +1609,7 @@ class PermissionApi:
     def permissions_subject_permission_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: PermissionsSubjectPermissionRequest,
+        body: SubjectPermissionBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1628,7 +1629,7 @@ class PermissionApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: PermissionsSubjectPermissionRequest
+        :type body: SubjectPermissionBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of

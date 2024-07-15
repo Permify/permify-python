@@ -21,13 +21,12 @@ from typing_extensions import Self
 
 class SchemaDefinitionReference(str, Enum):
     """
-    The Reference enum helps distinguish whether a name corresponds to an entity or a rule.   - REFERENCE_UNSPECIFIED: Default, unspecified reference.  - REFERENCE_ENTITY: Indicates that the name refers to an entity.  - REFERENCE_RULE: Indicates that the name refers to a rule.
+    The Reference enum helps distinguish whether a name corresponds to an entity or a rule.   - REFERENCE_ENTITY: Indicates that the name refers to an entity.  - REFERENCE_RULE: Indicates that the name refers to a rule.
     """
 
     """
     allowed enum values
     """
-    REFERENCE_UNSPECIFIED = 'REFERENCE_UNSPECIFIED'
     REFERENCE_ENTITY = 'REFERENCE_ENTITY'
     REFERENCE_RULE = 'REFERENCE_RULE'
 

@@ -70,7 +70,7 @@ class TestSchemaDefinition(unittest.TestCase):
                                                         name = '', ), )
                                                 ], ), ), 
                                     rewrite = permify.models.rewrite.Rewrite(
-                                        rewrite_operation = 'OPERATION_UNSPECIFIED', 
+                                        rewrite_operation = 'OPERATION_UNION', 
                                         children = [
                                             permify.models.child.Child()
                                             ], ), ), )
@@ -78,17 +78,17 @@ class TestSchemaDefinition(unittest.TestCase):
                         attributes = {
                             'key' : permify.models.attribute_definition.AttributeDefinition(
                                 name = '', 
-                                type = 'ATTRIBUTE_TYPE_UNSPECIFIED', )
+                                type = 'ATTRIBUTE_TYPE_BOOLEAN', )
                             }, 
                         references = {
-                            'key' : 'REFERENCE_UNSPECIFIED'
+                            'key' : 'REFERENCE_RELATION'
                             }, )
                     },
                 rule_definitions = {
                     'key' : permify.models.rule_definition.RuleDefinition(
                         name = '', 
                         arguments = {
-                            'key' : 'ATTRIBUTE_TYPE_UNSPECIFIED'
+                            'key' : 'ATTRIBUTE_TYPE_BOOLEAN'
                             }, 
                         expression = permify.models.checked_expr.CheckedExpr(
                             reference_map = {
@@ -112,9 +112,9 @@ class TestSchemaDefinition(unittest.TestCase):
                                 'key' : permify.models.v1alpha1/type.v1alpha1.Type(
                                     dyn = permify.models.dyn.dyn(), 
                                     null = '', 
-                                    primitive = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                                    wrapper = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                                    well_known = 'WELL_KNOWN_TYPE_UNSPECIFIED', 
+                                    primitive = 'BOOL', 
+                                    wrapper = 'BOOL', 
+                                    well_known = 'ANY', 
                                     list_type = permify.models.list_type.ListType(
                                         elem_type = permify.models.v1alpha1/type.v1alpha1.Type(
                                             dyn = permify.models.dyn.dyn(), 
@@ -215,7 +215,7 @@ class TestSchemaDefinition(unittest.TestCase):
                             expr = , ), )
                     },
                 references = {
-                    'key' : 'REFERENCE_UNSPECIFIED'
+                    'key' : 'REFERENCE_ENTITY'
                     }
             )
         else:

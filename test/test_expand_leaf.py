@@ -36,8 +36,19 @@ class TestExpandLeaf(unittest.TestCase):
         model = ExpandLeaf()
         if include_optional:
             return ExpandLeaf(
-                subjects = permify.models.subjects.Subjects(),
-                values = permify.models.values.Values(),
+                subjects = permify.models.subjects.Subjects(
+                    subjects = [
+                        permify.models.subject.Subject(
+                            type = '', 
+                            id = '', 
+                            relation = '', )
+                        ], ),
+                values = permify.models.values.Values(
+                    values = {
+                        'key' : {
+                            'key' : None
+                            }
+                        }, ),
                 value = {
                     'key' : None
                     }

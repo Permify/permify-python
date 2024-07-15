@@ -1,10 +1,8 @@
 # RewriteOperation
 
-Operation enum includes potential rewrite operations. OPERATION_UNION: Represents a union operation. OPERATION_INTERSECTION: Represents an intersection operation. OPERATION_EXCLUSION: Represents an exclusion operation.   - OPERATION_UNSPECIFIED: Default, unspecified operation.  - OPERATION_UNION: Represents a union operation.  - OPERATION_INTERSECTION: Represents an intersection operation.  - OPERATION_EXCLUSION: Represents an exclusion operation.
+Operation enum includes potential rewrite operations. OPERATION_UNION: Represents a union operation. OPERATION_INTERSECTION: Represents an intersection operation. OPERATION_EXCLUSION: Represents an exclusion operation.   - OPERATION_UNION: Represents a union operation.  - OPERATION_INTERSECTION: Represents an intersection operation.  - OPERATION_EXCLUSION: Represents an exclusion operation.
 
 ## Enum
-
-* `OPERATION_UNSPECIFIED` (value: `'OPERATION_UNSPECIFIED'`)
 
 * `OPERATION_UNION` (value: `'OPERATION_UNION'`)
 

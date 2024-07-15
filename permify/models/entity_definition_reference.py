@@ -21,13 +21,12 @@ from typing_extensions import Self
 
 class EntityDefinitionReference(str, Enum):
     """
-    The Reference enum specifies whether a name pertains to a relation, permission, or attribute.   - REFERENCE_UNSPECIFIED: Default, unspecified reference.  - REFERENCE_RELATION: Indicates that the name refers to a relation.  - REFERENCE_PERMISSION: Indicates that the name refers to a permission.  - REFERENCE_ATTRIBUTE: Indicates that the name refers to an attribute.
+    The Reference enum specifies whether a name pertains to a relation, permission, or attribute.   - REFERENCE_RELATION: Indicates that the name refers to a relation.  - REFERENCE_PERMISSION: Indicates that the name refers to a permission.  - REFERENCE_ATTRIBUTE: Indicates that the name refers to an attribute.
     """
 
     """
     allowed enum values
     """
-    REFERENCE_UNSPECIFIED = 'REFERENCE_UNSPECIFIED'
     REFERENCE_RELATION = 'REFERENCE_RELATION'
     REFERENCE_PERMISSION = 'REFERENCE_PERMISSION'
     REFERENCE_ATTRIBUTE = 'REFERENCE_ATTRIBUTE'

@@ -36,7 +36,7 @@ class TestRewrite(unittest.TestCase):
         model = Rewrite()
         if include_optional:
             return Rewrite(
-                rewrite_operation = 'OPERATION_UNSPECIFIED',
+                rewrite_operation = 'OPERATION_UNION',
                 children = [
                     permify.models.child.Child(
                         leaf = permify.models.leaf.Leaf(
@@ -57,7 +57,7 @@ class TestRewrite(unittest.TestCase):
                                             name = '', ), )
                                     ], ), ), 
                         rewrite = permify.models.rewrite.Rewrite(
-                            rewrite_operation = 'OPERATION_UNSPECIFIED', ), )
+                            rewrite_operation = 'OPERATION_UNION', ), )
                     ]
             )
         else:

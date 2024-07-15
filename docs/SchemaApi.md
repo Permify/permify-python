@@ -20,8 +20,8 @@ list schema
 
 ```python
 import permify
+from permify.models.schema_list_body import SchemaListBody
 from permify.models.schema_list_response import SchemaListResponse
-from permify.models.schemas_list_request import SchemasListRequest
 from permify.rest import ApiException
 from pprint import pprint
 
@@ -37,7 +37,7 @@ with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify.SchemaApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
-    body = permify.SchemasListRequest() # SchemasListRequest | 
+    body = permify.SchemaListBody() # SchemaListBody | 
 
     try:
         # list schema
@@ -56,7 +56,7 @@ with permify.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
- **body** | [**SchemasListRequest**](SchemasListRequest.md)|  | 
+ **body** | [**SchemaListBody**](SchemaListBody.md)|  | 
 
 ### Return type
 
@@ -90,7 +90,7 @@ partially update your authorization model
 
 ```python
 import permify
-from permify.models.it_contains_the_tenant_id_to_identify_the_tenant_and_metadata_of_the_schema_to_be_edited_with_the_corresponding_edits_to_various_entities import ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities
+from permify.models.partial_write_body import PartialWriteBody
 from permify.models.schema_partial_write_response import SchemaPartialWriteResponse
 from permify.rest import ApiException
 from pprint import pprint
@@ -107,7 +107,7 @@ with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify.SchemaApi(api_client)
     tenant_id = 'tenant_id_example' # str | tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.
-    body = permify.ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities() # ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities | 
+    body = permify.PartialWriteBody() # PartialWriteBody | 
 
     try:
         # partially update your authorization model
@@ -126,7 +126,7 @@ with permify.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| tenant_id is a string that identifies the tenant. It must match the pattern \&quot;[a-zA-Z0-9-,]+\&quot;, be a maximum of 64 bytes, and must not be empty. | 
- **body** | [**ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities**](ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities.md)|  | 
+ **body** | [**PartialWriteBody**](PartialWriteBody.md)|  | 
 
 ### Return type
 
@@ -160,8 +160,8 @@ read schema
 
 ```python
 import permify
+from permify.models.schema_read_body import SchemaReadBody
 from permify.models.schema_read_response import SchemaReadResponse
-from permify.models.schemas_read_request import SchemasReadRequest
 from permify.rest import ApiException
 from pprint import pprint
 
@@ -177,7 +177,7 @@ with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify.SchemaApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
-    body = permify.SchemasReadRequest() # SchemasReadRequest | 
+    body = permify.SchemaReadBody() # SchemaReadBody | 
 
     try:
         # read schema
@@ -196,7 +196,7 @@ with permify.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
- **body** | [**SchemasReadRequest**](SchemasReadRequest.md)|  | 
+ **body** | [**SchemaReadBody**](SchemaReadBody.md)|  | 
 
 ### Return type
 
@@ -230,8 +230,8 @@ write schema
 
 ```python
 import permify
+from permify.models.schema_write_body import SchemaWriteBody
 from permify.models.schema_write_response import SchemaWriteResponse
-from permify.models.schemas_write_request import SchemasWriteRequest
 from permify.rest import ApiException
 from pprint import pprint
 
@@ -247,7 +247,7 @@ with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify.SchemaApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
-    body = permify.SchemasWriteRequest() # SchemasWriteRequest | 
+    body = permify.SchemaWriteBody() # SchemaWriteBody | 
 
     try:
         # write schema
@@ -266,7 +266,7 @@ with permify.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
- **body** | [**SchemasWriteRequest**](SchemasWriteRequest.md)|  | 
+ **body** | [**SchemaWriteBody**](SchemaWriteBody.md)|  | 
 
 ### Return type
 

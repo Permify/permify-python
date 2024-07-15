@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from permify.models.expand import Expand
+from permify.models.v1_expand import V1Expand
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class PermissionExpandResponse(BaseModel):
     """
     PermissionExpandResponse is the response message for the Expand method in the Permission service.
     """ # noqa: E501
-    tree: Optional[Expand] = None
+    tree: Optional[V1Expand] = None
     __properties: ClassVar[List[str]] = ["tree"]
 
     model_config = ConfigDict(
@@ -85,7 +85,7 @@ class PermissionExpandResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "tree": Expand.from_dict(obj["tree"]) if obj.get("tree") is not None else None
+            "tree": V1Expand.from_dict(obj["tree"]) if obj.get("tree") is not None else None
         })
         return _obj
 

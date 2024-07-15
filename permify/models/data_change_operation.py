@@ -21,13 +21,12 @@ from typing_extensions import Self
 
 class DataChangeOperation(str, Enum):
     """
-     - OPERATION_UNSPECIFIED: Default operation, not specified.  - OPERATION_CREATE: Creation operation.  - OPERATION_DELETE: Deletion operation.
+     - OPERATION_CREATE: Creation operation.  - OPERATION_DELETE: Deletion operation.
     """
 
     """
     allowed enum values
     """
-    OPERATION_UNSPECIFIED = 'OPERATION_UNSPECIFIED'
     OPERATION_CREATE = 'OPERATION_CREATE'
     OPERATION_DELETE = 'OPERATION_DELETE'
 

@@ -37,7 +37,7 @@ class TestAttributeDefinition(unittest.TestCase):
         if include_optional:
             return AttributeDefinition(
                 name = '',
-                type = 'ATTRIBUTE_TYPE_UNSPECIFIED'
+                type = 'ATTRIBUTE_TYPE_BOOLEAN'
             )
         else:
             return AttributeDefinition(

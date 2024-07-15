@@ -36,7 +36,7 @@ class TestDataChange(unittest.TestCase):
         model = DataChange()
         if include_optional:
             return DataChange(
-                operation = 'OPERATION_UNSPECIFIED',
+                operation = 'OPERATION_CREATE',
                 tuple = permify.models.tuple.Tuple(
                     entity = permify.models.entity.Entity(
                         type = '', 

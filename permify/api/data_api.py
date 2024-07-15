@@ -20,19 +20,19 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr
 from typing_extensions import Annotated
 from permify.models.attribute_read_response import AttributeReadResponse
-from permify.models.bundle_run_request import BundleRunRequest
 from permify.models.bundle_run_response import BundleRunResponse
-from permify.models.data_attributes_read_request import DataAttributesReadRequest
-from permify.models.data_delete_request import DataDeleteRequest
+from permify.models.data_delete_body import DataDeleteBody
 from permify.models.data_delete_response import DataDeleteResponse
-from permify.models.data_relationships_read_request import DataRelationshipsReadRequest
-from permify.models.data_write_request import DataWriteRequest
+from permify.models.data_write_body import DataWriteBody
 from permify.models.data_write_response import DataWriteResponse
-from permify.models.relationship_delete_request import RelationshipDeleteRequest
+from permify.models.delete_relationships_body import DeleteRelationshipsBody
+from permify.models.read_attributes_body import ReadAttributesBody
+from permify.models.read_relationships_body import ReadRelationshipsBody
 from permify.models.relationship_delete_response import RelationshipDeleteResponse
 from permify.models.relationship_read_response import RelationshipReadResponse
 from permify.models.relationship_write_response import RelationshipWriteResponse
-from permify.models.relationships_write_request import RelationshipsWriteRequest
+from permify.models.run_bundle_body import RunBundleBody
+from permify.models.write_relationships_body import WriteRelationshipsBody
 
 from permify.api_client import ApiClient, RequestSerialized
 from permify.api_response import ApiResponse
@@ -56,7 +56,7 @@ class DataApi:
     def bundle_run(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: BundleRunRequest,
+        body: RunBundleBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -76,7 +76,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: BundleRunRequest
+        :type body: RunBundleBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -126,7 +126,7 @@ class DataApi:
     def bundle_run_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: BundleRunRequest,
+        body: RunBundleBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -146,7 +146,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: BundleRunRequest
+        :type body: RunBundleBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -196,7 +196,7 @@ class DataApi:
     def bundle_run_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: BundleRunRequest,
+        body: RunBundleBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -216,7 +216,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: BundleRunRequest
+        :type body: RunBundleBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -339,7 +339,7 @@ class DataApi:
     def data_attributes_read(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: DataAttributesReadRequest,
+        body: ReadAttributesBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -359,7 +359,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: DataAttributesReadRequest
+        :type body: ReadAttributesBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -409,7 +409,7 @@ class DataApi:
     def data_attributes_read_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: DataAttributesReadRequest,
+        body: ReadAttributesBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -429,7 +429,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: DataAttributesReadRequest
+        :type body: ReadAttributesBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -479,7 +479,7 @@ class DataApi:
     def data_attributes_read_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: DataAttributesReadRequest,
+        body: ReadAttributesBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -499,7 +499,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: DataAttributesReadRequest
+        :type body: ReadAttributesBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -622,7 +622,7 @@ class DataApi:
     def data_delete(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: DataDeleteRequest,
+        body: DataDeleteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -642,7 +642,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: DataDeleteRequest
+        :type body: DataDeleteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -692,7 +692,7 @@ class DataApi:
     def data_delete_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: DataDeleteRequest,
+        body: DataDeleteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -712,7 +712,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: DataDeleteRequest
+        :type body: DataDeleteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -762,7 +762,7 @@ class DataApi:
     def data_delete_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: DataDeleteRequest,
+        body: DataDeleteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -782,7 +782,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: DataDeleteRequest
+        :type body: DataDeleteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -905,7 +905,7 @@ class DataApi:
     def data_relationships_read(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: DataRelationshipsReadRequest,
+        body: ReadRelationshipsBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -925,7 +925,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: DataRelationshipsReadRequest
+        :type body: ReadRelationshipsBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -975,7 +975,7 @@ class DataApi:
     def data_relationships_read_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: DataRelationshipsReadRequest,
+        body: ReadRelationshipsBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -995,7 +995,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: DataRelationshipsReadRequest
+        :type body: ReadRelationshipsBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1045,7 +1045,7 @@ class DataApi:
     def data_relationships_read_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: DataRelationshipsReadRequest,
+        body: ReadRelationshipsBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1065,7 +1065,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: DataRelationshipsReadRequest
+        :type body: ReadRelationshipsBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1188,7 +1188,7 @@ class DataApi:
     def data_write(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: DataWriteRequest,
+        body: DataWriteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1208,7 +1208,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: DataWriteRequest
+        :type body: DataWriteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1258,7 +1258,7 @@ class DataApi:
     def data_write_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: DataWriteRequest,
+        body: DataWriteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1278,7 +1278,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: DataWriteRequest
+        :type body: DataWriteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1328,7 +1328,7 @@ class DataApi:
     def data_write_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: DataWriteRequest,
+        body: DataWriteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1348,7 +1348,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: DataWriteRequest
+        :type body: DataWriteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1471,7 +1471,7 @@ class DataApi:
     def relationships_delete(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: RelationshipDeleteRequest,
+        body: DeleteRelationshipsBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1491,7 +1491,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: RelationshipDeleteRequest
+        :type body: DeleteRelationshipsBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1541,7 +1541,7 @@ class DataApi:
     def relationships_delete_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: RelationshipDeleteRequest,
+        body: DeleteRelationshipsBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1561,7 +1561,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: RelationshipDeleteRequest
+        :type body: DeleteRelationshipsBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1611,7 +1611,7 @@ class DataApi:
     def relationships_delete_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: RelationshipDeleteRequest,
+        body: DeleteRelationshipsBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1631,7 +1631,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: RelationshipDeleteRequest
+        :type body: DeleteRelationshipsBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1754,7 +1754,7 @@ class DataApi:
     def relationships_write(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: RelationshipsWriteRequest,
+        body: WriteRelationshipsBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1774,7 +1774,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: RelationshipsWriteRequest
+        :type body: WriteRelationshipsBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1824,7 +1824,7 @@ class DataApi:
     def relationships_write_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: RelationshipsWriteRequest,
+        body: WriteRelationshipsBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1844,7 +1844,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: RelationshipsWriteRequest
+        :type body: WriteRelationshipsBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1894,7 +1894,7 @@ class DataApi:
     def relationships_write_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: RelationshipsWriteRequest,
+        body: WriteRelationshipsBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1914,7 +1914,7 @@ class DataApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: RelationshipsWriteRequest
+        :type body: WriteRelationshipsBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of

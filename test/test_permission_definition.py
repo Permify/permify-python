@@ -56,7 +56,7 @@ class TestPermissionDefinition(unittest.TestCase):
                                         name = '', ), )
                                 ], ), ), 
                     rewrite = permify.models.rewrite.Rewrite(
-                        rewrite_operation = 'OPERATION_UNSPECIFIED', 
+                        rewrite_operation = 'OPERATION_UNION', 
                         children = [
                             permify.models.child.Child()
                             ], ), )

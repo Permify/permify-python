@@ -41,7 +41,7 @@ class TestStreamResultOfWatchResponse(unittest.TestCase):
                         snap_token = '', 
                         data_changes = [
                             permify.models.data_change.DataChange(
-                                operation = 'OPERATION_UNSPECIFIED', 
+                                operation = 'OPERATION_CREATE', 
                                 tuple = permify.models.tuple.Tuple(
                                     entity = permify.models.entity.Entity(
                                         type = '', 

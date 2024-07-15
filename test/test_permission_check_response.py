@@ -36,7 +36,7 @@ class TestPermissionCheckResponse(unittest.TestCase):
         model = PermissionCheckResponse()
         if include_optional:
             return PermissionCheckResponse(
-                can = 'CHECK_RESULT_UNSPECIFIED',
+                can = 'CHECK_RESULT_ALLOWED',
                 metadata = permify.models.permission_check_response_metadata.PermissionCheckResponseMetadata(
                     check_count = 56, )
             )

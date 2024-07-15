@@ -20,7 +20,7 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr
 from typing_extensions import Annotated
 from permify.models.stream_result_of_watch_response import StreamResultOfWatchResponse
-from permify.models.watch_watch_request import WatchWatchRequest
+from permify.models.watch_body import WatchBody
 
 from permify.api_client import ApiClient, RequestSerialized
 from permify.api_response import ApiResponse
@@ -44,7 +44,7 @@ class WatchApi:
     def watch_watch(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: WatchWatchRequest,
+        body: WatchBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -64,7 +64,7 @@ class WatchApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: WatchWatchRequest
+        :type body: WatchBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -114,7 +114,7 @@ class WatchApi:
     def watch_watch_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: WatchWatchRequest,
+        body: WatchBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -134,7 +134,7 @@ class WatchApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: WatchWatchRequest
+        :type body: WatchBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -184,7 +184,7 @@ class WatchApi:
     def watch_watch_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: WatchWatchRequest,
+        body: WatchBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -204,7 +204,7 @@ class WatchApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: WatchWatchRequest
+        :type body: WatchBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of

@@ -19,14 +19,14 @@ from typing_extensions import Annotated
 
 from pydantic import Field, StrictStr
 from typing_extensions import Annotated
-from permify.models.it_contains_the_tenant_id_to_identify_the_tenant_and_metadata_of_the_schema_to_be_edited_with_the_corresponding_edits_to_various_entities import ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities
+from permify.models.partial_write_body import PartialWriteBody
+from permify.models.schema_list_body import SchemaListBody
 from permify.models.schema_list_response import SchemaListResponse
 from permify.models.schema_partial_write_response import SchemaPartialWriteResponse
+from permify.models.schema_read_body import SchemaReadBody
 from permify.models.schema_read_response import SchemaReadResponse
+from permify.models.schema_write_body import SchemaWriteBody
 from permify.models.schema_write_response import SchemaWriteResponse
-from permify.models.schemas_list_request import SchemasListRequest
-from permify.models.schemas_read_request import SchemasReadRequest
-from permify.models.schemas_write_request import SchemasWriteRequest
 
 from permify.api_client import ApiClient, RequestSerialized
 from permify.api_response import ApiResponse
@@ -50,7 +50,7 @@ class SchemaApi:
     def schemas_list(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: SchemasListRequest,
+        body: SchemaListBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -70,7 +70,7 @@ class SchemaApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: SchemasListRequest
+        :type body: SchemaListBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -120,7 +120,7 @@ class SchemaApi:
     def schemas_list_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: SchemasListRequest,
+        body: SchemaListBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -140,7 +140,7 @@ class SchemaApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: SchemasListRequest
+        :type body: SchemaListBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -190,7 +190,7 @@ class SchemaApi:
     def schemas_list_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: SchemasListRequest,
+        body: SchemaListBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -210,7 +210,7 @@ class SchemaApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: SchemasListRequest
+        :type body: SchemaListBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -333,7 +333,7 @@ class SchemaApi:
     def schemas_partial_write(
         self,
         tenant_id: Annotated[StrictStr, Field(description="tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.")],
-        body: ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities,
+        body: PartialWriteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -353,7 +353,7 @@ class SchemaApi:
         :param tenant_id: tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities
+        :type body: PartialWriteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -403,7 +403,7 @@ class SchemaApi:
     def schemas_partial_write_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.")],
-        body: ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities,
+        body: PartialWriteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -423,7 +423,7 @@ class SchemaApi:
         :param tenant_id: tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities
+        :type body: PartialWriteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -473,7 +473,7 @@ class SchemaApi:
     def schemas_partial_write_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty.")],
-        body: ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities,
+        body: PartialWriteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -493,7 +493,7 @@ class SchemaApi:
         :param tenant_id: tenant_id is a string that identifies the tenant. It must match the pattern \"[a-zA-Z0-9-,]+\", be a maximum of 64 bytes, and must not be empty. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: ItContainsTheTenantIdToIdentifyTheTenantAndMetadataOfTheSchemaToBeEditedWithTheCorrespondingEditsToVariousEntities
+        :type body: PartialWriteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -616,7 +616,7 @@ class SchemaApi:
     def schemas_read(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: SchemasReadRequest,
+        body: SchemaReadBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -636,7 +636,7 @@ class SchemaApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: SchemasReadRequest
+        :type body: SchemaReadBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -686,7 +686,7 @@ class SchemaApi:
     def schemas_read_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: SchemasReadRequest,
+        body: SchemaReadBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -706,7 +706,7 @@ class SchemaApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: SchemasReadRequest
+        :type body: SchemaReadBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -756,7 +756,7 @@ class SchemaApi:
     def schemas_read_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: SchemasReadRequest,
+        body: SchemaReadBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -776,7 +776,7 @@ class SchemaApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: SchemasReadRequest
+        :type body: SchemaReadBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -899,7 +899,7 @@ class SchemaApi:
     def schemas_write(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: SchemasWriteRequest,
+        body: SchemaWriteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -919,7 +919,7 @@ class SchemaApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: SchemasWriteRequest
+        :type body: SchemaWriteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -969,7 +969,7 @@ class SchemaApi:
     def schemas_write_with_http_info(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: SchemasWriteRequest,
+        body: SchemaWriteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -989,7 +989,7 @@ class SchemaApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: SchemasWriteRequest
+        :type body: SchemaWriteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1039,7 +1039,7 @@ class SchemaApi:
     def schemas_write_without_preload_content(
         self,
         tenant_id: Annotated[StrictStr, Field(description="Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.")],
-        body: SchemasWriteRequest,
+        body: SchemaWriteBody,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1059,7 +1059,7 @@ class SchemaApi:
         :param tenant_id: Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. (required)
         :type tenant_id: str
         :param body: (required)
-        :type body: SchemasWriteRequest
+        :type body: SchemaWriteBody
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of

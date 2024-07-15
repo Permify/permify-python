@@ -39,9 +39,9 @@ class TestMapType(unittest.TestCase):
                 key_type = permify.models.v1alpha1/type.v1alpha1.Type(
                     dyn = permify.models.dyn.dyn(), 
                     null = '', 
-                    primitive = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                    wrapper = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                    well_known = 'WELL_KNOWN_TYPE_UNSPECIFIED', 
+                    primitive = 'BOOL', 
+                    wrapper = 'BOOL', 
+                    well_known = 'ANY', 
                     list_type = permify.models.list_type.ListType(
                         elem_type = permify.models.v1alpha1/type.v1alpha1.Type(
                             dyn = permify.models.dyn.dyn(), 
@@ -73,9 +73,9 @@ class TestMapType(unittest.TestCase):
                 value_type = permify.models.v1alpha1/type.v1alpha1.Type(
                     dyn = permify.models.dyn.dyn(), 
                     null = '', 
-                    primitive = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                    wrapper = 'PRIMITIVE_TYPE_UNSPECIFIED', 
-                    well_known = 'WELL_KNOWN_TYPE_UNSPECIFIED', 
+                    primitive = 'BOOL', 
+                    wrapper = 'BOOL', 
+                    well_known = 'ANY', 
                     list_type = permify.models.list_type.ListType(
                         elem_type = permify.models.v1alpha1/type.v1alpha1.Type(
                             dyn = permify.models.dyn.dyn(), 

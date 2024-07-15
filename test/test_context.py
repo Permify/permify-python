@@ -57,7 +57,7 @@ class TestContext(unittest.TestCase):
                             'key' : None
                             }, )
                     ],
-                data = None
+                data = permify.models.data.data()
             )
         else:
             return Context(

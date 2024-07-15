@@ -4,8 +4,6 @@ Operation is an enum representing the type of operation to be applied on the tre
 
 ## Enum
 
-* `OPERATION_UNSPECIFIED` (value: `'OPERATION_UNSPECIFIED'`)
-
 * `OPERATION_UNION` (value: `'OPERATION_UNION'`)
 
 * `OPERATION_INTERSECTION` (value: `'OPERATION_INTERSECTION'`)
