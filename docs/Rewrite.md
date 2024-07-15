@@ -6,7 +6,7 @@ The Rewrite message represents a specific rewrite operation. This operation coul
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rewrite_operation** | [**RewriteOperation**](RewriteOperation.md) |  | [optional] [default to RewriteOperation.UNSPECIFIED]
+**rewrite_operation** | [**RewriteOperation**](RewriteOperation.md) |  | [optional] 
 **children** | [**List[Child]**](Child.md) | A list of children that are operated upon by the rewrite operation. | [optional] 
 
 ## Example

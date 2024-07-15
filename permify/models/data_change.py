@@ -30,7 +30,7 @@ class DataChange(BaseModel):
     """
     DataChange represents a single change in data, with an operation type and the actual change which could be a tuple or an attribute.
     """ # noqa: E501
-    operation: Optional[DataChangeOperation] = DataChangeOperation.UNSPECIFIED
+    operation: Optional[DataChangeOperation] = None
     tuple: Optional[Tuple] = None
     attribute: Optional[Attribute] = None
     __properties: ClassVar[List[str]] = ["operation", "tuple", "attribute"]
@@ -92,7 +92,7 @@ class DataChange(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "operation": obj.get("operation") if obj.get("operation") is not None else DataChangeOperation.UNSPECIFIED,
+            "operation": obj.get("operation"),
             "tuple": Tuple.from_dict(obj["tuple"]) if obj.get("tuple") is not None else None,
             "attribute": Attribute.from_dict(obj["attribute"]) if obj.get("attribute") is not None else None
         })

@@ -28,7 +28,7 @@ class Rewrite(BaseModel):
     """
     The Rewrite message represents a specific rewrite operation. This operation could be one of the following: union, intersection, or exclusion.
     """ # noqa: E501
-    rewrite_operation: Optional[RewriteOperation] = Field(default=RewriteOperation.UNSPECIFIED, alias="rewriteOperation")
+    rewrite_operation: Optional[RewriteOperation] = Field(default=None, alias="rewriteOperation")
     children: Optional[List[Child]] = Field(default=None, description="A list of children that are operated upon by the rewrite operation.")
     __properties: ClassVar[List[str]] = ["rewriteOperation", "children"]
 
@@ -90,7 +90,7 @@ class Rewrite(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "rewriteOperation": obj.get("rewriteOperation") if obj.get("rewriteOperation") is not None else RewriteOperation.UNSPECIFIED,
+            "rewriteOperation": obj.get("rewriteOperation"),
             "children": [Child.from_dict(_item) for _item in obj["children"]] if obj.get("children") is not None else None
         })
         return _obj

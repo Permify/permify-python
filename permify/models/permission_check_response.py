@@ -29,7 +29,7 @@ class PermissionCheckResponse(BaseModel):
     """
     PermissionCheckResponse is the response message for the Check method in the Permission service.
     """ # noqa: E501
-    can: Optional[CheckResult] = CheckResult.UNSPECIFIED
+    can: Optional[CheckResult] = None
     metadata: Optional[PermissionCheckResponseMetadata] = None
     __properties: ClassVar[List[str]] = ["can", "metadata"]
 
@@ -87,7 +87,7 @@ class PermissionCheckResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "can": obj.get("can") if obj.get("can") is not None else CheckResult.UNSPECIFIED,
+            "can": obj.get("can"),
             "metadata": PermissionCheckResponseMetadata.from_dict(obj["metadata"]) if obj.get("metadata") is not None else None
         })
         return _obj

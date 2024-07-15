@@ -6,7 +6,7 @@ PermissionCheckResponse is the response message for the Check method in the Perm
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**can** | [**CheckResult**](CheckResult.md) |  | [optional] [default to CheckResult.UNSPECIFIED]
+**can** | [**CheckResult**](CheckResult.md) |  | [optional] 
 **metadata** | [**PermissionCheckResponseMetadata**](PermissionCheckResponseMetadata.md) |  | [optional] 
 
 ## Example

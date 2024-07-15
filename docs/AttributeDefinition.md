@@ -7,7 +7,7 @@ The AttributeDefinition message provides detailed information about a specific a
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | The name of the attribute, which follows a specific string pattern and has a maximum byte size. | [optional] 
-**type** | [**AttributeType**](AttributeType.md) |  | [optional] [default to AttributeType.UNSPECIFIED]
+**type** | [**AttributeType**](AttributeType.md) |  | [optional] 
 
 ## Example
 
