@@ -15,7 +15,7 @@
 
 import unittest
 
-from permify.data_api import DataApi
+from permify.api.data_api import DataApi
 
 
 class TestDataApi(unittest.TestCase):

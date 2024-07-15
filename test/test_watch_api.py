@@ -15,7 +15,7 @@
 
 import unittest
 
-from permify.watch_api import WatchApi
+from permify.api.watch_api import WatchApi
 
 
 class TestWatchApi(unittest.TestCase):

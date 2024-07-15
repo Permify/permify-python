@@ -18,12 +18,12 @@
 __version__ = "1.0.0"
 
 # import apis into sdk package
-from permify.bundle_api import BundleApi
-from permify.data_api import DataApi
-from permify.permission_api import PermissionApi
-from permify.schema_api import SchemaApi
-from permify.tenancy_api import TenancyApi
-from permify.watch_api import WatchApi
+from permify.api.bundle_api import BundleApi
+from permify.api.data_api import DataApi
+from permify.api.permission_api import PermissionApi
+from permify.api.schema_api import SchemaApi
+from permify.api.tenancy_api import TenancyApi
+from permify.api.watch_api import WatchApi
 
 # import ApiClient
 from permify.api_response import ApiResponse

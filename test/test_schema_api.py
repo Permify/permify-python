@@ -15,7 +15,7 @@
 
 import unittest
 
-from permify.schema_api import SchemaApi
+from permify.api.schema_api import SchemaApi
 
 
 class TestSchemaApi(unittest.TestCase):

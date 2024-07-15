@@ -15,7 +15,7 @@
 
 import unittest
 
-from permify.permission_api import PermissionApi
+from permify.api.permission_api import PermissionApi
 
 
 class TestPermissionApi(unittest.TestCase):

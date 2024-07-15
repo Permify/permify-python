@@ -15,7 +15,7 @@
 
 import unittest
 
-from permify.bundle_api import BundleApi
+from permify.api.bundle_api import BundleApi
 
 
 class TestBundleApi(unittest.TestCase):
