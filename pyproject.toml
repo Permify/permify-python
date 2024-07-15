@@ -5,7 +5,7 @@ description = "Permify API"
 authors = ["API Support <hello@permify.co>"]
 license = "Apache-2.0 license"
 readme = "README.md"
-repository = "https://github.com/permify/permify-python"
+repository = "https://github.com/Permify/permify-python"
 keywords = ["OpenAPI", "OpenAPI-Generator", "Permify API"]
 include = ["permify/py.typed"]
 
