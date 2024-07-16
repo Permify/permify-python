@@ -14,15 +14,21 @@ jobs:
       
       - name: Check commit message for '#new-release'
         run: |
-          if git log --format=%B -n 1 | grep -q '#new-release'; then
-            git config --global user.name 'GitHub Actions Bot'
-            git config --global user.email '<>'
-            latest_release=$(git describe --tags --abbrev=0 --always)            
-            new_release=$(echo $latest_release | awk -F. '{$NF = $NF + 1;} 1' OFS=.)
-            echo "Creating release $new_release"
-            git tag -a $new_release -m "Release $new_release"
-            git push origin $new_release
+          commit_message=$(git log --format=%B -n 1)
+          
+          if echo "$commit_message" | grep -q '#new-release'; then
+              if [[ "$commit_message" =~ <new-release:([^>]+)> ]]; then
+                  new_release="${BASH_REMATCH[1]}"
+                  echo "Creating release $new_release"
+                  git config --global user.name 'GitHub Actions Bot'
+                  git config --global user.email '<>'
+                  git tag -a "$new_release" -m "Release $new_release"
+                  git push origin "$new_release"
+              else
+                  echo "Commit includes '#new-release' but no tag found in <new-release:tag> format. Skipping release."
+                  exit 1
+              fi
           else
-            echo "Commit does not include '#new-release'. Skipping release."
-            exit 0
+              echo "Commit does not include '#new-release'. Skipping release."
+              exit 0
           fi
