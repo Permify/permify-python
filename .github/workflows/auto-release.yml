@@ -1,33 +1,39 @@
-name: Auto Release on 'new-release' commit
+name: Auto Release on '#new-release' commit
 
 on:
   push:
     branches:
       - main
-    
+
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       
       - name: Check commit message for '#new-release'
+        id: check_message
         run: |
-          commit_message=$(git log --format=%B -n 1)
-          if echo "$commit_message" | grep -q '#new-release'; then
-              new_release=$(echo "$commit_message" | sed -n 's/.*<new-release:\([^>]*\)>.*$/\1/p')
-              if [ -n "$new_release" ]; then
-                  echo "Creating release $new_release"
-                  git config --global user.name 'GitHub Actions Bot'
-                  git config --global user.email '<>'
-                  git tag -a "$new_release" -m "Release $new_release"
-                  git push origin "$new_release"
-              else
-                  echo "Commit includes '#new-release' but no tag found in <new-release:tag> format. Skipping release."
-                  exit 1
-              fi
+          if git log --format=%B -n 1 | grep -q '#new-release'; then
+            latest_release=$(git describe --tags --abbrev=0)            
+            new_release=$(echo $latest_release | awk -F. '{$NF = $NF + 1;} 1' OFS=.)
+            echo "Creating release $new_release"
+            git tag -a $new_release -m "Release $new_release"
+            git push origin $new_release
+            echo "::set-output name=new_release::$new_release"
           else
-              echo "Commit does not include '#new-release'. Skipping release."
-              exit 0
-          fi
+            echo "Commit does not include '#new-release'. Skipping release."
+            exit 0
+
+      - name: Create release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          gh release create "${{ steps.check_message.outputs.new_release }}" \
+              --repo="$GITHUB_REPOSITORY" \
+              --title="${{ steps.check_message.outputs.new_release#v }}" \
+              --generate-notes
