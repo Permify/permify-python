@@ -18,18 +18,24 @@ jobs:
       - name: Check commit message for '#new-release'
         id: check_message
         run: |
-          if git log --format=%B -n 1 | grep -q '#new-release'; then
-            latest_release=$(git describe --tags --always --abbrev=0)            
-            new_release=$(echo $latest_release | awk -F. '{$NF = $NF + 1;} 1' OFS=.)
-            echo "Creating release $new_release"
-            git config --global user.name 'GitHub Actions Bot'
-            git config --global user.email '<>'
-            git tag -a $new_release -m "Release $new_release"
-            git push origin $new_release
-            echo "::set-output name=new_release::$new_release"
+          commit_message=$(git log --format=%B -n 1)
+          
+          if echo "$commit_message" | grep -q '#new-release'; then
+              new_release=$(echo "$commit_message" | sed -n 's/.*<new-release:\([^>]*\)>.*$/\1/p')
+              if [ -n "$new_release" ]; then
+                  echo "Creating release $new_release"
+                  git config --global user.name 'GitHub Actions Bot'
+                  git config --global user.email '<>'
+                  git tag -a "$new_release" -m "Release $new_release"
+                  git push origin "$new_release"
+                  echo "::set-output name=new_release::$new_release"
+              else
+                  echo "Commit includes '#new-release' but no tag found in <new-release:tag> format. Skipping release."
+                  exit 1
+              fi
           else
-            echo "Commit does not include '#new-release'. Skipping release."
-            exit 0
+              echo "Commit does not include '#new-release'. Skipping release."
+              exit 0
           fi
 
       - name: Create release
