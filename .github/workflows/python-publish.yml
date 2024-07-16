@@ -23,10 +23,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install build
     - name: Build package
+      env:
+        PACKAGE_VERSION: ${GITHUB_REF##*/}
       run: |
-        echo "PACKAGE_VERSION=$GITHUB_REF"
-        echo "PACKAGE_VERSION=$GITHUB_WORKFLOW_REF"
-        echo "PACKAGE_VERSION=$GITHUB_REF" >> .env
         python -m build
     - name: Publish package
       uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
