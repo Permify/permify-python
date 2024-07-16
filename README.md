@@ -53,15 +53,16 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 
 import permify
-from permify import ApiException
+from permify.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:3476
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-
-configuration =permify.Configuration(
-    host = "http://localhost:3476"
+configuration = permify.Configuration(
+    host = "http://localhost"
 )
+
+
 
 # Enter a context with an instance of the API client
 with permify.ApiClient(configuration) as api_client:
@@ -82,7 +83,7 @@ with permify.ApiClient(configuration) as api_client:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost:3476*
+All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
