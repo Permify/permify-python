@@ -15,10 +15,9 @@ jobs:
       - name: Check commit message for '#new-release'
         run: |
           commit_message=$(git log --format=%B -n 1)
-          
           if echo "$commit_message" | grep -q '#new-release'; then
-              if [[ "$commit_message" =~ <new-release:([^>]+)> ]]; then
-                  new_release="${BASH_REMATCH[1]}"
+              new_release=$(echo "$commit_message" | sed -n 's/.*<new-release:\([^>]*\)>.*$/\1/p')
+              if [ -n "$new_release" ]; then
                   echo "Creating release $new_release"
                   git config --global user.name 'GitHub Actions Bot'
                   git config --global user.email '<>'
