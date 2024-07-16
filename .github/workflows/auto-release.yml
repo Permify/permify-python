@@ -15,6 +15,8 @@ jobs:
       - name: Check commit message for '#new-release'
         run: |
           if git log --format=%B -n 1 | grep -q '#new-release'; then
+            git config --global user.name 'GitHub Actions Bot'
+            git config --global user.email '<>'
             latest_release=$(git describe --tags --abbrev=0 --always)            
             new_release=$(echo $latest_release | awk -F. '{$NF = $NF + 1;} 1' OFS=.)
             echo "Creating release $new_release"
