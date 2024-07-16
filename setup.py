@@ -14,7 +14,7 @@
 
 
 from setuptools import setup, find_packages  # noqa: H301
-
+import os
 # To install the library, run the following
 #
 # python setup.py install
@@ -22,7 +22,7 @@ from setuptools import setup, find_packages  # noqa: H301
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "permify"
-VERSION = "1.0.0"
+VERSION = os.environ.get("PACKAGE_VERSION")
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
     "urllib3 >= 1.25.3, < 2.1.0",
