@@ -28,6 +28,7 @@ jobs:
           else
             echo "Commit does not include '#new-release'. Skipping release."
             exit 0
+          fi
 
       - name: Create release
         env:
