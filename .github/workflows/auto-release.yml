@@ -33,7 +33,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          gh release create "${{ steps.check_message.outputs.new_release }}" \
+          tag="${{ steps.check_message.outputs.new_release }}"
+          title="${tag#v}"
+          gh release create "$tag" \
               --repo="$GITHUB_REPOSITORY" \
-              --title="${{ steps.check_message.outputs.new_release#v }}" \
+              --title="$title" \
               --generate-notes
