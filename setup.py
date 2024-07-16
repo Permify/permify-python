@@ -37,7 +37,7 @@ setup(
     description="Permify API",
     author="API Support",
     author_email="hello@permify.co",
-    url="permify.co",
+    url="",
     keywords=["OpenAPI", "OpenAPI-Generator", "Permify API"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
