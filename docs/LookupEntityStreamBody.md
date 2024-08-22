@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **permission** | **str** | Name of the permission to check, required, must start with a letter and can include alphanumeric and underscore, max 64 bytes. | [optional] 
 **subject** | [**Subject**](Subject.md) |  | [optional] 
 **context** | [**Context**](Context.md) |  | [optional] 
+**page_size** | **int** | page_size is the number of tenants to be returned in the response. The value should be between 1 and 100. | [optional] 
+**continuous_token** | **str** | continuous_token is an optional parameter used for pagination. It should be the value received in the previous response. | [optional] 
 
 ## Example
 
