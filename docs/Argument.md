@@ -7,7 +7,6 @@ Argument defines the type of argument in a Call. It can be either a ComputedAttr
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **computed_attribute** | [**ComputedAttribute**](ComputedAttribute.md) |  | [optional] 
-**context_attribute** | [**ContextAttribute**](ContextAttribute.md) |  | [optional] 
 
 ## Example
 

@@ -6,7 +6,7 @@ SchemaListRequest is the request message for the List method in the Schema servi
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**page_size** | **int** | page_size is the number of tenants to be returned in the response. The value should be between 1 and 100. | [optional] 
+**page_size** | **int** | page_size is the number of schemas to be returned in the response. The value should be between 1 and 100. | [optional] 
 **continuous_token** | **str** | continuous_token is an optional parameter used for pagination. It should be the value received in the previous response. | [optional] 
 
 ## Example

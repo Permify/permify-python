@@ -23,12 +23,12 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class RelationshipReadRequestMetadata(BaseModel):
+class StringArrayValue(BaseModel):
     """
-    RelationshipReadRequestMetadata defines the structure of the metadata for a read request focused on relationships. It includes the snap_token associated with a particular state of the database.
+    Wrapper for an array of strings.
     """ # noqa: E501
-    snap_token: Optional[StrictStr] = Field(default=None, description="The snap token to avoid stale cache, see more details on [Snap Tokens](../../operations/snap-tokens)")
-    __properties: ClassVar[List[str]] = ["snap_token"]
+    data: Optional[List[StrictStr]] = Field(default=None, description="The array of strings.")
+    __properties: ClassVar[List[str]] = ["data"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -48,7 +48,7 @@ class RelationshipReadRequestMetadata(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of RelationshipReadRequestMetadata from a JSON string"""
+        """Create an instance of StringArrayValue from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -73,7 +73,7 @@ class RelationshipReadRequestMetadata(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of RelationshipReadRequestMetadata from a dict"""
+        """Create an instance of StringArrayValue from a dict"""
         if obj is None:
             return None
 
@@ -81,7 +81,7 @@ class RelationshipReadRequestMetadata(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "snap_token": obj.get("snap_token")
+            "data": obj.get("data")
         })
         return _obj
 

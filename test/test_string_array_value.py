@@ -15,10 +15,10 @@
 
 import unittest
 
-from permify.models.bundle_read_body import BundleReadBody
+from permify.models.string_array_value import StringArrayValue
 
-class TestBundleReadBody(unittest.TestCase):
-    """BundleReadBody unit test stubs"""
+class TestStringArrayValue(unittest.TestCase):
+    """StringArrayValue unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,25 +26,27 @@ class TestBundleReadBody(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> BundleReadBody:
-        """Test BundleReadBody
+    def make_instance(self, include_optional) -> StringArrayValue:
+        """Test StringArrayValue
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `BundleReadBody`
+        # uncomment below to create an instance of `StringArrayValue`
         """
-        model = BundleReadBody()
+        model = StringArrayValue()
         if include_optional:
-            return BundleReadBody(
-                name = ''
+            return StringArrayValue(
+                data = [
+                    ''
+                    ]
             )
         else:
-            return BundleReadBody(
+            return StringArrayValue(
         )
         """
 
-    def testBundleReadBody(self):
-        """Test BundleReadBody"""
+    def testStringArrayValue(self):
+        """Test StringArrayValue"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 
