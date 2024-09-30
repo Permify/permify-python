@@ -22,7 +22,7 @@ check api
 
 ```python
 import permify
-from permify.models.permission_check_body import PermissionCheckBody
+from permify.models.check_body import CheckBody
 from permify.models.permission_check_response import PermissionCheckResponse
 from permify.rest import ApiException
 from pprint import pprint
@@ -39,7 +39,7 @@ with permify.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = permify.PermissionApi(api_client)
     tenant_id = 'tenant_id_example' # str | Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant <code>t1</code> for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes.
-    body = permify.PermissionCheckBody() # PermissionCheckBody | 
+    body = permify.CheckBody() # CheckBody | 
 
     try:
         # check api
@@ -58,7 +58,7 @@ with permify.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_id** | **str**| Identifier of the tenant, if you are not using multi-tenancy (have only one tenant) use pre-inserted tenant &lt;code&gt;t1&lt;/code&gt; for this field. Required, and must match the pattern \\“[a-zA-Z0-9-,]+\\“, max 64 bytes. | 
- **body** | [**PermissionCheckBody**](PermissionCheckBody.md)|  | 
+ **body** | [**CheckBody**](CheckBody.md)|  | 
 
 ### Return type
 
