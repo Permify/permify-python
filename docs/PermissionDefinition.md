@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of PermissionDefinition from a JSON string
 permission_definition_instance = PermissionDefinition.from_json(json)
 # print the JSON string representation of the object
-print(PermissionDefinition.to_json())
+print PermissionDefinition.to_json()
 
 # convert the object into a dict
 permission_definition_dict = permission_definition_instance.to_dict()
 # create an instance of PermissionDefinition from a dict
-permission_definition_from_dict = PermissionDefinition.from_dict(permission_definition_dict)
+permission_definition_form_dict = permission_definition.from_dict(permission_definition_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

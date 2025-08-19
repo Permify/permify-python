@@ -2,11 +2,10 @@
 
  - OPERATION_CREATE: Creation operation.  - OPERATION_DELETE: Deletion operation.
 
-## Enum
+## Properties
 
-* `OPERATION_CREATE` (value: `'OPERATION_CREATE'`)
-
-* `OPERATION_DELETE` (value: `'OPERATION_DELETE'`)
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

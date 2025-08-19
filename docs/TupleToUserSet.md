@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of TupleToUserSet from a JSON string
 tuple_to_user_set_instance = TupleToUserSet.from_json(json)
 # print the JSON string representation of the object
-print(TupleToUserSet.to_json())
+print TupleToUserSet.to_json()
 
 # convert the object into a dict
 tuple_to_user_set_dict = tuple_to_user_set_instance.to_dict()
 # create an instance of TupleToUserSet from a dict
-tuple_to_user_set_from_dict = TupleToUserSet.from_dict(tuple_to_user_set_dict)
+tuple_to_user_set_form_dict = tuple_to_user_set.from_dict(tuple_to_user_set_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

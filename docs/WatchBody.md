@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of WatchBody from a JSON string
 watch_body_instance = WatchBody.from_json(json)
 # print the JSON string representation of the object
-print(WatchBody.to_json())
+print WatchBody.to_json()
 
 # convert the object into a dict
 watch_body_dict = watch_body_instance.to_dict()
 # create an instance of WatchBody from a dict
-watch_body_from_dict = WatchBody.from_dict(watch_body_dict)
+watch_body_form_dict = watch_body.from_dict(watch_body_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

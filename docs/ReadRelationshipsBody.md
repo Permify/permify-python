@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of ReadRelationshipsBody from a JSON string
 read_relationships_body_instance = ReadRelationshipsBody.from_json(json)
 # print the JSON string representation of the object
-print(ReadRelationshipsBody.to_json())
+print ReadRelationshipsBody.to_json()
 
 # convert the object into a dict
 read_relationships_body_dict = read_relationships_body_instance.to_dict()
 # create an instance of ReadRelationshipsBody from a dict
-read_relationships_body_from_dict = ReadRelationshipsBody.from_dict(read_relationships_body_dict)
+read_relationships_body_form_dict = read_relationships_body.from_dict(read_relationships_body_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

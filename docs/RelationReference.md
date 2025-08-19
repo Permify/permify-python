@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of RelationReference from a JSON string
 relation_reference_instance = RelationReference.from_json(json)
 # print the JSON string representation of the object
-print(RelationReference.to_json())
+print RelationReference.to_json()
 
 # convert the object into a dict
 relation_reference_dict = relation_reference_instance.to_dict()
 # create an instance of RelationReference from a dict
-relation_reference_from_dict = RelationReference.from_dict(relation_reference_dict)
+relation_reference_form_dict = relation_reference.from_dict(relation_reference_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

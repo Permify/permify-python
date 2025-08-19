@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of PermissionLookupSubjectResponse from a JSON string
 permission_lookup_subject_response_instance = PermissionLookupSubjectResponse.from_json(json)
 # print the JSON string representation of the object
-print(PermissionLookupSubjectResponse.to_json())
+print PermissionLookupSubjectResponse.to_json()
 
 # convert the object into a dict
 permission_lookup_subject_response_dict = permission_lookup_subject_response_instance.to_dict()
 # create an instance of PermissionLookupSubjectResponse from a dict
-permission_lookup_subject_response_from_dict = PermissionLookupSubjectResponse.from_dict(permission_lookup_subject_response_dict)
+permission_lookup_subject_response_form_dict = permission_lookup_subject_response.from_dict(permission_lookup_subject_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

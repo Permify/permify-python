@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of LookupEntityBody from a JSON string
 lookup_entity_body_instance = LookupEntityBody.from_json(json)
 # print the JSON string representation of the object
-print(LookupEntityBody.to_json())
+print LookupEntityBody.to_json()
 
 # convert the object into a dict
 lookup_entity_body_dict = lookup_entity_body_instance.to_dict()
 # create an instance of LookupEntityBody from a dict
-lookup_entity_body_from_dict = LookupEntityBody.from_dict(lookup_entity_body_dict)
+lookup_entity_body_form_dict = lookup_entity_body.from_dict(lookup_entity_body_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

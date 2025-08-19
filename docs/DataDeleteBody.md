@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of DataDeleteBody from a JSON string
 data_delete_body_instance = DataDeleteBody.from_json(json)
 # print the JSON string representation of the object
-print(DataDeleteBody.to_json())
+print DataDeleteBody.to_json()
 
 # convert the object into a dict
 data_delete_body_dict = data_delete_body_instance.to_dict()
 # create an instance of DataDeleteBody from a dict
-data_delete_body_from_dict = DataDeleteBody.from_dict(data_delete_body_dict)
+data_delete_body_form_dict = data_delete_body.from_dict(data_delete_body_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

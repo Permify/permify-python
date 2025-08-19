@@ -18,6 +18,8 @@ create tenant
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.tenant_create_request import TenantCreateRequest
 from permify.models.tenant_create_response import TenantCreateResponse
@@ -86,6 +88,8 @@ delete tenant
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.tenant_delete_response import TenantDeleteResponse
 from permify.rest import ApiException
@@ -153,6 +157,8 @@ list tenants
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.tenant_list_request import TenantListRequest
 from permify.models.tenant_list_response import TenantListResponse

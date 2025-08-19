@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of Rewrite from a JSON string
 rewrite_instance = Rewrite.from_json(json)
 # print the JSON string representation of the object
-print(Rewrite.to_json())
+print Rewrite.to_json()
 
 # convert the object into a dict
 rewrite_dict = rewrite_instance.to_dict()
 # create an instance of Rewrite from a dict
-rewrite_from_dict = Rewrite.from_dict(rewrite_dict)
+rewrite_form_dict = rewrite.from_dict(rewrite_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

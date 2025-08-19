@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of SchemaReadRequestMetadata from a JSON string
 schema_read_request_metadata_instance = SchemaReadRequestMetadata.from_json(json)
 # print the JSON string representation of the object
-print(SchemaReadRequestMetadata.to_json())
+print SchemaReadRequestMetadata.to_json()
 
 # convert the object into a dict
 schema_read_request_metadata_dict = schema_read_request_metadata_instance.to_dict()
 # create an instance of SchemaReadRequestMetadata from a dict
-schema_read_request_metadata_from_dict = SchemaReadRequestMetadata.from_dict(schema_read_request_metadata_dict)
+schema_read_request_metadata_form_dict = schema_read_request_metadata.from_dict(schema_read_request_metadata_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

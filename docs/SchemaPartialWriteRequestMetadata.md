@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of SchemaPartialWriteRequestMetadata from a JSON string
 schema_partial_write_request_metadata_instance = SchemaPartialWriteRequestMetadata.from_json(json)
 # print the JSON string representation of the object
-print(SchemaPartialWriteRequestMetadata.to_json())
+print SchemaPartialWriteRequestMetadata.to_json()
 
 # convert the object into a dict
 schema_partial_write_request_metadata_dict = schema_partial_write_request_metadata_instance.to_dict()
 # create an instance of SchemaPartialWriteRequestMetadata from a dict
-schema_partial_write_request_metadata_from_dict = SchemaPartialWriteRequestMetadata.from_dict(schema_partial_write_request_metadata_dict)
+schema_partial_write_request_metadata_form_dict = schema_partial_write_request_metadata.from_dict(schema_partial_write_request_metadata_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

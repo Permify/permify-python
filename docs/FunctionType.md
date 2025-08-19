@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of FunctionType from a JSON string
 function_type_instance = FunctionType.from_json(json)
 # print the JSON string representation of the object
-print(FunctionType.to_json())
+print FunctionType.to_json()
 
 # convert the object into a dict
 function_type_dict = function_type_instance.to_dict()
 # create an instance of FunctionType from a dict
-function_type_from_dict = FunctionType.from_dict(function_type_dict)
+function_type_form_dict = function_type.from_dict(function_type_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

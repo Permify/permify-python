@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of RunBundleBody from a JSON string
 run_bundle_body_instance = RunBundleBody.from_json(json)
 # print the JSON string representation of the object
-print(RunBundleBody.to_json())
+print RunBundleBody.to_json()
 
 # convert the object into a dict
 run_bundle_body_dict = run_bundle_body_instance.to_dict()
 # create an instance of RunBundleBody from a dict
-run_bundle_body_from_dict = RunBundleBody.from_dict(run_bundle_body_dict)
+run_bundle_body_form_dict = run_bundle_body.from_dict(run_bundle_body_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

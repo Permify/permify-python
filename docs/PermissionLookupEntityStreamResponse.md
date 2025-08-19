@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of PermissionLookupEntityStreamResponse from a JSON string
 permission_lookup_entity_stream_response_instance = PermissionLookupEntityStreamResponse.from_json(json)
 # print the JSON string representation of the object
-print(PermissionLookupEntityStreamResponse.to_json())
+print PermissionLookupEntityStreamResponse.to_json()
 
 # convert the object into a dict
 permission_lookup_entity_stream_response_dict = permission_lookup_entity_stream_response_instance.to_dict()
 # create an instance of PermissionLookupEntityStreamResponse from a dict
-permission_lookup_entity_stream_response_from_dict = PermissionLookupEntityStreamResponse.from_dict(permission_lookup_entity_stream_response_dict)
+permission_lookup_entity_stream_response_form_dict = permission_lookup_entity_stream_response.from_dict(permission_lookup_entity_stream_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
