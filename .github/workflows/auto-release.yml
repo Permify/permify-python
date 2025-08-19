@@ -1,4 +1,4 @@
-name: Auto Release on '#new-release' commit
+name: Auto Release
 
 on:
   push:
@@ -25,39 +25,26 @@ jobs:
         with:
           fetch-depth: 0
       
-      - name: Check commit message for '#new-release'
-        id: check_message
-        run: |
-          commit_message=$(git log --format=%B -n 1)
-          
-          if echo "$commit_message" | grep -q '#new-release'; then
-              # Extract version from OpenAPI spec
-              openapi_version=$(grep '"version":' generator/openapi.json | sed 's/.*"version": *"\([^"]*\)".*/\1/')
-              
-              if [ -n "$openapi_version" ]; then
-                  echo "Creating release $openapi_version"
-                  git config --global user.name 'GitHub Actions Bot'
-                  git config --global user.email 'actions@github.com'
-                  git tag -a "$openapi_version" -m "Release $openapi_version"
-                  git push origin "$openapi_version"
-                  echo "new_release=$openapi_version" >> $GITHUB_OUTPUT
-              else
-                  echo "Could not extract version from OpenAPI specification. Skipping release."
-                  exit 1
-              fi
-          else
-              echo "Commit does not include '#new-release'. Skipping release."
-              exit 0
-          fi
-
-      - name: Create release
-        if: steps.check_message.outputs.new_release
+      - name: Create tag and release
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
-          tag="${{ steps.check_message.outputs.new_release }}"
-          title="${tag#v}"
-          gh release create "$tag" \
-              --repo="$GITHUB_REPOSITORY" \
-              --title="$title" \
-              --generate-notes
+          # Extract version from OpenAPI spec
+          openapi_version=$(grep '"version":' generator/openapi.json | sed 's/.*"version": *"\([^"]*\)".*/\1/')
+          
+          if [ -n "$openapi_version" ]; then
+              echo "Creating release $openapi_version"
+              git config --global user.name 'GitHub Actions Bot'
+              git config --global user.email '<>'
+              git tag -a "$openapi_version" -m "Release $openapi_version"
+              git push origin "$openapi_version"
+              
+              # Create GitHub release
+              gh release create "$openapi_version" \
+                  --repo="$GITHUB_REPOSITORY" \
+                  --title="$openapi_version" \
+                  --generate-notes
+          else
+              echo "Could not extract version from OpenAPI specification. Skipping release."
+              exit 1
+          fi
