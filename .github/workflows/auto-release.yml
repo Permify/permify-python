@@ -11,6 +11,7 @@ on:
       - 'requirements.txt'
       - 'setup.py'
       - 'pyproject.toml'
+      - 'generator/openapi.json'
 
 permissions:
   contents: write
@@ -21,6 +22,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       
       - name: Check commit message for '#new-release'
         id: check_message
@@ -28,16 +31,18 @@ jobs:
           commit_message=$(git log --format=%B -n 1)
           
           if echo "$commit_message" | grep -q '#new-release'; then
-              new_release=$(echo "$commit_message" | sed -n 's/.*<new-release:\([^>]*\)>.*$/\1/p')
-              if [ -n "$new_release" ]; then
-                  echo "Creating release $new_release"
+              # Extract version from OpenAPI spec
+              openapi_version=$(grep '"version":' generator/openapi.json | sed 's/.*"version": *"\([^"]*\)".*/\1/')
+              
+              if [ -n "$openapi_version" ]; then
+                  echo "Creating release $openapi_version"
                   git config --global user.name 'GitHub Actions Bot'
-                  git config --global user.email '<>'
-                  git tag -a "$new_release" -m "Release $new_release"
-                  git push origin "$new_release"
-                  echo "::set-output name=new_release::$new_release"
+                  git config --global user.email 'actions@github.com'
+                  git tag -a "$openapi_version" -m "Release $openapi_version"
+                  git push origin "$openapi_version"
+                  echo "new_release=$openapi_version" >> $GITHUB_OUTPUT
               else
-                  echo "Commit includes '#new-release' but no tag found in <new-release:tag> format. Skipping release."
+                  echo "Could not extract version from OpenAPI specification. Skipping release."
                   exit 1
               fi
           else
@@ -46,8 +51,9 @@ jobs:
           fi
 
       - name: Create release
+        if: steps.check_message.outputs.new_release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           tag="${{ steps.check_message.outputs.new_release }}"
           title="${tag#v}"
