@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'permify/**'
+      - 'test/**'
+      - 'docs/**'
+      - 'requirements.txt'
+      - 'setup.py'
+      - 'pyproject.toml'
 
 permissions:
   contents: write
