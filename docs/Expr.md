@@ -25,12 +25,12 @@ json = "{}"
 # create an instance of Expr from a JSON string
 expr_instance = Expr.from_json(json)
 # print the JSON string representation of the object
-print(Expr.to_json())
+print Expr.to_json()
 
 # convert the object into a dict
 expr_dict = expr_instance.to_dict()
 # create an instance of Expr from a dict
-expr_from_dict = Expr.from_dict(expr_dict)
+expr_form_dict = expr.from_dict(expr_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -18,6 +18,8 @@ delete bundle
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.bundle_delete_body import BundleDeleteBody
 from permify.models.bundle_delete_response import BundleDeleteResponse
@@ -88,6 +90,8 @@ read bundle
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.bundle_read_body import BundleReadBody
 from permify.models.bundle_read_response import BundleReadResponse
@@ -158,6 +162,8 @@ write bundle
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.bundle_write_body import BundleWriteBody
 from permify.models.bundle_write_response import BundleWriteResponse

@@ -19,6 +19,8 @@ list schema
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.schema_list_body import SchemaListBody
 from permify.models.schema_list_response import SchemaListResponse
@@ -89,6 +91,8 @@ partially update your authorization model
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.partial_write_body import PartialWriteBody
 from permify.models.schema_partial_write_response import SchemaPartialWriteResponse
@@ -159,6 +163,8 @@ read schema
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.schema_read_body import SchemaReadBody
 from permify.models.schema_read_response import SchemaReadResponse
@@ -229,6 +235,8 @@ write schema
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.schema_write_body import SchemaWriteBody
 from permify.models.schema_write_response import SchemaWriteResponse

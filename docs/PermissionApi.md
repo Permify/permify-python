@@ -21,6 +21,8 @@ check api
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.check_body import CheckBody
 from permify.models.permission_check_response import PermissionCheckResponse
@@ -91,6 +93,8 @@ expand api
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.permission_expand_body import PermissionExpandBody
 from permify.models.permission_expand_response import PermissionExpandResponse
@@ -161,6 +165,8 @@ lookup entity
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.lookup_entity_body import LookupEntityBody
 from permify.models.permission_lookup_entity_response import PermissionLookupEntityResponse
@@ -231,6 +237,8 @@ lookup entity stream
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.lookup_entity_stream_body import LookupEntityStreamBody
 from permify.models.stream_result_of_permission_lookup_entity_stream_response import StreamResultOfPermissionLookupEntityStreamResponse
@@ -301,6 +309,8 @@ lookup-subject
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.lookup_subject_body import LookupSubjectBody
 from permify.models.permission_lookup_subject_response import PermissionLookupSubjectResponse
@@ -371,6 +381,8 @@ subject permission
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.permission_subject_permission_response import PermissionSubjectPermissionResponse
 from permify.models.subject_permission_body import SubjectPermissionBody

@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of RelationDefinition from a JSON string
 relation_definition_instance = RelationDefinition.from_json(json)
 # print the JSON string representation of the object
-print(RelationDefinition.to_json())
+print RelationDefinition.to_json()
 
 # convert the object into a dict
 relation_definition_dict = relation_definition_instance.to_dict()
 # create an instance of RelationDefinition from a dict
-relation_definition_from_dict = RelationDefinition.from_dict(relation_definition_dict)
+relation_definition_form_dict = relation_definition.from_dict(relation_definition_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

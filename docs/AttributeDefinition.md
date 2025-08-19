@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of AttributeDefinition from a JSON string
 attribute_definition_instance = AttributeDefinition.from_json(json)
 # print the JSON string representation of the object
-print(AttributeDefinition.to_json())
+print AttributeDefinition.to_json()
 
 # convert the object into a dict
 attribute_definition_dict = attribute_definition_instance.to_dict()
 # create an instance of AttributeDefinition from a dict
-attribute_definition_from_dict = AttributeDefinition.from_dict(attribute_definition_dict)
+attribute_definition_form_dict = attribute_definition.from_dict(attribute_definition_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

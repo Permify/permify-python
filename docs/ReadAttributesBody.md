@@ -21,12 +21,12 @@ json = "{}"
 # create an instance of ReadAttributesBody from a JSON string
 read_attributes_body_instance = ReadAttributesBody.from_json(json)
 # print the JSON string representation of the object
-print(ReadAttributesBody.to_json())
+print ReadAttributesBody.to_json()
 
 # convert the object into a dict
 read_attributes_body_dict = read_attributes_body_instance.to_dict()
 # create an instance of ReadAttributesBody from a dict
-read_attributes_body_from_dict = ReadAttributesBody.from_dict(read_attributes_body_dict)
+read_attributes_body_form_dict = read_attributes_body.from_dict(read_attributes_body_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

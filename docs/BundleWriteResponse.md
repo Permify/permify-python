@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of BundleWriteResponse from a JSON string
 bundle_write_response_instance = BundleWriteResponse.from_json(json)
 # print the JSON string representation of the object
-print(BundleWriteResponse.to_json())
+print BundleWriteResponse.to_json()
 
 # convert the object into a dict
 bundle_write_response_dict = bundle_write_response_instance.to_dict()
 # create an instance of BundleWriteResponse from a dict
-bundle_write_response_from_dict = BundleWriteResponse.from_dict(bundle_write_response_dict)
+bundle_write_response_form_dict = bundle_write_response.from_dict(bundle_write_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of RelationshipReadResponse from a JSON string
 relationship_read_response_instance = RelationshipReadResponse.from_json(json)
 # print the JSON string representation of the object
-print(RelationshipReadResponse.to_json())
+print RelationshipReadResponse.to_json()
 
 # convert the object into a dict
 relationship_read_response_dict = relationship_read_response_instance.to_dict()
 # create an instance of RelationshipReadResponse from a dict
-relationship_read_response_from_dict = RelationshipReadResponse.from_dict(relationship_read_response_dict)
+relationship_read_response_form_dict = relationship_read_response.from_dict(relationship_read_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

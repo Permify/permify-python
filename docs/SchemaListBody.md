@@ -19,12 +19,12 @@ json = "{}"
 # create an instance of SchemaListBody from a JSON string
 schema_list_body_instance = SchemaListBody.from_json(json)
 # print the JSON string representation of the object
-print(SchemaListBody.to_json())
+print SchemaListBody.to_json()
 
 # convert the object into a dict
 schema_list_body_dict = schema_list_body_instance.to_dict()
 # create an instance of SchemaListBody from a dict
-schema_list_body_from_dict = SchemaListBody.from_dict(schema_list_body_dict)
+schema_list_body_form_dict = schema_list_body.from_dict(schema_list_body_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

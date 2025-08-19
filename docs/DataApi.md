@@ -22,6 +22,8 @@ run bundle
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.bundle_run_response import BundleRunResponse
 from permify.models.run_bundle_body import RunBundleBody
@@ -92,6 +94,8 @@ read attributes
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.attribute_read_response import AttributeReadResponse
 from permify.models.read_attributes_body import ReadAttributesBody
@@ -162,6 +166,8 @@ delete data
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.data_delete_body import DataDeleteBody
 from permify.models.data_delete_response import DataDeleteResponse
@@ -232,6 +238,8 @@ read relationships
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.read_relationships_body import ReadRelationshipsBody
 from permify.models.relationship_read_response import RelationshipReadResponse
@@ -302,6 +310,8 @@ write data
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.data_write_body import DataWriteBody
 from permify.models.data_write_response import DataWriteResponse
@@ -372,6 +382,8 @@ delete relationships
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.delete_relationships_body import DeleteRelationshipsBody
 from permify.models.relationship_delete_response import RelationshipDeleteResponse
@@ -442,6 +454,8 @@ write relationships
 
 
 ```python
+import time
+import os
 import permify
 from permify.models.relationship_write_response import RelationshipWriteResponse
 from permify.models.write_relationships_body import WriteRelationshipsBody

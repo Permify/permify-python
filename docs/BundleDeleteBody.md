@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of BundleDeleteBody from a JSON string
 bundle_delete_body_instance = BundleDeleteBody.from_json(json)
 # print the JSON string representation of the object
-print(BundleDeleteBody.to_json())
+print BundleDeleteBody.to_json()
 
 # convert the object into a dict
 bundle_delete_body_dict = bundle_delete_body_instance.to_dict()
 # create an instance of BundleDeleteBody from a dict
-bundle_delete_body_from_dict = BundleDeleteBody.from_dict(bundle_delete_body_dict)
+bundle_delete_body_form_dict = bundle_delete_body.from_dict(bundle_delete_body_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

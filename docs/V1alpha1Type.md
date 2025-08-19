@@ -30,12 +30,12 @@ json = "{}"
 # create an instance of V1alpha1Type from a JSON string
 v1alpha1_type_instance = V1alpha1Type.from_json(json)
 # print the JSON string representation of the object
-print(V1alpha1Type.to_json())
+print V1alpha1Type.to_json()
 
 # convert the object into a dict
 v1alpha1_type_dict = v1alpha1_type_instance.to_dict()
 # create an instance of V1alpha1Type from a dict
-v1alpha1_type_from_dict = V1alpha1Type.from_dict(v1alpha1_type_dict)
+v1alpha1_type_form_dict = v1alpha1_type.from_dict(v1alpha1_type_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

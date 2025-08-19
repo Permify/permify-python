@@ -24,12 +24,12 @@ json = "{}"
 # create an instance of Comprehension from a JSON string
 comprehension_instance = Comprehension.from_json(json)
 # print the JSON string representation of the object
-print(Comprehension.to_json())
+print Comprehension.to_json()
 
 # convert the object into a dict
 comprehension_dict = comprehension_instance.to_dict()
 # create an instance of Comprehension from a dict
-comprehension_from_dict = Comprehension.from_dict(comprehension_dict)
+comprehension_form_dict = comprehension.from_dict(comprehension_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -18,12 +18,12 @@ json = "{}"
 # create an instance of AttributeReadRequestMetadata from a JSON string
 attribute_read_request_metadata_instance = AttributeReadRequestMetadata.from_json(json)
 # print the JSON string representation of the object
-print(AttributeReadRequestMetadata.to_json())
+print AttributeReadRequestMetadata.to_json()
 
 # convert the object into a dict
 attribute_read_request_metadata_dict = attribute_read_request_metadata_instance.to_dict()
 # create an instance of AttributeReadRequestMetadata from a dict
-attribute_read_request_metadata_from_dict = AttributeReadRequestMetadata.from_dict(attribute_read_request_metadata_dict)
+attribute_read_request_metadata_form_dict = attribute_read_request_metadata.from_dict(attribute_read_request_metadata_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
