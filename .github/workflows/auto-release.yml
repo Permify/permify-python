@@ -31,7 +31,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           # Extract version from OpenAPI spec
-          openapi_version=$(grep '"version":' generator/openapi.json | sed 's/.*"version": *"\([^"]*\)".*/\1/')
+          openapi_version=$(grep '"version":' generator/openapi.json | head -n 1 | sed 's/.*"version": *"\([^"]*\)".*/\1/')
           
           if [ -n "$openapi_version" ]; then
               echo "Creating release $openapi_version"
