@@ -6,7 +6,7 @@ TenantDeleteResponse is the message returned from the request to delete a tenant
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tenant** | [**Tenant**](Tenant.md) |  | [optional] 
+**tenant_id** | **str** | tenant_id is the tenant id that was deleted. | [optional] 
 
 ## Example
 
