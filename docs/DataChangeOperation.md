@@ -1,6 +1,6 @@
 # DataChangeOperation
 
- - OPERATION_UNSPECIFIED: Default operation, not specified.  - OPERATION_CREATE: Creation operation.  - OPERATION_DELETE: Deletion operation.
+ - OPERATION_CREATE: Creation operation.  - OPERATION_DELETE: Deletion operation.
 
 ## Properties
 
