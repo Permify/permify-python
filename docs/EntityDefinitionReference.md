@@ -1,6 +1,6 @@
 # EntityDefinitionReference
 
-The Reference enum specifies whether a name pertains to a relation, permission, or attribute.   - REFERENCE_RELATION: Indicates that the name refers to a relation.  - REFERENCE_PERMISSION: Indicates that the name refers to a permission.  - REFERENCE_ATTRIBUTE: Indicates that the name refers to an attribute.
+The Reference enum specifies whether a name pertains to a relation, permission, or attribute.   - REFERENCE_UNSPECIFIED: Default, unspecified reference.  - REFERENCE_RELATION: Indicates that the name refers to a relation.  - REFERENCE_PERMISSION: Indicates that the name refers to a permission.  - REFERENCE_ATTRIBUTE: Indicates that the name refers to an attribute.
 
 ## Properties
 

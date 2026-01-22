@@ -27,22 +27,19 @@ except ImportError:
     from typing_extensions import Self
 
 
-class ExpandTreeNodeOperation(str, Enum):
+class NullValue(str, Enum):
     """
-    Operation is an enum representing the type of operation to be applied on the tree node.
+    `NullValue` is a singleton enumeration to represent the null value for the `Value` type union.  The JSON representation for `NullValue` is JSON `null`.   - NULL_VALUE: Null value.
     """
 
     """
     allowed enum values
     """
-    OPERATION_UNSPECIFIED = 'OPERATION_UNSPECIFIED'
-    OPERATION_UNION = 'OPERATION_UNION'
-    OPERATION_INTERSECTION = 'OPERATION_INTERSECTION'
-    OPERATION_EXCLUSION = 'OPERATION_EXCLUSION'
+    NULL_VALUE = 'NULL_VALUE'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
-        """Create an instance of ExpandTreeNodeOperation from a JSON string"""
+        """Create an instance of NullValue from a JSON string"""
         return cls(json.loads(json_str))
 
 

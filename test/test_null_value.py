@@ -16,10 +16,10 @@
 import unittest
 import datetime
 
-from permify.models.attribute_type import AttributeType
+from permify.models.null_value import NullValue
 
-class TestAttributeType(unittest.TestCase):
-    """AttributeType unit test stubs"""
+class TestNullValue(unittest.TestCase):
+    """NullValue unit test stubs"""
 
     def setUp(self):
         pass
@@ -27,9 +27,9 @@ class TestAttributeType(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testAttributeType(self):
-        """Test AttributeType"""
-        # inst = AttributeType()
+    def testNullValue(self):
+        """Test NullValue"""
+        # inst = NullValue()
 
 if __name__ == '__main__':
     unittest.main()

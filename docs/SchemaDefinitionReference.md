@@ -1,6 +1,6 @@
 # SchemaDefinitionReference
 
-The Reference enum helps distinguish whether a name corresponds to an entity or a rule.   - REFERENCE_ENTITY: Indicates that the name refers to an entity.  - REFERENCE_RULE: Indicates that the name refers to a rule.
+The Reference enum helps distinguish whether a name corresponds to an entity or a rule.   - REFERENCE_UNSPECIFIED: Default, unspecified reference.  - REFERENCE_ENTITY: Indicates that the name refers to an entity.  - REFERENCE_RULE: Indicates that the name refers to a rule.
 
 ## Properties
 
