@@ -42,7 +42,7 @@ setup(
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
-    license="AGPL-3.0 license",
+    license="Apache-2.0",
     long_description_content_type='text/markdown',
     long_description="""\
     Permify is an open source authorization service for creating fine-grained and scalable authorization systems.
