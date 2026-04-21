@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "permify"
-version = "1.6.8"
+version = "1.6.9"
 description = "Permify API"
 authors = ["API Support <hello@permify.co>"]
 license = "Apache-2.0"
